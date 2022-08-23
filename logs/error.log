@@ -1,0 +1,188 @@
+2022/06/17 18:59:42 [emerg] 149739#0: zero size shared memory zone "on"
+2022/06/17 19:03:48 [emerg] 150151#0: zero size shared memory zone "on"
+2022/06/17 19:04:48 [emerg] 153339#0: zero size shared memory zone "on"
+2022/06/17 19:06:17 [emerg] 159057#0: zero size shared memory zone "on"
+2022/06/17 19:20:30 [emerg] 168840#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/06/17 19:20:30 [emerg] 168840#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/06/17 19:20:30 [emerg] 168840#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/06/17 19:20:30 [emerg] 168840#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/06/17 19:20:30 [emerg] 168840#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/06/17 19:20:30 [emerg] 168840#0: still could not bind()
+2022/06/17 19:21:22 [error] 169042#0: *1 open() "/home/zt/tengine/tengine//html/status" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /status HTTP/1.1", host: "127.0.0.1"
+2022/07/11 09:46:03 [error] 20199#0: *1 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/07/11 09:46:03 [error] 20199#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/07/11 09:46:33 [error] 20199#0: *1 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/07/11 09:46:33 [error] 20199#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/07/11 09:47:07 [error] 20199#0: *1 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/07/11 09:47:07 [error] 20199#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/07/11 09:48:12 [error] 20199#0: *1 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/07/11 09:48:12 [error] 20199#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/07/11 09:48:23 [error] 20199#0: *1 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/07/11 09:48:23 [error] 20199#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/07/11 09:49:40 [emerg] 21491#0: bind() to 0.0.0.0:80 failed (13: Permission denied)
+2022/07/11 09:49:51 [error] 21560#0: *1 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/07/11 09:49:51 [error] 21560#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/07/11 09:49:52 [error] 21560#0: *1 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/07/11 09:49:52 [error] 21560#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/07/11 09:49:53 [error] 21560#0: *1 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/07/11 09:49:53 [error] 21560#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/07/11 09:49:54 [error] 21560#0: *1 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/07/11 09:49:54 [error] 21560#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/07/11 09:49:54 [error] 21560#0: *1 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/07/11 09:49:54 [error] 21560#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/07/11 09:49:54 [error] 21560#0: *1 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/07/11 09:49:54 [error] 21560#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/07/11 09:49:54 [error] 21560#0: *1 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/07/11 09:49:54 [error] 21560#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/07/11 09:49:54 [error] 21560#0: *1 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/07/11 09:49:54 [error] 21560#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/07/11 09:49:55 [error] 21560#0: *1 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/07/11 09:49:55 [error] 21560#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/07/11 09:49:55 [error] 21560#0: *1 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/07/11 09:49:55 [error] 21560#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/07/11 09:49:55 [error] 21560#0: *1 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/07/11 09:49:55 [error] 21560#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/07/11 10:01:10 [error] 21560#0: *3 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/07/11 10:01:10 [error] 21560#0: *3 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/07/11 10:02:22 [error] 21560#0: *5 open() "/home/zt/tengine/tengine//html/nginx_status" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /nginx_status HTTP/1.1", host: "127.0.0.1"
+2022/07/11 10:05:30 [error] 21560#0: *6 open() "/home/zt/tengine/tengine//html/nginx_status" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /nginx_status HTTP/1.1", host: "127.0.0.1"
+2022/07/11 10:05:49 [error] 21560#0: *8 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/07/11 10:05:56 [error] 21560#0: *9 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/07/11 10:06:33 [error] 21560#0: *10 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/07/11 10:06:36 [error] 21560#0: *11 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/07/11 10:15:36 [error] 21560#0: *12 open() "/home/zt/tengine/tengine//html/nginx_status" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /nginx_status HTTP/1.1", host: "127.0.0.1"
+2022/07/11 10:15:36 [error] 21560#0: *12 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/nginx_status"
+2022/07/11 16:59:50 [error] 21560#0: *14 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/07/11 16:59:50 [error] 21560#0: *14 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/07/11 16:59:58 [error] 21560#0: *14 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/07/11 17:00:54 [error] 21560#0: *14 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/07/13 11:24:47 [error] 21560#0: *17 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/07/13 11:24:47 [error] 21560#0: *17 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/07/13 11:25:15 [error] 21560#0: *17 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/07/13 11:25:38 [error] 21560#0: *17 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/07/21 17:12:50 [emerg] 37244#0: unexpected "}" in /home/zt/tengine/tengine//conf/nginx.conf:70
+2022/07/21 17:12:53 [emerg] 37367#0: unexpected "}" in /home/zt/tengine/tengine//conf/nginx.conf:70
+2022/07/21 17:14:03 [emerg] 37524#0: bind() to 0.0.0.0:80 failed (13: Permission denied)
+2022/07/29 17:29:01 [emerg] 26819#0: bind() to 0.0.0.0:80 failed (13: Permission denied)
+2022/07/31 15:18:04 [emerg] 56577#0: unknown directive "vhost_traffic_status_zone" in /home/zt/tengine/tengine//conf/nginx.conf:23
+2022/07/31 15:18:11 [emerg] 56646#0: unknown directive "vhost_traffic_status_zone" in /home/zt/tengine/tengine//conf/nginx.conf:23
+2022/07/31 15:18:37 [emerg] 56752#0: unknown directive "vhost_traffic_status_zone" in /home/zt/tengine/tengine//conf/nginx.conf:23
+2022/07/31 15:49:37 [error] 69583#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/07/31 15:51:46 [error] 69583#0: *3 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/07/31 20:13:42 [error] 69583#0: *12 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/08/01 10:44:29 [error] 69583#0: *34 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/08/01 10:47:25 [error] 69583#0: *34 open() "/home/zt/tengine/tengine//html/metruc" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /metruc HTTP/1.1", host: "127.0.0.1"
+2022/08/01 10:47:25 [error] 69583#0: *34 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/metruc"
+2022/08/01 10:47:32 [error] 69583#0: *34 open() "/home/zt/tengine/tengine//html/metric" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /metric HTTP/1.1", host: "127.0.0.1"
+2022/08/01 10:47:32 [error] 69583#0: *34 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/metric"
+2022/08/01 10:47:43 [error] 69583#0: *34 open() "/home/zt/tengine/tengine//html/metrics" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /metrics HTTP/1.1", host: "127.0.0.1"
+2022/08/01 10:47:43 [error] 69583#0: *34 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/metrics"
+2022/08/01 10:48:13 [error] 69583#0: *34 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/08/01 10:48:13 [error] 69583#0: *34 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/08/01 11:45:55 [error] 69583#0: *40 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/08/01 21:46:43 [error] 69583#0: *48 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/08/01 21:51:55 [warn] 210192#0: low address bits of 127.0.0.1/8 are meaningless in /home/zt/tengine/tengine//conf/nginx.conf:60
+2022/08/01 21:51:55 [emerg] 210192#0: bind() to 0.0.0.0:80 failed (13: Permission denied)
+2022/08/01 21:53:43 [emerg] 213720#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/08/01 21:53:43 [emerg] 213720#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/08/01 21:53:43 [emerg] 213720#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/08/01 21:53:43 [emerg] 213720#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/08/01 21:53:43 [emerg] 213720#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/08/01 21:53:43 [emerg] 213720#0: still could not bind()
+2022/08/01 21:55:10 [emerg] 214328#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/08/01 21:55:10 [emerg] 214328#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/08/01 21:55:10 [emerg] 214328#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/08/01 21:55:10 [emerg] 214328#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/08/01 21:55:10 [emerg] 214328#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/08/01 21:55:10 [emerg] 214328#0: still could not bind()
+2022/08/01 21:56:52 [emerg] 214578#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/08/01 21:56:52 [emerg] 214578#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/08/01 21:56:52 [emerg] 214578#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/08/01 21:56:52 [emerg] 214578#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/08/01 21:56:52 [emerg] 214578#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/08/01 21:56:52 [emerg] 214578#0: still could not bind()
+2022/08/01 21:58:45 [error] 215114#0: *1 access forbidden by rule, client: 127.0.0.1, server: localhost, request: "GET /us HTTP/1.1", host: "127.0.0.1"
+2022/08/01 21:58:46 [error] 215114#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/08/01 21:59:09 [error] 215114#0: *1 access forbidden by rule, client: 127.0.0.1, server: localhost, request: "GET /us HTTP/1.1", host: "127.0.0.1"
+2022/08/01 21:59:09 [error] 215114#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/08/01 21:59:44 [error] 215114#0: *1 access forbidden by rule, client: 127.0.0.1, server: localhost, request: "GET /us HTTP/1.1", host: "127.0.0.1"
+2022/08/01 21:59:44 [error] 215114#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/08/01 22:16:33 [emerg] 216822#0: invalid number of arguments in "req_status" directive in /home/zt/tengine/tengine//conf/nginx.conf:59
+2022/08/01 22:17:00 [emerg] 216908#0: unknown directive "req_stat_show" in /home/zt/tengine/tengine//conf/nginx.conf:59
+2022/08/01 22:17:23 [notice] 217051#0: signal process started
+2022/08/01 22:17:23 [emerg] 215112#0: zero size shared memory zone "on"
+2022/08/01 22:17:41 [error] 215114#0: *3 access forbidden by rule, client: 127.0.0.1, server: localhost, request: "GET /us HTTP/1.1", host: "127.0.0.1"
+2022/08/01 22:17:41 [error] 215114#0: *3 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/08/01 22:18:03 [notice] 217297#0: signal process started
+2022/08/01 22:18:03 [emerg] 215112#0: zero size shared memory zone "on"
+2022/08/01 22:20:03 [error] 215114#0: *5 access forbidden by rule, client: 127.0.0.1, server: localhost, request: "GET /us HTTP/1.1", host: "127.0.0.1"
+2022/08/01 22:20:03 [error] 215114#0: *5 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/08/01 22:20:28 [notice] 217746#0: signal process started
+2022/08/01 22:20:28 [emerg] 215112#0: zero size shared memory zone "on"
+2022/08/01 22:20:32 [error] 215114#0: *5 access forbidden by rule, client: 127.0.0.1, server: localhost, request: "GET /us HTTP/1.1", host: "127.0.0.1"
+2022/08/01 22:20:32 [error] 215114#0: *5 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/08/01 22:20:34 [error] 215114#0: *5 access forbidden by rule, client: 127.0.0.1, server: localhost, request: "GET /us HTTP/1.1", host: "127.0.0.1"
+2022/08/01 22:20:34 [error] 215114#0: *5 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/08/01 22:20:34 [error] 215114#0: *5 access forbidden by rule, client: 127.0.0.1, server: localhost, request: "GET /us HTTP/1.1", host: "127.0.0.1"
+2022/08/01 22:20:34 [error] 215114#0: *5 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/08/01 22:20:35 [error] 215114#0: *5 access forbidden by rule, client: 127.0.0.1, server: localhost, request: "GET /us HTTP/1.1", host: "127.0.0.1"
+2022/08/01 22:20:35 [error] 215114#0: *5 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/08/01 22:20:35 [error] 215114#0: *5 access forbidden by rule, client: 127.0.0.1, server: localhost, request: "GET /us HTTP/1.1", host: "127.0.0.1"
+2022/08/01 22:20:35 [error] 215114#0: *5 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/08/01 22:20:35 [error] 215114#0: *5 access forbidden by rule, client: 127.0.0.1, server: localhost, request: "GET /us HTTP/1.1", host: "127.0.0.1"
+2022/08/01 22:20:35 [error] 215114#0: *5 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/08/01 22:20:36 [error] 215114#0: *5 access forbidden by rule, client: 127.0.0.1, server: localhost, request: "GET /us HTTP/1.1", host: "127.0.0.1"
+2022/08/01 22:20:36 [error] 215114#0: *5 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/08/01 22:20:36 [error] 215114#0: *5 access forbidden by rule, client: 127.0.0.1, server: localhost, request: "GET /us HTTP/1.1", host: "127.0.0.1"
+2022/08/01 22:20:36 [error] 215114#0: *5 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/08/01 22:20:45 [notice] 217836#0: signal process started
+2022/08/01 22:20:49 [error] 215114#0: *6 access forbidden by rule, client: 127.0.0.1, server: localhost, request: "GET /us HTTP/1.1", host: "127.0.0.1"
+2022/08/01 22:20:49 [error] 217837#0: *7 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/08/01 22:20:52 [error] 217837#0: *7 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/08/03 12:03:13 [emerg] 29072#0: bind() to 0.0.0.0:80 failed (13: Permission denied)
+2022/08/03 12:04:36 [error] 29461#0: *1 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/08/03 12:04:36 [error] 29461#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/08/03 12:04:49 [error] 29461#0: *1 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/08/03 12:04:49 [error] 29461#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/08/03 12:04:55 [error] 29461#0: *1 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/08/03 12:04:55 [error] 29461#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/08/03 12:05:00 [error] 29461#0: *1 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/08/03 12:05:00 [error] 29461#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/08/03 12:05:08 [error] 29461#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/08/03 12:06:54 [notice] 29803#0: signal process started
+2022/08/03 12:07:02 [error] 29804#0: *3 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/08/03 12:07:02 [error] 29804#0: *3 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/08/03 12:07:11 [error] 29804#0: *3 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/08/03 12:07:11 [error] 29804#0: *3 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/08/03 12:07:32 [notice] 29933#0: signal process started
+2022/08/03 12:07:37 [error] 29934#0: *5 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/08/03 12:07:40 [error] 29934#0: *5 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/08/03 12:07:40 [error] 29934#0: *5 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/08/03 12:10:52 [error] 29934#0: *7 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/08/03 12:10:52 [error] 29934#0: *7 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/08/03 12:10:56 [error] 29934#0: *7 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/08/03 12:10:56 [error] 29934#0: *7 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/08/03 12:11:00 [error] 29934#0: *7 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/08/03 12:11:00 [error] 29934#0: *7 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/08/03 12:11:10 [error] 29934#0: *7 open() "/home/zt/tengine/tengine//html/satus" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /satus HTTP/1.1", host: "127.0.0.1"
+2022/08/03 12:11:10 [error] 29934#0: *7 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/satus"
+2022/08/03 12:11:15 [error] 29934#0: *7 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/08/03 12:11:20 [error] 29934#0: *7 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/08/03 12:11:20 [error] 29934#0: *7 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/08/03 12:12:01 [error] 29934#0: *7 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/08/03 12:12:02 [error] 29934#0: *7 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/08/03 12:12:02 [error] 29934#0: *7 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/08/03 12:12:02 [error] 29934#0: *7 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/08/03 16:09:49 [error] 29934#0: *11 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/08/03 18:20:46 [error] 29934#0: *18 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/08/05 15:00:15 [emerg] 35912#0: bind() to 0.0.0.0:80 failed (13: Permission denied)
+2022/08/05 15:00:28 [emerg] 36027#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/08/05 15:00:28 [emerg] 36027#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/08/05 15:00:28 [emerg] 36027#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/08/05 15:00:28 [emerg] 36027#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/08/05 15:00:47 [error] 35992#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/08/05 15:06:12 [error] 35992#0: *6 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/08/05 15:06:12 [error] 35992#0: *6 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/08/12 15:21:56 [error] 15410#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/08/12 15:22:00 [error] 15410#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/08/12 15:22:06 [error] 15410#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
