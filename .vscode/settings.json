@@ -6,6 +6,9 @@
         "ngx_string.h": "c",
         "ngx_http_reqstat.h": "c",
         "ngx_http.h": "c",
-        "ngx_http_vhost_traffic_status_module.h": "c"
+        "ngx_http_vhost_traffic_status_module.h": "c",
+        "ngx_http_test_status_module.h": "c",
+        "ngx_http_vhost_traffic_status_string.h": "c",
+        "ngx_http_vhost_traffic_status_control.h": "c"
     }
 }

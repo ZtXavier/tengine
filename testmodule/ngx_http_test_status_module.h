@@ -54,7 +54,7 @@ typedef struct {
 
     ngx_msec_t                      interval;
     time_t                          lock_time;
-} ngx_http__status_main_conf_t;
+} ngx_http_status_main_conf_t;
 
 
 typedef struct ngx_http_new_status_loc_conf_s {
