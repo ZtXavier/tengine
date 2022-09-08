@@ -20,7 +20,7 @@ struct variable_index_s {
     ngx_int_t                    index;
 };
 
-struct ngx_http_reqstat_rbnode_s {
+struct  ngx_http_reqstat_rbnode_s {
     u_char                       color;
     u_char                       padding[3];
     uint32_t                     len;
@@ -75,6 +75,7 @@ typedef struct {
     ngx_int_t                    index;
     ngx_array_t                 *user_select;
     ngx_array_t                 *user_defined_str;
+    ngx_array_t                 *prome_conf;
 } ngx_http_reqstat_conf_t;
 
 
