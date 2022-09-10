@@ -123,10 +123,10 @@ static ngx_int_t ngx_http_reqstat_input_body_filter(ngx_http_request_t *r,
 ngx_int_t ngx_http_reqstat_log_flow(ngx_http_request_t *r);
 
 // 添加的功能
-static char * ngx_http_reqstat_prome(ngx_conf_t *cf,ngx_command_t *cmd,
-void *conf);
+// static char * ngx_http_reqstat_prome(ngx_conf_t *cf,ngx_command_t *cmd,
+// void *conf);
 
-static ngx_int_t ngx_http_reqstat_prome_handler(ngx_http_request_t *r);
+// static ngx_int_t ngx_http_reqstat_prome_handler(ngx_http_request_t *r);
 
 
 static ngx_command_t   ngx_http_reqstat_commands[] = {
@@ -194,12 +194,12 @@ static ngx_command_t   ngx_http_reqstat_commands[] = {
       0,
       NULL },
 
-      { ngx_string("req_status_prome"),
-        NGX_HTTP_LOC_CONF | NGX_CONF_ANY,
-        ngx_http_reqstat_prome,
-        NGX_HTTP_LOC_CONF_OFFSET,
-        offsetof(ngx_http_reqstat_conf_t,prome_conf),
-        NULL },
+    //   { ngx_string("req_status_prome"),
+    //     NGX_HTTP_LOC_CONF | NGX_CONF_ANY,
+    //     ngx_http_reqstat_prome,
+    //     NGX_HTTP_LOC_CONF_OFFSET,
+    //     offsetof(ngx_http_reqstat_conf_t,prome_conf),
+    //     NULL },
 
       ngx_null_command
 };

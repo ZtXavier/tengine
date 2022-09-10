@@ -9,6 +9,10 @@
         "ngx_http_vhost_traffic_status_module.h": "c",
         "ngx_http_test_status_module.h": "c",
         "ngx_http_vhost_traffic_status_string.h": "c",
-        "ngx_http_vhost_traffic_status_control.h": "c"
+        "ngx_http_vhost_traffic_status_control.h": "c",
+        "ngx_http_vhost_traffic_status_shm.h": "c",
+        "ngx_http_vhost_traffic_status_filter.h": "c",
+        "ngx_http_vhost_traffic_status_variables.h": "c",
+        "ngx_http_vhost_traffic_status_node.h": "c"
     }
 }

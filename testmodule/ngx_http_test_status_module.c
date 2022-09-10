@@ -1,281 +1,307 @@
-#include<ngx_http_test_status_module.h>
-
-static void *
-ngx_http_new_status_create_main_conf(ngx_conf_t *cf){
-    ngx_http_new_status_main_conf_t *nmcf;
-    nmcf = ngx_pcalloc(cf->pool,sizeof(ngx_http_new_status_main_conf_t));
-
-    if(nmcf == NULL){
-        return NULL;
-    }
-
-    if(ngx_arrary_init(&nmcf->zones,cf->pool,4,sizeof(ngx_http_status_main_conf_t*)) != NGX_OK){
-        return NULL;
-    }
-
-    nmcf->interval = NGX_CONF_UNSET_MSEC;
-    nmcf->lock_time = NGX_CONF_UNSET;
-
-    return nmcf;
-}
-
-
-static char *
-ngx_http_new_status_init_main_conf(ngx_conf_t *cf, void *conf){
-    ngx_http_new_status_main_conf_t *nmcf = conf;
-
-    ngx_conf_init_msec_value(nmcf->interval, 3000);
-    ngx_conf_init_value(nmcf->lock_time, 10);
-
-    return NGX_CONF_OK;
-}
-
-
-static void *
-ngx_http_new_status_create_loc_conf(ngx_conf_t *cf){
-    ngx_http_new_status_loc_conf_t *nlcf;
-
-    nlcf = ngx_pcalloc(cf->pool, sizeof(ngx_http_new_status_loc_conf_t));
-    if (nlcf == NULL) {
-        return NULL;
-    }
-
-    nlcf->parent = NGX_CONF_UNSET_PTR;
-
-    return nlcf;
-}
-
-
-
-
-static char *
-ngx_http_new_status_merge_loc_conf(ngx_conf_t *cf, void *parent, void *child)
-{
-    ngx_http_new_status_loc_conf_t *prev = parent;
-    ngx_http_new_status_loc_conf_t *conf = child;
-    ngx_http_new_status_loc_conf_t *nlcf;
-
-    if (conf->parent == NGX_CONF_UNSET_PTR){
-        nlcf = prev;
-
-        if (nlcf->parent == NGX_CONF_UNSET_PTR) {
-            nlcf->parent = NULL;
-        } else {
-            while (nlcf->parent && nlcf->req_zones.nelts == 0) {
-                nlcf = nlcf->parent;
-            }
-        }
-        conf->parent = nlcf->req_zones.nelts ? nlcf : NULL;
-    }
-
-    return NGX_CONF_OK;
-}
-
-
-
-
-// 该函数是作为监控指标的处理回调函数
-static ngx_int_t
-ngx_http_new_status_handler(ngx_http_request_t *r){
-    // 基本的数据类型
-     size_t                              size, item_size;
-    u_char                              long_num, full_info, clear_status;
-    ngx_int_t                           rc;
-    ngx_buf_t                          *b;
-    ngx_uint_t                          i;
-    ngx_array_t                         items;
-    ngx_queue_t                        *q;
-    ngx_chain_t                         out;
-
-    // 下面需要统计的指标
+#include"ngx_http_test_status_module.h"
 
 
 
 
 
-    
-}
+static ngx_int_t ngx_http_test_traffic_status_handler(ngx_http_request_t *r);
+static void ngx_http_test_traffic_status_rbtree_insert_value(
+    ngx_rbtree_node_t *temp, ngx_rbtree_node_t *node,
+    ngx_rbtree_node_t *sentinel);
+static ngx_int_t ngx_http_test_traffic_status_init_zone(
+    ngx_shm_zone_t *shm_zone, void *data);
+static char *ngx_http_test_traffic_status_zone(ngx_conf_t *cf,
+    ngx_command_t *cmd, void *conf);
 
+
+static ngx_int_t ngx_http_test_traffic_status_preconfiguration(ngx_conf_t *cf);
+static ngx_int_t ngx_http_test_traffic_status_init(ngx_conf_t *cf);
+static void *ngx_http_test_traffic_status_create_main_conf(ngx_conf_t *cf);
+static char *ngx_http_test_traffic_status_init_main_conf(ngx_conf_t *cf,
+    void *conf);
+static void *ngx_http_test_traffic_status_create_loc_conf(ngx_conf_t *cf);
+static char *ngx_http_test_traffic_status_merge_loc_conf(ngx_conf_t *cf,
+    void *parent, void *child);
+
+
+static ngx_conf_enum_t  ngx_http_test_traffic_status_display_format[] = {
+    { ngx_string("html"), 
+    NGX_HTTP_TEST_STATUS_FORMAT_HTML },
+
+    { ngx_string("prometheus"), 
+    NGX_HTTP_TEST_STATUS_FORMAT_PROMETHEUS },
+
+    { ngx_null_string, 
+    0 }
+};
+
+
+static ngx_command_t ngx_http_test_traffic_status_commands[] = {
+    { ngx_string("test_traffic_status"),
+      NGX_HTTP_MAIN_CONF|NGX_HTTP_SRV_CONF|NGX_HTTP_LOC_CONF|NGX_CONF_FLAG,
+      ngx_conf_set_flag_slot,
+      NGX_HTTP_LOC_CONF_OFFSET,
+      offsetof(ngx_http_test_traffic_status_loc_conf_t, enable),
+      NULL },
+
+    { ngx_string("test_traffic_status_zone"),
+      NGX_HTTP_MAIN_CONF|NGX_CONF_NOARGS|NGX_CONF_TAKE1,
+      ngx_http_test_traffic_status_zone,
+      0,
+      0,
+      NULL },
+
+    { ngx_string("test_traffic_status_display"),
+      NGX_HTTP_SRV_CONF|NGX_HTTP_LOC_CONF|NGX_CONF_NOARGS|NGX_CONF_TAKE1,
+      ngx_http_test_traffic_status_display,
+      0,
+      0,
+      NULL },
+
+    { ngx_string("test_traffic_status_display_format"),
+      NGX_HTTP_SRV_CONF|NGX_HTTP_LOC_CONF|NGX_CONF_TAKE1,
+      ngx_conf_set_enum_slot,
+      NGX_HTTP_LOC_CONF_OFFSET,
+      offsetof(ngx_http_test_traffic_status_loc_conf_t, format),
+      &ngx_http_test_traffic_status_display_format },
+
+    ngx_null_command
+};
+
+static ngx_http_module_t ngx_http_test_traffic_status_module_ctx = {
+    ngx_http_test_traffic_status_preconfiguration, /* preconfiguration */
+    ngx_http_test_traffic_status_init,             /* postconfiguration */
+
+    ngx_http_test_traffic_status_create_main_conf, /* create main configuration */
+    ngx_http_test_traffic_status_init_main_conf,   /* init main configuration */
+
+    NULL,                                           /* create server configuration */
+    NULL,                                           /* merge server configuration */
+
+    ngx_http_test_traffic_status_create_loc_conf,  /* create location configuration */
+    ngx_http_test_traffic_status_merge_loc_conf,   /* merge location configuration */
+};
 
 
 
 
 static ngx_int_t
-ngx_http_new_status_init(ngx_conf_t *cf)
+ngx_http_test_traffic_status_preconfiguration(ngx_conf_t *cf)
 {
-    ngx_http_handler_pt             *ret;
-    ngx_http_core_main_conf_t    *cmcf;
-    ngx_http_new_status_main_conf_t   *nmcf;
-
-    nmcf = ngx_http_conf_get_module_main_conf(cf,ngx_http_new_status_module);
-
-    if(nmcf->zones.nelts == 0){
-        return NGX_OK;
-    }
-    cmcf = ngx_http_conf_get_module_main_conf(cf,ngx_http_core_module);
-
-    ret = ngx_arrary_push(&cmcf->phases[NGX_HTTP_PREACCESS_PHASE].handlers);
-    if(ret == NULL){
-        return NGX_ERROR;
-    }
-
-    *ret = ngx_http_new_status_handler;
-
-    
-    return NGX_OK;
+    return ngx_http_test_traffic_status_add_variables(cf);
 }
-
-
-static void
-ngx_http_new_status_rbtree_insert_value(ngx_rbtree_node_t *temp,
-        ngx_rbtree_node_t *node, ngx_rbtree_node_t *sentinel)
-{
-    ngx_rbtree_node_t               **p;
-    ngx_http_new_status_node_t      *cn, *cnt;
-
-    for ( ;; ) {
-
-        if (node->key < temp->key) {
-
-            p = &temp->left;
-
-        } else if (node->key > temp->key) {
-
-            p = &temp->right;
-
-        } else { /* node->key == temp->key */
-
-            cn = (ngx_http_new_status_node_t *) node;
-            cnt = (ngx_http_new_status_node_t *) temp;
-
-            p = (ngx_memn2cmp(cn->key, cnt->key, cn->len, cnt->len) < 0)
-                ? &temp->left : &temp->right;
-        }
-
-        if (*p == sentinel) {
-            break;
-        }
-
-        temp = *p;
-    }
-
-    *p = node;
-    node->parent = temp;
-    node->left = sentinel;
-    node->right = sentinel;
-    ngx_rbt_red(node);
-}
-
 
 
 static ngx_int_t
-ngx_http_new_status_init_zone(ngx_shm_zone_t *shm_zone,void *data){
-    size_t      len;
-    ngx_http_new_status_zone_t  *ctx = shm_zone->data;
-    ngx_http_new_status_zone_t *octx = data;
+ngx_http_test_traffic_status_init(ngx_conf_t *cf)
+{
+    ngx_http_handler_pt        *h;
+    ngx_http_core_main_conf_t  *cmcf;
 
-    if(octx != NULL) {
-        if(ngx_strcmp(&octx->key.value,&ctx->key.value) != 0) {
-            ngx_log_error(NGX_LOG_EMERG,shm_zone->shm.log,0,
-            "status_new \" %V \"  ctx.v = \" %V \" octx.v = \" %V \" error",
-            &shm_zone->shm.name,&ctx->key.value,&octx->key.value);
-            return NGX_ERROR;
-        }
-        ctx->sh = octx->sh;
-        ctx->shpool = octx->shpool;
+    ngx_log_debug0(NGX_LOG_DEBUG_HTTP, cf->log, 0,
+                   "http vts init");
 
-        return NGX_OK;
-    }
-
-    ctx->shpool = (ngx_slab_pool_t *) shm_zone->shm.addr;
-    if(shm_zone->shm.exists) {
-        ctx->sh = ctx->shpool->data;
-        return NGX_OK;
-    }
+    cmcf = ngx_http_conf_get_module_main_conf(cf, ngx_http_core_module);
 
 
-    // 申请大内存(page)
-    ctx->sh = ngx_slab_alloc(ctx->shpool,sizeof(ngx_http_new_status_sh_t));
-    if(ctx->sh == NULL) {
+    // /* set handler */
+    // h = ngx_array_push(&cmcf->phases[NGX_HTTP_ACCESS_PHASE].handlers);
+    // if (h == NULL) {
+    //     return NGX_ERROR;
+    // }
+
+    // *h = ngx_http_test_traffic_status_set_handler;
+
+    /* vts handler */
+    h = ngx_array_push(&cmcf->phases[NGX_HTTP_LOG_PHASE].handlers);
+    if (h == NULL) {
         return NGX_ERROR;
     }
 
-    ctx->shpool->data = ctx->sh;
-
-    ngx_rbtree_init(&ctx->sh->rbtree,&ctx->sh->sentinel,
-    ngx_http_new_status_rbtree_insert_value); 
-
-    ngx_queue_init(&ctx->sh->queue);
-
-    ctx->sh->expire_lock = 0;
-
-    len = sizeof("in status zone\"\"") + shm_zone->shm.name.len;
-
-    ctx->shpool->log_ctx = ngx_slab_alloc(ctx->shpool,len);
-    if(ctx->shpool->log_ctx == NULL) {
-        return NGX_ERROR;
-    }
-
-    ngx_sprintf(ctx->shpool->log_ctx,"in status zone \"%V\"%Z",&shm_zone->shm.name);
+    *h = ngx_http_test_traffic_status_handler;
 
     return NGX_OK;
 }
 
 
-static char *
-ngx_http_new_status(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
+
+static void *
+ngx_http_test_traffic_status_create_main_conf(ngx_conf_t *cf)
 {
-    ngx_http_new_status_loc_conf_t *rlcf = conf;
+    ngx_http_test_traffic_status_ctx_t  *ctx;
 
-    ngx_str_t                      *value;
-    ngx_uint_t                      i, m;
-    ngx_shm_zone_t                 *shm_zone, **zones, **pzone;
+    ctx = ngx_pcalloc(cf->pool, sizeof(ngx_http_test_traffic_status_ctx_t));
+    if (ctx == NULL) {
+        return NULL;
+    }
 
-    value = cf->args->elts;
+    ctx->filter_max_node = NGX_CONF_UNSET_UINT;
+    ctx->enable = NGX_CONF_UNSET;
+    ctx->filter_check_duplicate = NGX_CONF_UNSET;
+    ctx->limit_check_duplicate = NGX_CONF_UNSET;
 
-    zones = rlcf->req_zones.elts;
 
-    for (i = 1; i < cf->args->nelts; i++){
-        if (value[i].data[0] == '@') {
-            rlcf->parent = NULL;
+    return ctx;
+}
 
-            if (value[i].len == 1) {
-                continue;
-            }
 
-            value[i].data ++;
-            value[i].len --;
+static void *
+ngx_http_test_traffic_status_create_loc_conf(ngx_conf_t *cf)
+{
+    ngx_http_test_traffic_status_loc_conf_t  *conf;
+
+    conf = ngx_pcalloc(cf->pool, sizeof(ngx_http_test_traffic_status_loc_conf_t));
+    if (conf == NULL) {
+        return NULL;
+    }
+    conf->shm_zone = NGX_CONF_UNSET_PTR;
+    conf->enable = NGX_CONF_UNSET;
+    
+    conf->start_msec = ngx_http_test_traffic_status_current_msec();
+
+    return conf;
+}
+
+
+static char *
+ngx_http_test_traffic_status_merge_loc_conf(ngx_conf_t *cf, void *parent, void *child)
+{
+    ngx_http_test_traffic_status_loc_conf_t *prev = parent;
+    ngx_http_test_traffic_status_loc_conf_t *conf = child;
+
+    ngx_int_t                             rc;
+    ngx_str_t                             name;
+    ngx_shm_zone_t                       *shm_zone;
+    ngx_http_test_traffic_status_ctx_t  *ctx;
+
+    ngx_log_debug0(NGX_LOG_DEBUG_HTTP, cf->log, 0,
+                   "http vts merge loc conf");
+
+    ctx = ngx_http_conf_get_module_main_conf(cf, ngx_http_test_traffic_status_module);
+
+    if (!ctx->enable) {
+        return NGX_CONF_OK;
+    }
+
+    if (conf->filter_keys == NULL) {
+        conf->filter_keys = prev->filter_keys;
+
+    } else {
+        if (conf->filter_check_duplicate == NGX_CONF_UNSET) {
+            conf->filter_check_duplicate = ctx->filter_check_duplicate;
         }
-
-        shm_zone = ngx_shared_memory_add(cf, &value[i], 0,
-                &ngx_http_new_status_module);
-        if (shm_zone == NULL) {
-            return NGX_CONF_ERROR;
-        }
-
-        if (zones == NULL) {
-            if (ngx_array_init(&rlcf->req_zones, cf->pool, 2, sizeof(ngx_shm_zone_t *))
-                    != NGX_OK)
-            {
+        if (conf->filter_check_duplicate != 0) {
+            rc = ngx_http_test_traffic_status_filter_unique(cf->pool, &conf->filter_keys);
+            if (rc != NGX_OK) {
+                ngx_conf_log_error(NGX_LOG_EMERG, cf, 0, "mere_loc_conf::filter_unique() failed");
                 return NGX_CONF_ERROR;
             }
-
-            zones = rlcf->req_zones.elts;
         }
-
-        for (m = 0; m < rlcf->req_zones.nelts; m++) {
-            if (shm_zone == zones[m]) {
-                return "is duplicate";
-            }
-        }
-
-        pzone = ngx_array_push(&rlcf->req_zones);
-        if (pzone == NULL){
-            return NGX_CONF_ERROR;
-        }
-
-        *pzone = shm_zone;
     }
 
+    if (conf->limit_traffics == NULL) {
+        conf->limit_traffics = prev->limit_traffics;
+
+    } else {
+        if (conf->limit_check_duplicate == NGX_CONF_UNSET) {
+            conf->limit_check_duplicate = ctx->limit_check_duplicate;
+        }
+
+        if (conf->limit_check_duplicate != 0) {
+            rc = ngx_http_test_traffic_status_limit_traffic_unique(cf->pool,
+                                                                    &conf->limit_traffics);
+            if (rc != NGX_OK) {
+                ngx_conf_log_error(NGX_LOG_EMERG, cf, 0,
+                                   "mere_loc_conf::limit_traffic_unique(server) failed");
+                return NGX_CONF_ERROR;
+            }
+        }
+    }
+
+    if (conf->limit_filter_traffics == NULL) {
+        conf->limit_filter_traffics = prev->limit_filter_traffics;
+
+    } else {
+        if (conf->limit_check_duplicate == NGX_CONF_UNSET) {
+            conf->limit_check_duplicate = ctx->limit_check_duplicate;
+        }
+
+        if (conf->limit_check_duplicate != 0) {
+            rc = ngx_http_test_traffic_status_limit_traffic_unique(cf->pool,
+                                                                    &conf->limit_filter_traffics);
+            if (rc != NGX_OK) {
+                ngx_conf_log_error(NGX_LOG_EMERG, cf, 0,
+                                   "mere_loc_conf::limit_traffic_unique(filter) failed");
+                return NGX_CONF_ERROR;
+            }
+        }
+    }
+
+    ngx_conf_merge_ptr_value(conf->shm_zone, prev->shm_zone, NULL);
+    ngx_conf_merge_value(conf->enable, prev->enable, 1);
+    name = ctx->shm_name;
+
+    shm_zone = ngx_shared_memory_add(cf, &name, 0,
+                                     &ngx_http_test_traffic_status_module);
+    if (shm_zone == NULL) {
+        return NGX_CONF_ERROR;
+    }
+
+    conf->shm_zone = shm_zone;
+    conf->shm_name = name;
+
     return NGX_CONF_OK;
+}
+
+
+
+
+
+static ngx_int_t
+ngx_http_test_traffic_status_handler(ngx_http_request_t *r)
+{
+    ngx_int_t                                  rc;
+    ngx_http_test_traffic_status_ctx_t       *ctx;
+    ngx_http_test_traffic_status_loc_conf_t  *vtscf;
+
+    ngx_log_debug0(NGX_LOG_DEBUG_HTTP, r->connection->log, 0,
+                   "http vts handler");
+
+    ctx = ngx_http_get_module_main_conf(r, ngx_http_test_traffic_status_module);
+    vtscf = ngx_http_get_module_loc_conf(r, ngx_http_test_traffic_status_module);
+
+    if (!ctx->enable || !vtscf->enable || vtscf->bypass_stats) {
+        return NGX_DECLINED;
+    }
+    if (vtscf->shm_zone == NULL) {
+        return NGX_DECLINED;
+    }
+
+    rc = ngx_http_test_traffic_status_shm_add_server(r);
+    if (rc != NGX_OK) {
+        ngx_log_error(NGX_LOG_ERR, r->connection->log, 0,
+                      "handler::shm_add_server() failed");
+    }
+
+    rc = ngx_http_test_traffic_status_shm_add_upstream(r);
+    if (rc != NGX_OK) {
+        ngx_log_error(NGX_LOG_ERR, r->connection->log, 0,
+                      "handler::shm_add_upstream() failed");
+    }
+
+    rc = ngx_http_test_traffic_status_shm_add_filter(r);
+    if (rc != NGX_OK) {
+        ngx_log_error(NGX_LOG_ERR, r->connection->log, 0,
+                      "handler::shm_add_filter() failed");
+    }
+
+#if (NGX_HTTP_CACHE)
+    rc = ngx_http_test_traffic_status_shm_add_cache(r);
+    if (rc != NGX_OK) {
+        ngx_log_error(NGX_LOG_ERR, r->connection->log, 0,
+                      "handler::shm_add_cache() failed");
+    }
+#endif
+
+    return NGX_DECLINED;
 }
