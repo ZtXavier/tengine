@@ -2,11 +2,22 @@
 #define _NGX_HTTP_TEST_STATUS_MODULE_H_
 
 
-#include<ngx_config.h>
 #include<ngx_core.h>
+#include<ngx_config.h>
 #include<ngx_http.h>
 #include<nginx.h>
 
+
+#include"ngx_http_test_status_module_node.h"
+
+#define NGX_HTTP_TEST_TRAFFIC_STATUS_UPSTREAM_NO          0
+#define NGX_HTTP_TEST_TRAFFIC_STATUS_UPSTREAM_UA          1
+#define NGX_HTTP_TEST_TRAFFIC_STATUS_UPSTREAM_UG          2
+#define NGX_HTTP_TEST_TRAFFIC_STATUS_UPSTREAM_CC          3
+#define NGX_HTTP_TEST_TRAFFIC_STATUS_UPSTREAM_FG          4
+
+#define NGX_HTTP_TEST_TRAFFIC_STATUS_AVERAGE_METHOD_AMM   0
+#define NGX_HTTP_TEST_TRAFFIC_STATUS_AVERAGE_METHOD_WMA   1
 
 #define NGX_HTTP_TEST_STATUS_FORMAT_NONE    0
 #define NGX_HTTP_TEST_STATUS_FORMAT_HTML    1
@@ -16,8 +27,41 @@
 #define NGX_HTTP_TEST_TRAFFIC_STATUS_DEFAULT_SHM_NAME "ngx_test_traffic_status"
 #define NGX_HTTP_TEST_TRAFFIC_STATUS_DEFAULT_SHM_SIZE     0xfffff
 
-#define NGX_HTTP_TEST_TRAFFIC_STATUS_DEFAULT_QUEUE_LEN    64
-#define NGX_HTTP_TEST_TRAFFIC_STATUS_DEFAULT_BUCKET_LEN   32
+
+#define NGX_HTTP_TEST_TRAFFIC_STATUS_KEY_SEPARATOR        (u_char) 0x1f
+
+#define NGX_HTTP_TEST_TRAFFIC_STATUS_NODE_NONE            0
+#define NGX_HTTP_TEST_TRAFFIC_STATUS_NODE_FIND            1
+
+#define NGX_HTTP_TEST_TRAFFIC_STATUS_UPSTREAMS            (u_char *) "NO\0UA\0UG\0CC\0FG\0"
+
+#define ngx_http_test_traffic_status_group_to_string(n) (u_char *) (          \
+    (n > 4)                                                                    \
+    ? NGX_HTTP_TEST_TRAFFIC_STATUS_UPSTREAMS                                  \
+    : NGX_HTTP_TEST_TRAFFIC_STATUS_UPSTREAMS + 3 * n                          \
+)
+
+#define ngx_http_test_traffic_status_string_to_group(s) (unsigned) (          \
+{                                                                              \
+    unsigned n = NGX_HTTP_TEST_TRAFFIC_STATUS_UPSTREAM_NO;                    \
+    if (*s == 'N' && *(s + 1) == 'O') {                                        \
+        n = NGX_HTTP_TEST_TRAFFIC_STATUS_UPSTREAM_NO;                         \
+    } else if (*s == 'U' && *(s + 1) == 'A') {                                 \
+        n = NGX_HTTP_TEST_TRAFFIC_STATUS_UPSTREAM_UA;                         \
+    } else if (*s == 'U' && *(s + 1) == 'G') {                                 \
+        n = NGX_HTTP_TEST_TRAFFIC_STATUS_UPSTREAM_UG;                         \
+    } else if (*s == 'C' && *(s + 1) == 'C') {                                 \
+        n = NGX_HTTP_TEST_TRAFFIC_STATUS_UPSTREAM_CC;                         \
+    } else if (*s == 'F' && *(s + 1) == 'G') {                                 \
+        n = NGX_HTTP_TEST_TRAFFIC_STATUS_UPSTREAM_FG;                         \
+    }                                                                          \
+    n;                                                                         \
+}                                                                              \
+)
+
+#define ngx_http_test_traffic_status_triangle(n) (unsigned) (                 \
+    n * (n + 1) / 2                                                            \
+)
 
 
 
@@ -60,82 +104,11 @@
     }                                                                          \
 }
 
-typedef struct {
-    ngx_msec_t                                             time;
-    ngx_msec_int_t                                         msec;
-} ngx_http_test_traffic_status_node_time_t;
-
-
-typedef struct {
-    ngx_http_test_traffic_status_node_time_t              times[NGX_HTTP_TEST_TRAFFIC_STATUS_DEFAULT_QUEUE_LEN];
-    ngx_int_t                                              front;
-    ngx_int_t                                              rear;
-    ngx_int_t                                              len;
-} ngx_http_test_traffic_status_node_time_queue_t;
-
-
-typedef struct {
-    ngx_msec_int_t                                         msec;
-    ngx_atomic_t                                           counter;
-} ngx_http_test_traffic_status_node_histogram_t;
-
-
-typedef struct {
-    ngx_http_test_traffic_status_node_histogram_t         buckets[NGX_HTTP_TEST_TRAFFIC_STATUS_DEFAULT_BUCKET_LEN];
-    ngx_int_t                                              len;
-} ngx_http_test_traffic_status_node_histogram_bucket_t;
-
-
-typedef struct {
-    /* unsigned type:5 */
-    unsigned                                               type;
-    ngx_atomic_t                                           response_time_counter;
-    ngx_msec_t                                             response_time;
-    ngx_http_test_traffic_status_node_time_queue_t        response_times;
-    ngx_http_test_traffic_status_node_histogram_bucket_t  response_buckets;
-} ngx_http_test_traffic_status_node_upstream_t;
-
-
-
-
-typedef struct {
-    u_char                                                     color;
-    ngx_atomic_t                                           stat_request_counter;
-    ngx_atomic_t                                           stat_in_bytes;
-    ngx_atomic_t                                           stat_out_bytes;
-    ngx_atomic_t                                           stat_1xx_counter;
-    ngx_atomic_t                                           stat_2xx_counter;
-    ngx_atomic_t                                           stat_3xx_counter;
-    ngx_atomic_t                                           stat_4xx_counter;
-    ngx_atomic_t                                           stat_5xx_counter;
-
-    ngx_atomic_t                                           stat_request_time_counter;
-    ngx_msec_t                                             stat_request_time;
-    ngx_http_test_traffic_status_node_time_queue_t        stat_request_times;
-    ngx_http_test_traffic_status_node_histogram_bucket_t  stat_request_buckets;
-
-    /* deals with the overflow of variables */
-    ngx_atomic_t                                           stat_request_counter_oc;
-    ngx_atomic_t                                           stat_in_bytes_oc;
-    ngx_atomic_t                                           stat_out_bytes_oc;
-    ngx_atomic_t                                           stat_1xx_counter_oc;
-    ngx_atomic_t                                           stat_2xx_counter_oc;
-    ngx_atomic_t                                           stat_3xx_counter_oc;
-    ngx_atomic_t                                           stat_4xx_counter_oc;
-    ngx_atomic_t                                           stat_5xx_counter_oc;
-    ngx_atomic_t                                           stat_request_time_counter_oc;
-    ngx_atomic_t                                           stat_response_time_counter_oc;
-
-    ngx_http_test_traffic_status_node_upstream_t          stat_upstream;
-    u_short                                                len;
-    u_char                                                 data[1];
-} ngx_http_test_traffic_status_node_t;
-
 
 typedef struct {
      ngx_rbtree_t                           *rbtree;
 
-    /* array of ngx_http_test_traffic_status_filter_t */
+     /* array of ngx_http_test_traffic_status_filter_t */
     ngx_array_t                            *filter_keys;
 
     /* array of ngx_http_test_traffic_status_limit_t */
@@ -145,7 +118,7 @@ typedef struct {
     ngx_array_t                            *limit_filter_traffics;
 
     /* array of ngx_http_test_traffic_status_filter_match_t */
-    ngx_array_t                            *filter_max_node_matches;
+    ngx_array_t                            *filter_max_node_matches; 
 
     ngx_uint_t                              filter_max_node;
 
@@ -207,3 +180,4 @@ ngx_msec_int_t ngx_http_test_traffic_status_request_time(ngx_http_request_t *r);
 ngx_msec_int_t ngx_http_test_traffic_status_upstream_response_time(ngx_http_request_t *r);
 
 
+#endif

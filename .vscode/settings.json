@@ -13,6 +13,14 @@
         "ngx_http_vhost_traffic_status_shm.h": "c",
         "ngx_http_vhost_traffic_status_filter.h": "c",
         "ngx_http_vhost_traffic_status_variables.h": "c",
-        "ngx_http_vhost_traffic_status_node.h": "c"
+        "ngx_http_vhost_traffic_status_node.h": "c",
+        "ngx_http_vhost_traffic_status_display.h": "c",
+        "ngx_http_vhost_traffic_status_display_prometheus.h": "c",
+        "ngx_http_test_status_node.h": "c",
+        "ngx_http_test_status_module_prome.h": "c",
+        "ngx_http_vhost_traffic_status_display_json.h": "c",
+        "ngx_http_test_status_module_shm.h": "c",
+        "ngx_http_test_status_module_node.h": "c",
+        "ngx_http_test_status_module_variable.h": "c"
     }
 }
