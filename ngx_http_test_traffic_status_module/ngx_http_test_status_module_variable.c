@@ -4,54 +4,44 @@
 
 static ngx_http_variable_t  ngx_http_test_traffic_status_vars[] = {
 
-    { ngx_string("vts_request_counter"), NULL,
+    { ngx_string("test_request_counter"), NULL,
       ngx_http_test_traffic_status_node_variable,
       offsetof(ngx_http_test_traffic_status_node_t, stat_request_counter),
       NGX_HTTP_VAR_NOCACHEABLE, 0 },
 
-    { ngx_string("vts_in_bytes"), NULL,
+    { ngx_string("test_in_bytes"), NULL,
       ngx_http_test_traffic_status_node_variable,
       offsetof(ngx_http_test_traffic_status_node_t, stat_in_bytes),
       NGX_HTTP_VAR_NOCACHEABLE, 0 },
 
-    { ngx_string("vts_out_bytes"), NULL,
+    { ngx_string("test_out_bytes"), NULL,
       ngx_http_test_traffic_status_node_variable,
       offsetof(ngx_http_test_traffic_status_node_t, stat_out_bytes),
       NGX_HTTP_VAR_NOCACHEABLE, 0 },
 
-    { ngx_string("vts_1xx_counter"), NULL,
+    { ngx_string("test_1xx_counter"), NULL,
       ngx_http_test_traffic_status_node_variable,
       offsetof(ngx_http_test_traffic_status_node_t, stat_1xx_counter),
       NGX_HTTP_VAR_NOCACHEABLE, 0 },
 
-    { ngx_string("vts_2xx_counter"), NULL,
+    { ngx_string("test_2xx_counter"), NULL,
       ngx_http_test_traffic_status_node_variable,
       offsetof(ngx_http_test_traffic_status_node_t, stat_2xx_counter),
       NGX_HTTP_VAR_NOCACHEABLE, 0 },
 
-    { ngx_string("vts_3xx_counter"), NULL,
+    { ngx_string("test_3xx_counter"), NULL,
       ngx_http_test_traffic_status_node_variable,
       offsetof(ngx_http_test_traffic_status_node_t, stat_3xx_counter),
       NGX_HTTP_VAR_NOCACHEABLE, 0 },
 
-    { ngx_string("vts_4xx_counter"), NULL,
+    { ngx_string("test_4xx_counter"), NULL,
       ngx_http_test_traffic_status_node_variable,
       offsetof(ngx_http_test_traffic_status_node_t, stat_4xx_counter),
       NGX_HTTP_VAR_NOCACHEABLE, 0 },
 
-    { ngx_string("vts_5xx_counter"), NULL,
+    { ngx_string("test_5xx_counter"), NULL,
       ngx_http_test_traffic_status_node_variable,
       offsetof(ngx_http_test_traffic_status_node_t, stat_5xx_counter),
-      NGX_HTTP_VAR_NOCACHEABLE, 0 },
-
-    { ngx_string("vts_request_time_counter"), NULL,
-      ngx_http_test_traffic_status_node_variable,
-      offsetof(ngx_http_test_traffic_status_node_t, stat_request_time_counter),
-      NGX_HTTP_VAR_NOCACHEABLE, 0 },
-
-    { ngx_string("vts_request_time"), NULL,
-      ngx_http_test_traffic_status_node_variable,
-      offsetof(ngx_http_test_traffic_status_node_t, stat_request_time),
       NGX_HTTP_VAR_NOCACHEABLE, 0 },
 
     { ngx_null_string, NULL, NULL, 0, 0, 0 }
@@ -68,10 +58,10 @@ ngx_http_test_traffic_status_node_variable(ngx_http_request_t *r,
     ngx_str_t                                  key, dst;
     ngx_slab_pool_t                           *shpool;
     ngx_rbtree_node_t                         *node;
-    ngx_http_test_traffic_status_node_t      *vtsn;
-    ngx_http_test_traffic_status_loc_conf_t  *vtscf;
+    ngx_http_test_traffic_status_node_t      *testn;
+    ngx_http_test_traffic_status_loc_conf_t  *testcf;
 
-    vtscf = ngx_http_get_module_loc_conf(r, ngx_http_test_traffic_status_module);
+    testcf = ngx_http_get_module_loc_conf(r, ngx_http_test_traffic_status_module);
 
     ngx_http_test_traffic_status_find_name(r, &dst);
 
@@ -86,7 +76,7 @@ ngx_http_test_traffic_status_node_variable(ngx_http_request_t *r,
         return NGX_ERROR;
     }
 
-    shpool = (ngx_slab_pool_t *) vtscf->shm_zone->shm.addr;
+    shpool = (ngx_slab_pool_t *) testcf->shm_zone->shm.addr;
 
     ngx_shmtx_lock(&shpool->mutex);
 
@@ -101,9 +91,9 @@ ngx_http_test_traffic_status_node_variable(ngx_http_request_t *r,
         goto not_found;
     }
 
-    vtsn = (ngx_http_test_traffic_status_node_t *) &node->color;
+    testn = (ngx_http_test_traffic_status_node_t *) &node->color;
 
-    v->len = ngx_sprintf(p, "%uA", *((ngx_atomic_t *) ((char *) vtsn + data))) - p;
+    v->len = ngx_sprintf(p, "%uA", *((ngx_atomic_t *) ((char *) testn + data))) - p;
     v->valid = 1;
     v->no_cacheable = 0;
     v->not_found = 0;
@@ -117,7 +107,7 @@ not_found:
 
 done:
 
-    vtscf->node_caches[type] = node;
+    testcf->node_caches[type] = node;
 
     ngx_shmtx_unlock(&shpool->mutex);
 

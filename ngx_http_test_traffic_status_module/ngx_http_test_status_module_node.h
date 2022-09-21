@@ -1,44 +1,44 @@
 #ifndef  NGX_HTTP_TEST_STATUS_NODE_H
 #define NGX_HTTP_TEST_STATUS_NODE_H
 
-#define NGX_HTTP_TEST_TRAFFIC_STATUS_DEFAULT_QUEUE_LEN    64
-#define NGX_HTTP_TEST_TRAFFIC_STATUS_DEFAULT_BUCKET_LEN   32
+// #define NGX_HTTP_TEST_TRAFFIC_STATUS_DEFAULT_QUEUE_LEN    64
+// #define NGX_HTTP_TEST_TRAFFIC_STATUS_DEFAULT_BUCKET_LEN   32
 
 
-typedef struct {
-    ngx_msec_t                                             time;
-    ngx_msec_int_t                                         msec;
-} ngx_http_test_traffic_status_node_time_t;
+// typedef struct {
+//     ngx_msec_t                                             time;
+//     ngx_msec_int_t                                         msec;
+// } ngx_http_test_traffic_status_node_time_t;
 
 
-typedef struct {
-    ngx_http_test_traffic_status_node_time_t              times[NGX_HTTP_TEST_TRAFFIC_STATUS_DEFAULT_QUEUE_LEN];
-    ngx_int_t                                              front;
-    ngx_int_t                                              rear;
-    ngx_int_t                                              len;
-} ngx_http_test_traffic_status_node_time_queue_t;
+// typedef struct {
+//     ngx_http_test_traffic_status_node_time_t              times[NGX_HTTP_TEST_TRAFFIC_STATUS_DEFAULT_QUEUE_LEN];
+//     ngx_int_t                                              front;
+//     ngx_int_t                                              rear;
+//     ngx_int_t                                              len;
+// } ngx_http_test_traffic_status_node_time_queue_t;
 
 
-typedef struct {
-    ngx_msec_int_t                                         msec;
-    ngx_atomic_t                                           counter;
-} ngx_http_test_traffic_status_node_histogram_t;
+// typedef struct {
+//     ngx_msec_int_t                                         msec;
+//     ngx_atomic_t                                           counter;
+// } ngx_http_test_traffic_status_node_histogram_t;
 
 
-typedef struct {
-    ngx_http_test_traffic_status_node_histogram_t         buckets[NGX_HTTP_TEST_TRAFFIC_STATUS_DEFAULT_BUCKET_LEN];
-    ngx_int_t                                              len;
-} ngx_http_test_traffic_status_node_histogram_bucket_t;
+// typedef struct {
+//     ngx_http_test_traffic_status_node_histogram_t         buckets[NGX_HTTP_TEST_TRAFFIC_STATUS_DEFAULT_BUCKET_LEN];
+//     ngx_int_t                                              len;
+// } ngx_http_test_traffic_status_node_histogram_bucket_t;
 
 
-typedef struct {
-    /* unsigned type:5 */
-    unsigned                                               type;
-    ngx_atomic_t                                           response_time_counter;
-    ngx_msec_t                                             response_time;
-    ngx_http_test_traffic_status_node_time_queue_t        response_times;
-    ngx_http_test_traffic_status_node_histogram_bucket_t  response_buckets;
-} ngx_http_test_traffic_status_node_upstream_t;
+// typedef struct {
+//     /* unsigned type:5 */
+//     unsigned                                               type;
+//     ngx_atomic_t                                           response_time_counter;
+//     ngx_msec_t                                             response_time;
+//     ngx_http_test_traffic_status_node_time_queue_t        response_times;
+//     ngx_http_test_traffic_status_node_histogram_bucket_t  response_buckets;
+// } ngx_http_test_traffic_status_node_upstream_t;
 
 
 typedef struct {
@@ -52,10 +52,10 @@ typedef struct {
     ngx_atomic_t                                           stat_4xx_counter;
     ngx_atomic_t                                           stat_5xx_counter;
 
-    ngx_atomic_t                                           stat_request_time_counter;
-    ngx_msec_t                                             stat_request_time;
-    ngx_http_test_traffic_status_node_time_queue_t        stat_request_times;
-    ngx_http_test_traffic_status_node_histogram_bucket_t  stat_request_buckets;
+    // ngx_atomic_t                                           stat_request_time_counter;
+    // ngx_msec_t                                             stat_request_time;
+    // ngx_http_test_traffic_status_node_time_queue_t        stat_request_times;
+    // ngx_http_test_traffic_status_node_histogram_bucket_t  stat_request_buckets;
 
     /* deals with the overflow of variables */
     ngx_atomic_t                                           stat_request_counter_oc;
@@ -66,10 +66,10 @@ typedef struct {
     ngx_atomic_t                                           stat_3xx_counter_oc;
     ngx_atomic_t                                           stat_4xx_counter_oc;
     ngx_atomic_t                                           stat_5xx_counter_oc;
-    ngx_atomic_t                                           stat_request_time_counter_oc;
-    ngx_atomic_t                                           stat_response_time_counter_oc;
+    // ngx_atomic_t                                           stat_request_time_counter_oc;
+    // ngx_atomic_t                                           stat_response_time_counter_oc;
 
-    ngx_http_test_traffic_status_node_upstream_t          stat_upstream;
+    // ngx_http_test_traffic_status_node_upstream_t          stat_upstream;
     u_short                                                len;
     u_char                                                 data[1];
 } ngx_http_test_traffic_status_node_t;
@@ -89,37 +89,37 @@ void ngx_http_test_traffic_status_node_init(ngx_http_request_t *r,
 void ngx_http_test_traffic_status_node_set(ngx_http_request_t *r,
     ngx_http_test_traffic_status_node_t *vtsn);
 void ngx_http_test_traffic_status_node_update(ngx_http_request_t *r,
-    ngx_http_test_traffic_status_node_t *vtsn, ngx_msec_int_t ms);
+    ngx_http_test_traffic_status_node_t *vtsn);
 
-void ngx_http_test_traffic_status_node_time_queue_zero(
-    ngx_http_test_traffic_status_node_time_queue_t *q);
-void ngx_http_test_traffic_status_node_time_queue_init(
-    ngx_http_test_traffic_status_node_time_queue_t *q);
-void ngx_http_test_traffic_status_node_time_queue_insert(
-    ngx_http_test_traffic_status_node_time_queue_t *q,
-    ngx_msec_int_t x);
-ngx_int_t ngx_http_test_traffic_status_node_time_queue_push(
-    ngx_http_test_traffic_status_node_time_queue_t *q,
-    ngx_msec_int_t x);
-ngx_int_t ngx_http_test_traffic_status_node_time_queue_pop(
-    ngx_http_test_traffic_status_node_time_queue_t *q,
-    ngx_http_test_traffic_status_node_time_t *x);
-ngx_int_t ngx_http_test_traffic_status_node_time_queue_rear(
-    ngx_http_test_traffic_status_node_time_queue_t *q);
+// void ngx_http_test_traffic_status_node_time_queue_zero(
+//     ngx_http_test_traffic_status_node_time_queue_t *q);
+// void ngx_http_test_traffic_status_node_time_queue_init(
+//     ngx_http_test_traffic_status_node_time_queue_t *q);
+// void ngx_http_test_traffic_status_node_time_queue_insert(
+//     ngx_http_test_traffic_status_node_time_queue_t *q,
+//     ngx_msec_int_t x);
+// ngx_int_t ngx_http_test_traffic_status_node_time_queue_push(
+//     ngx_http_test_traffic_status_node_time_queue_t *q,
+//     ngx_msec_int_t x);
+// ngx_int_t ngx_http_test_traffic_status_node_time_queue_pop(
+//     ngx_http_test_traffic_status_node_time_queue_t *q,
+//     ngx_http_test_traffic_status_node_time_t *x);
+// ngx_int_t ngx_http_test_traffic_status_node_time_queue_rear(
+//     ngx_http_test_traffic_status_node_time_queue_t *q);
 
-ngx_msec_t ngx_http_test_traffic_status_node_time_queue_average(
-    ngx_http_test_traffic_status_node_time_queue_t *q,
-    ngx_int_t method, ngx_msec_t period);
-ngx_msec_t ngx_http_test_traffic_status_node_time_queue_amm(
-    ngx_http_test_traffic_status_node_time_queue_t *q,
-    ngx_msec_t period);
-ngx_msec_t ngx_http_test_traffic_status_node_time_queue_wma(
-    ngx_http_test_traffic_status_node_time_queue_t *q,
-    ngx_msec_t period);
-void ngx_http_test_traffic_status_node_time_queue_merge(
-    ngx_http_test_traffic_status_node_time_queue_t *a,
-    ngx_http_test_traffic_status_node_time_queue_t *b,
-    ngx_msec_t period);
+// ngx_msec_t ngx_http_test_traffic_status_node_time_queue_average(
+//     ngx_http_test_traffic_status_node_time_queue_t *q,
+//     ngx_int_t method, ngx_msec_t period);
+// ngx_msec_t ngx_http_test_traffic_status_node_time_queue_amm(
+//     ngx_http_test_traffic_status_node_time_queue_t *q,
+//     ngx_msec_t period);
+// ngx_msec_t ngx_http_test_traffic_status_node_time_queue_wma(
+//     ngx_http_test_traffic_status_node_time_queue_t *q,
+//     ngx_msec_t period);
+// void ngx_http_test_traffic_status_node_time_queue_merge(
+//     ngx_http_test_traffic_status_node_time_queue_t *a,
+//     ngx_http_test_traffic_status_node_time_queue_t *b,
+//     ngx_msec_t period);
 
 void ngx_http_test_traffic_status_find_name(ngx_http_request_t *r,
     ngx_str_t *buf);

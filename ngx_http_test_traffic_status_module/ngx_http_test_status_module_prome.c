@@ -49,10 +49,10 @@ ngx_http_test_traffic_status_display_prometheus_set_server_node(
 {
     ngx_str_t                                               server;
 /*     ngx_uint_t                                              i, n; */
-    ngx_http_test_traffic_status_loc_conf_t               *vtscf; 
+    // ngx_http_test_traffic_status_loc_conf_t               *vtscf; 
    /*  ngx_http_test_traffic_status_node_histogram_bucket_t  *b; */
 
-    vtscf = ngx_http_get_module_loc_conf(r, ngx_http_test_traffic_status_module);
+    // vtscf = ngx_http_get_module_loc_conf(r, ngx_http_test_traffic_status_module);
 
     server = *key;
 
@@ -65,11 +65,7 @@ ngx_http_test_traffic_status_display_prometheus_set_server_node(
                       &server, vtsn->stat_2xx_counter,
                       &server, vtsn->stat_3xx_counter,
                       &server, vtsn->stat_4xx_counter,
-                      &server, vtsn->stat_5xx_counter,
-                      &server, (double) vtsn->stat_request_time_counter / 1000,
-                      &server, (double) ngx_http_test_traffic_status_node_time_queue_average(
-                                   &vtsn->stat_request_times, vtscf->average_method,
-                                   vtscf->average_period) / 1000);
+                      &server, vtsn->stat_5xx_counter);
 
 
 
@@ -105,7 +101,6 @@ ngx_http_test_traffic_status_display_prometheus_set_server(ngx_http_request_t *r
     if (node != ctx->rbtree->sentinel) {
         vtsn = (ngx_http_test_traffic_status_node_t *) &node->color;
 
-        if (vtsn->stat_upstream.type == NGX_HTTP_TEST_TRAFFIC_STATUS_UPSTREAM_NO) {
             key.data = vtsn->data;
             key.len = vtsn->len;
 
@@ -121,10 +116,10 @@ ngx_http_test_traffic_status_display_prometheus_set_server(ngx_http_request_t *r
             vtscf->stats.stat_3xx_counter += vtsn->stat_3xx_counter;
             vtscf->stats.stat_4xx_counter += vtsn->stat_4xx_counter;
             vtscf->stats.stat_5xx_counter += vtsn->stat_5xx_counter;
-            vtscf->stats.stat_request_time_counter += vtsn->stat_request_time_counter;
-            ngx_http_test_traffic_status_node_time_queue_merge(
-                &vtscf->stats.stat_request_times,
-                &vtsn->stat_request_times, vtscf->average_period);
+            // vtscf->stats.stat_request_time_counter += vtsn->stat_request_time_counter;
+            // ngx_http_test_traffic_status_node_time_queue_merge(
+            //     &vtscf->stats.stat_request_times,
+            //     &vtsn->stat_request_times, vtscf->average_period);
 
 // #if (NGX_HTTP_CACHE)
 //             vtscf->stats.stat_cache_miss_counter +=
@@ -144,48 +139,45 @@ ngx_http_test_traffic_status_display_prometheus_set_server(ngx_http_request_t *r
 //             vtscf->stats.stat_cache_scarce_counter +=
 //                                        vtsn->stat_cache_scarce_counter;
 // #endif
-        }
+        
 
         buf = ngx_http_test_traffic_status_display_prometheus_set_server(r, buf, node->left);
         buf = ngx_http_test_traffic_status_display_prometheus_set_server(r, buf, node->right);
-    }
+}
 
     return buf;
 }
 
 
 
-u_char *
-ngx_http_test_traffic_status_display_prometheus_set_filter_node(
-    ngx_http_request_t *r,
-    u_char *buf, ngx_str_t *key,
-    ngx_http_test_traffic_status_node_t *vtsn)
-{
-    ngx_str_t                                               filter, filter_name;
-/*     ngx_uint_t                                              i, n; */
-    ngx_http_test_traffic_status_loc_conf_t               *vtscf;
-/*     ngx_http_test_traffic_status_node_histogram_bucket_t  *b; */
+// u_char *
+// ngx_http_test_traffic_status_display_prometheus_set_filter_node(
+//     ngx_http_request_t *r,
+//     u_char *buf, ngx_str_t *key,
+//     ngx_http_test_traffic_status_node_t *vtsn)
+// {
+//     ngx_str_t                                               filter, filter_name;
+// /*     ngx_uint_t                                              i, n; */
+//     ngx_http_test_traffic_status_loc_conf_t               *vtscf;
+// /*     ngx_http_test_traffic_status_node_histogram_bucket_t  *b; */
 
-    vtscf = ngx_http_get_module_loc_conf(r, ngx_http_test_traffic_status_module);
+//     vtscf = ngx_http_get_module_loc_conf(r, ngx_http_test_traffic_status_module);
 
-    filter = filter_name = *key;
+//     filter = filter_name = *key;
 
-    (void) ngx_http_test_traffic_status_node_position_key(&filter, 1);
-    (void) ngx_http_test_traffic_status_node_position_key(&filter_name, 2);
+//     (void) ngx_http_test_traffic_status_node_position_key(&filter, 1);
+//     (void) ngx_http_test_traffic_status_node_position_key(&filter_name, 2);
 
-    buf = ngx_sprintf(buf, NGX_HTTP_TEST_TRAFFIC_STATUS_PROMETHEUS_FMT_FILTER,
-                      &filter, &filter_name, vtsn->stat_in_bytes,
-                      &filter, &filter_name, vtsn->stat_out_bytes,
-                      &filter, &filter_name, vtsn->stat_1xx_counter,
-                      &filter, &filter_name, vtsn->stat_2xx_counter,
-                      &filter, &filter_name, vtsn->stat_3xx_counter,
-                      &filter, &filter_name, vtsn->stat_4xx_counter,
-                      &filter, &filter_name, vtsn->stat_5xx_counter,
-                      &filter, &filter_name, (double) vtsn->stat_request_time_counter / 1000,
-                      &filter, &filter_name,
-                      (double) ngx_http_test_traffic_status_node_time_queue_average(
-                          &vtsn->stat_request_times, vtscf->average_method,
-                          vtscf->average_period) / 1000);
+//     buf = ngx_sprintf(buf, NGX_HTTP_TEST_TRAFFIC_STATUS_PROMETHEUS_FMT_FILTER,
+//                       &filter, &filter_name, vtsn->stat_in_bytes,
+//                       &filter, &filter_name, vtsn->stat_out_bytes,
+//                       &filter, &filter_name, vtsn->stat_1xx_counter,
+//                       &filter, &filter_name, vtsn->stat_2xx_counter,
+//                       &filter, &filter_name, vtsn->stat_3xx_counter,
+//                       &filter, &filter_name, vtsn->stat_4xx_counter,
+//                       &filter, &filter_name, vtsn->stat_5xx_counter,
+//                       &filter, &filter_name, (double) vtsn->stat_request_time_counter / 1000,
+//                       &filter, &filter_name);
 
     // /* histogram */
     // b = &vtsn->stat_request_buckets;
@@ -229,8 +221,8 @@ ngx_http_test_traffic_status_display_prometheus_set_filter_node(
 //                       &filter, &filter_name, vtsn->stat_cache_scarce_counter);
 // #endif
 
-    return buf;
-}
+//     return buf;
+// }
 
 
 // u_char *
@@ -498,8 +490,8 @@ ngx_http_test_traffic_status_display_prometheus_set(ngx_http_request_t *r,
     node = ctx->rbtree->root;
 
     /* init stats */
-    ngx_memzero(&vtscf->stats, sizeof(vtscf->stats));
-    ngx_http_test_traffic_status_node_time_queue_init(&vtscf->stats.stat_request_times);
+    // ngx_memzero(&vtscf->stats, sizeof(vtscf->stats));
+    // ngx_http_test_traffic_status_node_time_queue_init(&vtscf->stats.stat_request_times);
 
     /* main & connections */
     buf = ngx_http_test_traffic_status_display_prometheus_set_main(r, buf);

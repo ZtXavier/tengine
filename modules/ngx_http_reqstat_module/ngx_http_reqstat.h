@@ -75,7 +75,6 @@ typedef struct {
     ngx_int_t                    index;
     ngx_array_t                 *user_select;
     ngx_array_t                 *user_defined_str;
-    ngx_array_t                 *prome_conf;
 } ngx_http_reqstat_conf_t;
 
 

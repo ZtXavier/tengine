@@ -21,6 +21,8 @@
         "ngx_http_vhost_traffic_status_display_json.h": "c",
         "ngx_http_test_status_module_shm.h": "c",
         "ngx_http_test_status_module_node.h": "c",
-        "ngx_http_test_status_module_variable.h": "c"
+        "ngx_http_test_status_module_variable.h": "c",
+        "ngx_http_test_status_module_filter.h": "c",
+        "ngx_http_vhost_traffic_status_limit.h": "c"
     }
 }

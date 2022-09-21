@@ -226,3 +226,1022 @@
 2022/09/15 15:56:25 [emerg] 93312#0: "test_traffic_status_display_format" directive is duplicate in /home/zt/tengine/tengine//conf/nginx.conf:77
 2022/09/15 15:59:11 [emerg] 93593#0: "test_traffic_status_display_format" directive is duplicate in /home/zt/tengine/tengine//conf/nginx.conf:77
 2022/09/15 23:05:42 [emerg] 2813#0: "test_traffic_status_display_format" directive is duplicate in /home/zt/tengine/tengine//conf/nginx.conf:77
+2022/09/18 16:24:41 [emerg] 71931#0: "test_traffic_status_display_format" directive is duplicate in /home/zt/tengine/tengine//conf/nginx.conf:77
+2022/09/18 16:31:11 [alert] 72491#0: worker process 72493 exited on signal 11 (core dumped)
+2022/09/18 16:31:11 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 72493
+2022/09/18 16:31:11 [alert] 72491#0: worker process 72825 exited on signal 11 (core dumped)
+2022/09/18 16:31:11 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 72825
+2022/09/18 16:31:11 [error] 72833#0: *4 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 16:31:11 [alert] 72491#0: worker process 72833 exited on signal 11 (core dumped)
+2022/09/18 16:31:11 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 72833
+2022/09/18 16:31:12 [alert] 72491#0: worker process 72842 exited on signal 11 (core dumped)
+2022/09/18 16:31:12 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 72842
+2022/09/18 16:31:13 [alert] 72491#0: worker process 72852 exited on signal 11 (core dumped)
+2022/09/18 16:31:13 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 72852
+2022/09/18 16:31:14 [alert] 72491#0: worker process 72858 exited on signal 11 (core dumped)
+2022/09/18 16:31:14 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 72858
+2022/09/18 16:31:15 [alert] 72491#0: worker process 72866 exited on signal 11 (core dumped)
+2022/09/18 16:31:15 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 72866
+2022/09/18 16:31:16 [alert] 72491#0: worker process 72875 exited on signal 11 (core dumped)
+2022/09/18 16:31:16 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 72875
+2022/09/18 16:31:17 [alert] 72491#0: worker process 72881 exited on signal 11 (core dumped)
+2022/09/18 16:31:17 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 72881
+2022/09/18 16:31:18 [alert] 72491#0: worker process 72890 exited on signal 11 (core dumped)
+2022/09/18 16:31:18 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 72890
+2022/09/18 16:31:19 [alert] 72491#0: worker process 72897 exited on signal 11 (core dumped)
+2022/09/18 16:31:19 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 72897
+2022/09/18 16:31:20 [alert] 72491#0: worker process 72907 exited on signal 11 (core dumped)
+2022/09/18 16:31:20 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 72907
+2022/09/18 16:31:21 [alert] 72491#0: worker process 72917 exited on signal 11 (core dumped)
+2022/09/18 16:31:21 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 72917
+2022/09/18 16:31:22 [alert] 72491#0: worker process 72925 exited on signal 11 (core dumped)
+2022/09/18 16:31:22 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 72925
+2022/09/18 16:31:23 [alert] 72491#0: worker process 72931 exited on signal 11 (core dumped)
+2022/09/18 16:31:23 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 72931
+2022/09/18 16:31:24 [alert] 72491#0: worker process 72938 exited on signal 11 (core dumped)
+2022/09/18 16:31:24 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 72938
+2022/09/18 16:31:25 [alert] 72491#0: worker process 72946 exited on signal 11 (core dumped)
+2022/09/18 16:31:25 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 72946
+2022/09/18 16:31:26 [alert] 72491#0: worker process 72954 exited on signal 11 (core dumped)
+2022/09/18 16:31:26 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 72954
+2022/09/18 16:31:27 [alert] 72491#0: worker process 72961 exited on signal 11 (core dumped)
+2022/09/18 16:31:27 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 72961
+2022/09/18 16:31:28 [alert] 72491#0: worker process 72970 exited on signal 11 (core dumped)
+2022/09/18 16:31:28 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 72970
+2022/09/18 16:31:29 [alert] 72491#0: worker process 72976 exited on signal 11 (core dumped)
+2022/09/18 16:31:29 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 72976
+2022/09/18 16:31:30 [alert] 72491#0: worker process 72985 exited on signal 11 (core dumped)
+2022/09/18 16:31:30 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 72985
+2022/09/18 16:31:31 [alert] 72491#0: worker process 72991 exited on signal 11 (core dumped)
+2022/09/18 16:31:31 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 72991
+2022/09/18 16:31:32 [alert] 72491#0: worker process 73001 exited on signal 11 (core dumped)
+2022/09/18 16:31:32 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 73001
+2022/09/18 16:31:33 [alert] 72491#0: worker process 73014 exited on signal 11 (core dumped)
+2022/09/18 16:31:33 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 73014
+2022/09/18 16:31:34 [alert] 72491#0: worker process 73022 exited on signal 11 (core dumped)
+2022/09/18 16:31:34 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 73022
+2022/09/18 16:31:35 [alert] 72491#0: worker process 73028 exited on signal 11 (core dumped)
+2022/09/18 16:31:35 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 73028
+2022/09/18 16:31:36 [alert] 72491#0: worker process 73036 exited on signal 11 (core dumped)
+2022/09/18 16:31:36 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 73036
+2022/09/18 16:31:37 [alert] 72491#0: worker process 73045 exited on signal 11 (core dumped)
+2022/09/18 16:31:37 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 73045
+2022/09/18 16:31:38 [alert] 72491#0: worker process 73054 exited on signal 11 (core dumped)
+2022/09/18 16:31:38 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 73054
+2022/09/18 16:31:39 [alert] 72491#0: worker process 73063 exited on signal 11 (core dumped)
+2022/09/18 16:31:39 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 73063
+2022/09/18 16:31:40 [alert] 72491#0: worker process 73105 exited on signal 11 (core dumped)
+2022/09/18 16:31:40 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 73105
+2022/09/18 16:31:41 [alert] 72491#0: worker process 73119 exited on signal 11 (core dumped)
+2022/09/18 16:31:41 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 73119
+2022/09/18 16:31:42 [alert] 72491#0: worker process 73129 exited on signal 11 (core dumped)
+2022/09/18 16:31:42 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 73129
+2022/09/18 16:31:43 [alert] 72491#0: worker process 73135 exited on signal 11 (core dumped)
+2022/09/18 16:31:43 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 73135
+2022/09/18 16:31:44 [alert] 72491#0: worker process 73144 exited on signal 11 (core dumped)
+2022/09/18 16:31:44 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 73144
+2022/09/18 16:31:45 [alert] 72491#0: worker process 73156 exited on signal 11 (core dumped)
+2022/09/18 16:31:45 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 73156
+2022/09/18 16:31:46 [alert] 72491#0: worker process 73170 exited on signal 11 (core dumped)
+2022/09/18 16:31:46 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 73170
+2022/09/18 16:31:47 [alert] 72491#0: worker process 73180 exited on signal 11 (core dumped)
+2022/09/18 16:31:47 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 73180
+2022/09/18 16:31:48 [alert] 72491#0: worker process 73187 exited on signal 11 (core dumped)
+2022/09/18 16:31:48 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 73187
+2022/09/18 16:31:49 [alert] 72491#0: worker process 73194 exited on signal 11 (core dumped)
+2022/09/18 16:31:49 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 73194
+2022/09/18 16:31:50 [alert] 72491#0: worker process 73208 exited on signal 11 (core dumped)
+2022/09/18 16:31:50 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 73208
+2022/09/18 16:31:51 [alert] 72491#0: worker process 73220 exited on signal 11 (core dumped)
+2022/09/18 16:31:51 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 73220
+2022/09/18 16:31:52 [alert] 72491#0: worker process 73235 exited on signal 11 (core dumped)
+2022/09/18 16:31:52 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 73235
+2022/09/18 16:31:53 [alert] 72491#0: worker process 73276 exited on signal 11 (core dumped)
+2022/09/18 16:31:53 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 73276
+2022/09/18 16:31:54 [alert] 72491#0: worker process 73285 exited on signal 11 (core dumped)
+2022/09/18 16:31:54 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 73285
+2022/09/18 16:31:55 [alert] 72491#0: worker process 73291 exited on signal 11 (core dumped)
+2022/09/18 16:31:55 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 73291
+2022/09/18 16:31:56 [alert] 72491#0: worker process 73311 exited on signal 11 (core dumped)
+2022/09/18 16:31:56 [alert] 72491#0: shared memory zone "ngx_test_traffic_status" was locked by 73311
+2022/09/18 16:32:03 [emerg] 73438#0: "test_traffic_status_display_format" directive is duplicate in /home/zt/tengine/tengine//conf/nginx.conf:77
+2022/09/18 16:43:04 [emerg] 77378#0: "prome_traffic_status_display_format" directive is duplicate in /home/zt/tengine/tengine//conf/nginx.conf:77
+2022/09/18 16:58:26 [emerg] 78164#0: "prome_traffic_status_display_format" directive is duplicate in /home/zt/tengine/tengine//conf/nginx.conf:77
+2022/09/18 16:58:46 [emerg] 78247#0: unknown directive "test_traffic_status_display_format" in /home/zt/tengine/tengine//conf/nginx.conf:77
+2022/09/18 17:35:41 [emerg] 91535#0: unknown directive "test_traffic_status_zone" in /home/zt/tengine/tengine//conf/nginx.conf:26
+2022/09/18 17:36:01 [emerg] 91655#0: unknown directive "test_traffic_status_zone" in /home/zt/tengine/tengine//conf/nginx.conf:26
+2022/09/18 17:37:51 [emerg] 92034#0: unknown directive "test_traffic_status_zone" in /home/zt/tengine/tengine//conf/nginx.conf:26
+2022/09/18 17:38:11 [emerg] 92135#0: unknown directive "test_traffic_status_zone" in /home/zt/tengine/tengine//conf/nginx.conf:26
+2022/09/18 17:38:31 [emerg] 92331#0: unknown directive "test_traffic_status_zone" in /home/zt/tengine/tengine//conf/nginx.conf:26
+2022/09/18 17:38:51 [notice] 92481#0: signal process started
+2022/09/18 17:38:51 [alert] 92481#0: kill(72491, 1) failed (3: No such process)
+2022/09/18 17:39:23 [error] 92558#0: *1 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/09/18 17:39:23 [error] 92558#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/09/18 17:40:06 [error] 92558#0: *3 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 17:40:19 [error] 92558#0: *4 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 17:40:53 [notice] 92916#0: signal process started
+2022/09/18 17:44:53 [notice] 93434#0: signal process started
+2022/09/18 17:46:00 [notice] 93699#0: signal process started
+2022/09/18 17:46:09 [error] 93700#0: *9 open() "/home/zt/tengine/tengine//html/status" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /status HTTP/1.1", host: "127.0.0.1"
+2022/09/18 17:56:13 [emerg] 98290#0: the duplicate "vts_request_counter" variable in /home/zt/tengine/tengine//conf/nginx.conf:18
+2022/09/18 17:57:31 [emerg] 98403#0: the duplicate "vts_request_counter" variable in /home/zt/tengine/tengine//conf/nginx.conf:18
+2022/09/18 17:57:44 [emerg] 98496#0: the duplicate "vts_request_counter" variable in /home/zt/tengine/tengine//conf/nginx.conf:18
+2022/09/18 17:58:15 [emerg] 98772#0: the duplicate "vts_request_counter" variable in /home/zt/tengine/tengine//conf/nginx.conf:18
+2022/09/18 17:58:21 [emerg] 98901#0: the duplicate "vts_request_counter" variable in /home/zt/tengine/tengine//conf/nginx.conf:18
+2022/09/18 18:03:21 [emerg] 99413#0: the duplicate "vts_request_counter" variable in /home/zt/tengine/tengine//conf/nginx.conf:18
+2022/09/18 18:04:01 [emerg] 99674#0: the duplicate "vts_request_counter" variable in /home/zt/tengine/tengine//conf/nginx.conf:18
+2022/09/18 18:06:18 [emerg] 103317#0: "test_traffic_status_display_format" directive is duplicate in /home/zt/tengine/tengine//conf/nginx.conf:76
+2022/09/18 18:15:00 [emerg] 2539#0: "test_traffic_status_display_format" directive is duplicate in /home/zt/tengine/tengine//conf/nginx.conf:76
+2022/09/18 18:19:12 [emerg] 2801#0: "test_traffic_status_display_format" directive is duplicate in /home/zt/tengine/tengine//conf/nginx.conf:76
+2022/09/18 22:12:43 [alert] 10870#0: worker process 10871 exited on signal 11 (core dumped)
+2022/09/18 22:12:43 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 10871
+2022/09/18 22:12:43 [alert] 10870#0: worker process 11221 exited on signal 11 (core dumped)
+2022/09/18 22:12:43 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11221
+2022/09/18 22:12:43 [error] 11231#0: *4 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:12:43 [alert] 10870#0: worker process 11231 exited on signal 11 (core dumped)
+2022/09/18 22:12:43 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11231
+2022/09/18 22:12:44 [alert] 10870#0: worker process 11239 exited on signal 11 (core dumped)
+2022/09/18 22:12:44 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11239
+2022/09/18 22:12:45 [alert] 10870#0: worker process 11246 exited on signal 11 (core dumped)
+2022/09/18 22:12:45 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11246
+2022/09/18 22:12:46 [alert] 10870#0: worker process 11254 exited on signal 11 (core dumped)
+2022/09/18 22:12:46 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11254
+2022/09/18 22:12:47 [alert] 10870#0: worker process 11261 exited on signal 11 (core dumped)
+2022/09/18 22:12:47 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11261
+2022/09/18 22:12:48 [alert] 10870#0: worker process 11270 exited on signal 11 (core dumped)
+2022/09/18 22:12:48 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11270
+2022/09/18 22:12:49 [alert] 10870#0: worker process 11278 exited on signal 11 (core dumped)
+2022/09/18 22:12:49 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11278
+2022/09/18 22:12:50 [alert] 10870#0: worker process 11285 exited on signal 11 (core dumped)
+2022/09/18 22:12:50 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11285
+2022/09/18 22:12:51 [alert] 10870#0: worker process 11291 exited on signal 11 (core dumped)
+2022/09/18 22:12:51 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11291
+2022/09/18 22:12:52 [alert] 10870#0: worker process 11302 exited on signal 11 (core dumped)
+2022/09/18 22:12:52 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11302
+2022/09/18 22:12:53 [alert] 10870#0: worker process 11311 exited on signal 11 (core dumped)
+2022/09/18 22:12:53 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11311
+2022/09/18 22:12:54 [alert] 10870#0: worker process 11318 exited on signal 11 (core dumped)
+2022/09/18 22:12:54 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11318
+2022/09/18 22:12:55 [alert] 10870#0: worker process 11326 exited on signal 11 (core dumped)
+2022/09/18 22:12:55 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11326
+2022/09/18 22:12:56 [alert] 10870#0: worker process 11340 exited on signal 11 (core dumped)
+2022/09/18 22:12:56 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11340
+2022/09/18 22:12:57 [alert] 10870#0: worker process 11347 exited on signal 11 (core dumped)
+2022/09/18 22:12:57 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11347
+2022/09/18 22:12:58 [alert] 10870#0: worker process 11356 exited on signal 11 (core dumped)
+2022/09/18 22:12:58 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11356
+2022/09/18 22:12:59 [alert] 10870#0: worker process 11362 exited on signal 11 (core dumped)
+2022/09/18 22:12:59 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11362
+2022/09/18 22:13:00 [alert] 10870#0: worker process 11369 exited on signal 11 (core dumped)
+2022/09/18 22:13:00 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11369
+2022/09/18 22:13:01 [alert] 10870#0: worker process 11376 exited on signal 11 (core dumped)
+2022/09/18 22:13:01 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11376
+2022/09/18 22:13:02 [alert] 10870#0: worker process 11384 exited on signal 11 (core dumped)
+2022/09/18 22:13:02 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11384
+2022/09/18 22:13:03 [alert] 10870#0: worker process 11392 exited on signal 11 (core dumped)
+2022/09/18 22:13:03 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11392
+2022/09/18 22:13:04 [alert] 10870#0: worker process 11420 exited on signal 11 (core dumped)
+2022/09/18 22:13:04 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11420
+2022/09/18 22:13:05 [alert] 10870#0: worker process 11427 exited on signal 11 (core dumped)
+2022/09/18 22:13:05 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11427
+2022/09/18 22:13:06 [alert] 10870#0: worker process 11434 exited on signal 11 (core dumped)
+2022/09/18 22:13:06 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11434
+2022/09/18 22:13:07 [alert] 10870#0: worker process 11441 exited on signal 11 (core dumped)
+2022/09/18 22:13:07 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11441
+2022/09/18 22:13:08 [alert] 10870#0: worker process 11449 exited on signal 11 (core dumped)
+2022/09/18 22:13:08 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11449
+2022/09/18 22:13:09 [alert] 10870#0: worker process 11463 exited on signal 11 (core dumped)
+2022/09/18 22:13:09 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11463
+2022/09/18 22:13:10 [alert] 10870#0: worker process 11474 exited on signal 11 (core dumped)
+2022/09/18 22:13:10 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11474
+2022/09/18 22:13:11 [alert] 10870#0: worker process 11483 exited on signal 11 (core dumped)
+2022/09/18 22:13:11 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11483
+2022/09/18 22:13:12 [alert] 10870#0: worker process 11491 exited on signal 11 (core dumped)
+2022/09/18 22:13:12 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11491
+2022/09/18 22:13:13 [alert] 10870#0: worker process 11502 exited on signal 11 (core dumped)
+2022/09/18 22:13:13 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11502
+2022/09/18 22:13:14 [alert] 10870#0: worker process 11511 exited on signal 11 (core dumped)
+2022/09/18 22:13:14 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11511
+2022/09/18 22:13:15 [notice] 11524#0: signal process started
+2022/09/18 22:13:15 [alert] 10870#0: worker process 11525 exited on signal 11 (core dumped)
+2022/09/18 22:13:15 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11525
+2022/09/18 22:13:16 [alert] 10870#0: worker process 11558 exited on signal 11 (core dumped)
+2022/09/18 22:13:16 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11558
+2022/09/18 22:13:17 [alert] 10870#0: worker process 11572 exited on signal 11 (core dumped)
+2022/09/18 22:13:17 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11572
+2022/09/18 22:13:18 [alert] 10870#0: worker process 11583 exited on signal 11 (core dumped)
+2022/09/18 22:13:18 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11583
+2022/09/18 22:13:18 [error] 11590#0: *41 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:13:18 [alert] 10870#0: worker process 11590 exited on signal 11 (core dumped)
+2022/09/18 22:13:18 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11590
+2022/09/18 22:13:30 [alert] 10870#0: worker process 11597 exited on signal 11 (core dumped)
+2022/09/18 22:13:30 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11597
+2022/09/18 22:13:30 [error] 11653#0: *44 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:13:30 [alert] 10870#0: worker process 11653 exited on signal 11 (core dumped)
+2022/09/18 22:13:30 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11653
+2022/09/18 22:19:13 [alert] 10870#0: worker process 11659 exited on signal 11 (core dumped)
+2022/09/18 22:19:13 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 11659
+2022/09/18 22:19:13 [error] 12128#0: *47 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:19:13 [alert] 10870#0: worker process 12128 exited on signal 11 (core dumped)
+2022/09/18 22:19:13 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12128
+2022/09/18 22:19:14 [alert] 10870#0: worker process 12134 exited on signal 11 (core dumped)
+2022/09/18 22:19:14 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12134
+2022/09/18 22:19:14 [error] 12146#0: *50 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:19:14 [alert] 10870#0: worker process 12146 exited on signal 11 (core dumped)
+2022/09/18 22:19:14 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12146
+2022/09/18 22:19:14 [alert] 10870#0: worker process 12152 exited on signal 11 (core dumped)
+2022/09/18 22:19:14 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12152
+2022/09/18 22:19:14 [error] 12163#0: *53 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:19:14 [alert] 10870#0: worker process 12163 exited on signal 11 (core dumped)
+2022/09/18 22:19:14 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12163
+2022/09/18 22:19:14 [alert] 10870#0: worker process 12171 exited on signal 11 (core dumped)
+2022/09/18 22:19:14 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12171
+2022/09/18 22:19:14 [error] 12184#0: *56 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:19:15 [alert] 10870#0: worker process 12184 exited on signal 11 (core dumped)
+2022/09/18 22:19:15 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12184
+2022/09/18 22:19:15 [alert] 10870#0: worker process 12193 exited on signal 11 (core dumped)
+2022/09/18 22:19:15 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12193
+2022/09/18 22:19:15 [error] 12201#0: *59 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:19:15 [alert] 10870#0: worker process 12201 exited on signal 11 (core dumped)
+2022/09/18 22:19:15 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12201
+2022/09/18 22:19:15 [alert] 10870#0: worker process 12208 exited on signal 11 (core dumped)
+2022/09/18 22:19:15 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12208
+2022/09/18 22:19:15 [error] 12216#0: *62 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:19:15 [alert] 10870#0: worker process 12216 exited on signal 11 (core dumped)
+2022/09/18 22:19:15 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12216
+2022/09/18 22:19:16 [alert] 10870#0: worker process 12224 exited on signal 11 (core dumped)
+2022/09/18 22:19:16 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12224
+2022/09/18 22:19:16 [error] 12233#0: *65 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:19:16 [alert] 10870#0: worker process 12233 exited on signal 11 (core dumped)
+2022/09/18 22:19:16 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12233
+2022/09/18 22:19:16 [alert] 10870#0: worker process 12239 exited on signal 11 (core dumped)
+2022/09/18 22:19:16 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12239
+2022/09/18 22:19:16 [error] 12246#0: *68 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:19:16 [alert] 10870#0: worker process 12246 exited on signal 11 (core dumped)
+2022/09/18 22:19:16 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12246
+2022/09/18 22:19:21 [alert] 10870#0: worker process 12253 exited on signal 11 (core dumped)
+2022/09/18 22:19:21 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12253
+2022/09/18 22:19:21 [error] 12262#0: *71 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:19:21 [alert] 10870#0: worker process 12262 exited on signal 11 (core dumped)
+2022/09/18 22:19:21 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12262
+2022/09/18 22:19:21 [alert] 10870#0: worker process 12271 exited on signal 11 (core dumped)
+2022/09/18 22:19:21 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12271
+2022/09/18 22:19:21 [error] 12282#0: *74 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:19:22 [alert] 10870#0: worker process 12282 exited on signal 11 (core dumped)
+2022/09/18 22:19:22 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12282
+2022/09/18 22:19:22 [alert] 10870#0: worker process 12288 exited on signal 11 (core dumped)
+2022/09/18 22:19:22 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12288
+2022/09/18 22:19:22 [error] 12296#0: *77 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:19:22 [alert] 10870#0: worker process 12296 exited on signal 11 (core dumped)
+2022/09/18 22:19:22 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12296
+2022/09/18 22:19:23 [alert] 10870#0: worker process 12302 exited on signal 11 (core dumped)
+2022/09/18 22:19:23 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12302
+2022/09/18 22:19:23 [error] 12310#0: *80 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:19:23 [alert] 10870#0: worker process 12310 exited on signal 11 (core dumped)
+2022/09/18 22:19:23 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12310
+2022/09/18 22:19:23 [alert] 10870#0: worker process 12317 exited on signal 11 (core dumped)
+2022/09/18 22:19:23 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12317
+2022/09/18 22:19:23 [error] 12324#0: *83 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:19:23 [alert] 10870#0: worker process 12324 exited on signal 11 (core dumped)
+2022/09/18 22:19:23 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12324
+2022/09/18 22:19:23 [alert] 10870#0: worker process 12330 exited on signal 11 (core dumped)
+2022/09/18 22:19:23 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12330
+2022/09/18 22:19:23 [error] 12338#0: *86 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:19:23 [alert] 10870#0: worker process 12338 exited on signal 11 (core dumped)
+2022/09/18 22:19:23 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12338
+2022/09/18 22:19:24 [alert] 10870#0: worker process 12344 exited on signal 11 (core dumped)
+2022/09/18 22:19:24 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12344
+2022/09/18 22:19:24 [error] 12352#0: *89 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:19:24 [alert] 10870#0: worker process 12352 exited on signal 11 (core dumped)
+2022/09/18 22:19:24 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12352
+2022/09/18 22:19:24 [alert] 10870#0: worker process 12358 exited on signal 11 (core dumped)
+2022/09/18 22:19:24 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12358
+2022/09/18 22:19:24 [error] 12365#0: *92 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:19:24 [alert] 10870#0: worker process 12365 exited on signal 11 (core dumped)
+2022/09/18 22:19:24 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12365
+2022/09/18 22:19:25 [alert] 10870#0: worker process 12372 exited on signal 11 (core dumped)
+2022/09/18 22:19:25 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12372
+2022/09/18 22:19:25 [error] 12380#0: *95 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:19:25 [alert] 10870#0: worker process 12380 exited on signal 11 (core dumped)
+2022/09/18 22:19:25 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12380
+2022/09/18 22:19:37 [alert] 10870#0: worker process 12387 exited on signal 11 (core dumped)
+2022/09/18 22:19:37 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12387
+2022/09/18 22:19:37 [error] 12398#0: *98 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:19:37 [alert] 10870#0: worker process 12398 exited on signal 11 (core dumped)
+2022/09/18 22:19:37 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12398
+2022/09/18 22:19:37 [alert] 10870#0: worker process 12405 exited on signal 11 (core dumped)
+2022/09/18 22:19:37 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12405
+2022/09/18 22:19:37 [error] 12413#0: *101 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:19:37 [alert] 10870#0: worker process 12413 exited on signal 11 (core dumped)
+2022/09/18 22:19:37 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12413
+2022/09/18 22:19:38 [alert] 10870#0: worker process 12419 exited on signal 11 (core dumped)
+2022/09/18 22:19:38 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12419
+2022/09/18 22:19:38 [error] 12427#0: *104 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:19:38 [alert] 10870#0: worker process 12427 exited on signal 11 (core dumped)
+2022/09/18 22:19:38 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12427
+2022/09/18 22:19:38 [alert] 10870#0: worker process 12433 exited on signal 11 (core dumped)
+2022/09/18 22:19:38 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12433
+2022/09/18 22:19:38 [error] 12441#0: *107 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:19:39 [alert] 10870#0: worker process 12441 exited on signal 11 (core dumped)
+2022/09/18 22:19:39 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12441
+2022/09/18 22:19:39 [alert] 10870#0: worker process 12447 exited on signal 11 (core dumped)
+2022/09/18 22:19:39 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12447
+2022/09/18 22:19:39 [error] 12454#0: *110 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:19:39 [alert] 10870#0: worker process 12454 exited on signal 11 (core dumped)
+2022/09/18 22:19:39 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12454
+2022/09/18 22:19:40 [alert] 10870#0: worker process 12461 exited on signal 11 (core dumped)
+2022/09/18 22:19:40 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12461
+2022/09/18 22:19:40 [error] 12469#0: *113 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:19:40 [alert] 10870#0: worker process 12469 exited on signal 11 (core dumped)
+2022/09/18 22:19:40 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12469
+2022/09/18 22:24:52 [error] 12475#0: *114 open() "/home/zt/tengine/tengine//html/STATUS" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /STATUS HTTP/1.1", host: "127.0.0.1"
+2022/09/18 22:24:52 [alert] 10870#0: worker process 12475 exited on signal 11 (core dumped)
+2022/09/18 22:24:52 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 12475
+2022/09/18 22:24:53 [error] 20260#0: *116 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/STATUS"
+2022/09/18 22:24:53 [alert] 10870#0: worker process 20260 exited on signal 11 (core dumped)
+2022/09/18 22:24:53 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 20260
+2022/09/18 22:25:01 [alert] 10870#0: worker process 20270 exited on signal 11 (core dumped)
+2022/09/18 22:25:01 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 20270
+2022/09/18 22:25:01 [error] 20302#0: *118 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:25:01 [alert] 10870#0: worker process 20302 exited on signal 11 (core dumped)
+2022/09/18 22:25:01 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 20302
+2022/09/18 22:25:14 [notice] 20360#0: signal process started
+2022/09/18 22:25:14 [emerg] 10870#0: unknown directive "vhost_traffic_status_display" in /home/zt/tengine/tengine//conf/nginx.conf:70
+2022/09/18 22:25:32 [alert] 10870#0: worker process 20311 exited on signal 11 (core dumped)
+2022/09/18 22:25:32 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 20311
+2022/09/18 22:25:32 [error] 20689#0: *122 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:25:32 [alert] 10870#0: worker process 20689 exited on signal 11 (core dumped)
+2022/09/18 22:25:32 [alert] 10870#0: shared memory zone "ngx_test_traffic_status" was locked by 20689
+2022/09/18 22:26:13 [emerg] 21004#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/09/18 22:26:13 [emerg] 21004#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/09/18 22:26:13 [emerg] 21004#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/09/18 22:26:13 [emerg] 21004#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/09/18 22:26:13 [emerg] 21004#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/09/18 22:26:13 [emerg] 21004#0: still could not bind()
+2022/09/18 22:27:16 [alert] 21255#0: worker process 21256 exited on signal 11 (core dumped)
+2022/09/18 22:27:16 [alert] 21255#0: shared memory zone "ngx_test_traffic_status" was locked by 21256
+2022/09/18 22:27:18 [error] 21673#0: *3 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:27:18 [alert] 21255#0: worker process 21673 exited on signal 11 (core dumped)
+2022/09/18 22:27:18 [alert] 21255#0: shared memory zone "ngx_test_traffic_status" was locked by 21673
+2022/09/18 22:27:29 [notice] 21754#0: signal process started
+2022/09/18 22:27:33 [alert] 21255#0: worker process 21755 exited on signal 11 (core dumped)
+2022/09/18 22:27:33 [alert] 21255#0: shared memory zone "ngx_test_traffic_status" was locked by 21755
+2022/09/18 22:27:33 [error] 21808#0: *7 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:27:33 [alert] 21255#0: worker process 21808 exited on signal 11 (core dumped)
+2022/09/18 22:27:33 [alert] 21255#0: shared memory zone "ngx_test_traffic_status" was locked by 21808
+2022/09/18 22:27:35 [alert] 21255#0: worker process 21814 exited on signal 11 (core dumped)
+2022/09/18 22:27:35 [alert] 21255#0: shared memory zone "ngx_test_traffic_status" was locked by 21814
+2022/09/18 22:27:35 [error] 21826#0: *10 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:27:35 [alert] 21255#0: worker process 21826 exited on signal 11 (core dumped)
+2022/09/18 22:27:35 [alert] 21255#0: shared memory zone "ngx_test_traffic_status" was locked by 21826
+2022/09/18 22:28:12 [alert] 21255#0: worker process 21832 exited on signal 11 (core dumped)
+2022/09/18 22:28:12 [alert] 21255#0: shared memory zone "ngx_test_traffic_status" was locked by 21832
+2022/09/18 22:28:12 [error] 21873#0: *13 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:28:12 [alert] 21255#0: worker process 21873 exited on signal 11 (core dumped)
+2022/09/18 22:28:12 [alert] 21255#0: shared memory zone "ngx_test_traffic_status" was locked by 21873
+2022/09/18 22:28:12 [alert] 21255#0: worker process 21879 exited on signal 11 (core dumped)
+2022/09/18 22:28:12 [alert] 21255#0: shared memory zone "ngx_test_traffic_status" was locked by 21879
+2022/09/18 22:28:12 [error] 21888#0: *16 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:28:12 [alert] 21255#0: worker process 21888 exited on signal 11 (core dumped)
+2022/09/18 22:28:12 [alert] 21255#0: shared memory zone "ngx_test_traffic_status" was locked by 21888
+2022/09/18 22:28:13 [alert] 21255#0: worker process 21894 exited on signal 11 (core dumped)
+2022/09/18 22:28:13 [alert] 21255#0: shared memory zone "ngx_test_traffic_status" was locked by 21894
+2022/09/18 22:28:13 [error] 21901#0: *19 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:28:13 [alert] 21255#0: worker process 21901 exited on signal 11 (core dumped)
+2022/09/18 22:28:13 [alert] 21255#0: shared memory zone "ngx_test_traffic_status" was locked by 21901
+2022/09/18 22:28:13 [alert] 21255#0: worker process 21908 exited on signal 11 (core dumped)
+2022/09/18 22:28:13 [alert] 21255#0: shared memory zone "ngx_test_traffic_status" was locked by 21908
+2022/09/18 22:28:13 [error] 21916#0: *22 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:28:13 [alert] 21255#0: worker process 21916 exited on signal 11 (core dumped)
+2022/09/18 22:28:13 [alert] 21255#0: shared memory zone "ngx_test_traffic_status" was locked by 21916
+2022/09/18 22:28:13 [alert] 21255#0: worker process 21922 exited on signal 11 (core dumped)
+2022/09/18 22:28:13 [alert] 21255#0: shared memory zone "ngx_test_traffic_status" was locked by 21922
+2022/09/18 22:28:13 [error] 21929#0: *25 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:28:13 [alert] 21255#0: worker process 21929 exited on signal 11 (core dumped)
+2022/09/18 22:28:13 [alert] 21255#0: shared memory zone "ngx_test_traffic_status" was locked by 21929
+2022/09/18 22:28:13 [alert] 21255#0: worker process 21936 exited on signal 11 (core dumped)
+2022/09/18 22:28:13 [alert] 21255#0: shared memory zone "ngx_test_traffic_status" was locked by 21936
+2022/09/18 22:28:13 [error] 21944#0: *28 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:28:13 [alert] 21255#0: worker process 21944 exited on signal 11 (core dumped)
+2022/09/18 22:28:13 [alert] 21255#0: shared memory zone "ngx_test_traffic_status" was locked by 21944
+2022/09/18 22:28:38 [alert] 21255#0: worker process 21950 exited on signal 11 (core dumped)
+2022/09/18 22:28:38 [alert] 21255#0: shared memory zone "ngx_test_traffic_status" was locked by 21950
+2022/09/18 22:30:26 [alert] 22620#0: worker process 22621 exited on signal 11 (core dumped)
+2022/09/18 22:30:26 [alert] 22620#0: shared memory zone "ngx_test_traffic_status" was locked by 22621
+2022/09/18 22:30:26 [error] 22681#0: *3 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:30:26 [alert] 22620#0: worker process 22681 exited on signal 11 (core dumped)
+2022/09/18 22:30:26 [alert] 22620#0: shared memory zone "ngx_test_traffic_status" was locked by 22681
+2022/09/18 22:30:26 [alert] 22620#0: worker process 22689 exited on signal 11 (core dumped)
+2022/09/18 22:30:26 [alert] 22620#0: shared memory zone "ngx_test_traffic_status" was locked by 22689
+2022/09/18 22:30:26 [error] 22701#0: *6 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/18 22:30:26 [alert] 22620#0: worker process 22701 exited on signal 11 (core dumped)
+2022/09/18 22:30:26 [alert] 22620#0: shared memory zone "ngx_test_traffic_status" was locked by 22701
+2022/09/18 22:30:48 [error] 22713#0: *7 open() "/home/zt/tengine/tengine//html/us" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /us HTTP/1.1", host: "127.0.0.1"
+2022/09/18 22:30:48 [alert] 22620#0: worker process 22713 exited on signal 11 (core dumped)
+2022/09/18 22:30:48 [alert] 22620#0: shared memory zone "ngx_test_traffic_status" was locked by 22713
+2022/09/18 22:30:48 [error] 22772#0: *9 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/09/18 22:30:48 [alert] 22620#0: worker process 22772 exited on signal 11 (core dumped)
+2022/09/18 22:30:48 [alert] 22620#0: shared memory zone "ngx_test_traffic_status" was locked by 22772
+2022/09/18 22:30:53 [error] 22778#0: *10 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/09/18 22:30:53 [alert] 22620#0: worker process 22778 exited on signal 11 (core dumped)
+2022/09/18 22:30:53 [alert] 22620#0: shared memory zone "ngx_test_traffic_status" was locked by 22778
+2022/09/18 22:30:53 [error] 22788#0: *12 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/09/18 22:30:53 [alert] 22620#0: worker process 22788 exited on signal 11 (core dumped)
+2022/09/18 22:30:53 [alert] 22620#0: shared memory zone "ngx_test_traffic_status" was locked by 22788
+2022/09/18 22:30:59 [error] 22795#0: *13 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/09/18 22:30:59 [alert] 22620#0: worker process 22795 exited on signal 11 (core dumped)
+2022/09/18 22:30:59 [alert] 22620#0: shared memory zone "ngx_test_traffic_status" was locked by 22795
+2022/09/18 22:30:59 [error] 22805#0: *15 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/09/18 22:30:59 [alert] 22620#0: worker process 22805 exited on signal 11 (core dumped)
+2022/09/18 22:30:59 [alert] 22620#0: shared memory zone "ngx_test_traffic_status" was locked by 22805
+2022/09/18 22:31:07 [error] 22812#0: *16 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/09/18 22:31:07 [alert] 22620#0: worker process 22812 exited on signal 11 (core dumped)
+2022/09/18 22:31:07 [alert] 22620#0: shared memory zone "ngx_test_traffic_status" was locked by 22812
+2022/09/18 22:32:20 [notice] 22995#0: signal process started
+2022/09/18 22:47:11 [emerg] 30412#0: unknown directive "req_status_zone" in /home/zt/tengine/tengine//conf/nginx.conf:21
+2022/09/18 22:47:48 [emerg] 30509#0: unknown directive "req_status_zone" in /home/zt/tengine/tengine//conf/nginx.conf:21
+2022/09/18 22:48:05 [emerg] 30604#0: unknown directive "req_status_zone" in /home/zt/tengine/tengine//conf/nginx.conf:21
+2022/09/18 22:50:30 [emerg] 30804#0: unknown directive "req_status_zone" in /home/zt/tengine/tengine//conf/nginx.conf:21
+2022/09/18 22:55:26 [emerg] 31121#0: unknown directive "req_status_zone" in /home/zt/tengine/tengine//conf/nginx.conf:21
+2022/09/18 22:55:52 [emerg] 31200#0: unknown directive "req_status_show" in /home/zt/tengine/tengine//conf/nginx.conf:58
+2022/09/18 22:57:26 [emerg] 31449#0: unknown directive "req_status_zone" in /home/zt/tengine/tengine//conf/nginx.conf:21
+2022/09/18 23:01:44 [emerg] 32094#0: unknown directive "req_status_zone" in /home/zt/tengine/tengine//conf/nginx.conf:21
+2022/09/18 23:08:11 [emerg] 32467#0: unknown directive "req_status_zone" in /home/zt/tengine/tengine//conf/nginx.conf:21
+2022/09/19 17:09:01 [emerg] 36066#0: unknown directive "req_status_zone" in /home/zt/tengine/tengine//conf/nginx.conf:21
+2022/09/19 21:00:31 [emerg] 38628#0: unknown directive "req_status_zone" in /home/zt/tengine/tengine//conf/nginx.conf:21
+2022/09/21 20:52:16 [alert] 53009#0: worker process 53010 exited on signal 11 (core dumped)
+2022/09/21 20:52:16 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 53010
+2022/09/21 20:52:16 [alert] 53009#0: worker process 53209 exited on signal 11 (core dumped)
+2022/09/21 20:52:16 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 53209
+2022/09/21 20:52:17 [alert] 53009#0: worker process 53219 exited on signal 11 (core dumped)
+2022/09/21 20:52:17 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 53219
+2022/09/21 20:52:17 [alert] 53009#0: worker process 53259 exited on signal 11 (core dumped)
+2022/09/21 20:52:17 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 53259
+2022/09/21 20:52:18 [alert] 53009#0: worker process 53267 exited on signal 11 (core dumped)
+2022/09/21 20:52:18 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 53267
+2022/09/21 20:52:18 [alert] 53009#0: worker process 53289 exited on signal 11 (core dumped)
+2022/09/21 20:52:18 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 53289
+2022/09/21 20:52:23 [alert] 53009#0: worker process 53297 exited on signal 11 (core dumped)
+2022/09/21 20:52:23 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 53297
+2022/09/21 20:52:23 [alert] 53009#0: worker process 53318 exited on signal 11 (core dumped)
+2022/09/21 20:52:23 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 53318
+2022/09/21 20:52:27 [error] 53325#0: *13 open() "/home/zt/tengine/tengine//html/us" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /us HTTP/1.1", host: "127.0.0.1"
+2022/09/21 20:52:28 [alert] 53009#0: worker process 53325 exited on signal 11 (core dumped)
+2022/09/21 20:52:28 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 53325
+2022/09/21 20:52:28 [error] 53353#0: *15 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/09/21 20:52:28 [alert] 53009#0: worker process 53353 exited on signal 11 (core dumped)
+2022/09/21 20:52:28 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 53353
+2022/09/21 20:52:40 [alert] 53009#0: worker process 53360 exited on signal 11 (core dumped)
+2022/09/21 20:52:40 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 53360
+2022/09/21 20:52:40 [alert] 53009#0: worker process 53398 exited on signal 11 (core dumped)
+2022/09/21 20:52:40 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 53398
+2022/09/21 20:52:40 [alert] 53009#0: worker process 53419 exited on signal 11 (core dumped)
+2022/09/21 20:52:40 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 53419
+2022/09/21 20:52:41 [alert] 53009#0: worker process 53427 exited on signal 11 (core dumped)
+2022/09/21 20:52:41 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 53427
+2022/09/21 20:52:41 [alert] 53009#0: worker process 53462 exited on signal 11 (core dumped)
+2022/09/21 20:52:41 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 53462
+2022/09/21 20:52:43 [alert] 53009#0: worker process 53468 exited on signal 11 (core dumped)
+2022/09/21 20:52:43 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 53468
+2022/09/21 20:52:43 [alert] 53009#0: worker process 53490 exited on signal 11 (core dumped)
+2022/09/21 20:52:43 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 53490
+2022/09/21 20:52:48 [alert] 53009#0: worker process 53497 exited on signal 11 (core dumped)
+2022/09/21 20:52:48 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 53497
+2022/09/21 20:52:48 [alert] 53009#0: worker process 53529 exited on signal 11 (core dumped)
+2022/09/21 20:52:48 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 53529
+2022/09/21 20:53:19 [alert] 53009#0: worker process 53537 exited on signal 11 (core dumped)
+2022/09/21 20:53:19 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 53537
+2022/09/21 20:53:19 [alert] 53009#0: worker process 53649 exited on signal 11 (core dumped)
+2022/09/21 20:53:19 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 53649
+2022/09/21 20:54:19 [alert] 53009#0: worker process 53657 exited on signal 11 (core dumped)
+2022/09/21 20:54:19 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 53657
+2022/09/21 20:54:19 [alert] 53009#0: worker process 54776 exited on signal 11 (core dumped)
+2022/09/21 20:54:19 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 54776
+2022/09/21 20:55:35 [notice] 57130#0: signal process started
+2022/09/21 20:55:39 [alert] 53009#0: worker process 57131 exited on signal 11 (core dumped)
+2022/09/21 20:55:39 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57131
+2022/09/21 20:55:39 [alert] 53009#0: worker process 57207 exited on signal 11 (core dumped)
+2022/09/21 20:55:39 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57207
+2022/09/21 20:55:40 [alert] 53009#0: worker process 57215 exited on signal 11 (core dumped)
+2022/09/21 20:55:40 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57215
+2022/09/21 20:55:40 [alert] 53009#0: worker process 57239 exited on signal 11 (core dumped)
+2022/09/21 20:55:40 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57239
+2022/09/21 20:55:47 [error] 57246#0: *41 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/09/21 20:55:47 [alert] 53009#0: worker process 57246 exited on signal 11 (core dumped)
+2022/09/21 20:55:47 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57246
+2022/09/21 20:55:47 [error] 57273#0: *43 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/09/21 20:55:47 [alert] 53009#0: worker process 57273 exited on signal 11 (core dumped)
+2022/09/21 20:55:47 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57273
+2022/09/21 20:55:55 [error] 57280#0: *44 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/09/21 20:55:55 [alert] 53009#0: worker process 57280 exited on signal 11 (core dumped)
+2022/09/21 20:55:55 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57280
+2022/09/21 20:55:55 [error] 57290#0: *46 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/"
+2022/09/21 20:55:55 [alert] 53009#0: worker process 57290 exited on signal 11 (core dumped)
+2022/09/21 20:55:55 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57290
+2022/09/21 20:56:06 [alert] 53009#0: worker process 57298 exited on signal 11 (core dumped)
+2022/09/21 20:56:06 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57298
+2022/09/21 20:56:07 [alert] 53009#0: worker process 57323 exited on signal 11 (core dumped)
+2022/09/21 20:56:07 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57323
+2022/09/21 20:56:07 [alert] 53009#0: worker process 57332 exited on signal 11 (core dumped)
+2022/09/21 20:56:07 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57332
+2022/09/21 20:56:07 [alert] 53009#0: worker process 57338 exited on signal 11 (core dumped)
+2022/09/21 20:56:07 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57338
+2022/09/21 20:56:07 [alert] 53009#0: worker process 57345 exited on signal 11 (core dumped)
+2022/09/21 20:56:07 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57345
+2022/09/21 20:56:07 [alert] 53009#0: worker process 57354 exited on signal 11 (core dumped)
+2022/09/21 20:56:07 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57354
+2022/09/21 20:56:07 [alert] 53009#0: worker process 57361 exited on signal 11 (core dumped)
+2022/09/21 20:56:07 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57361
+2022/09/21 20:56:07 [alert] 53009#0: worker process 57368 exited on signal 11 (core dumped)
+2022/09/21 20:56:07 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57368
+2022/09/21 20:56:07 [alert] 53009#0: worker process 57375 exited on signal 11 (core dumped)
+2022/09/21 20:56:07 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57375
+2022/09/21 20:56:07 [alert] 53009#0: worker process 57382 exited on signal 11 (core dumped)
+2022/09/21 20:56:07 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57382
+2022/09/21 20:56:10 [alert] 53009#0: worker process 57391 exited on signal 11 (core dumped)
+2022/09/21 20:56:10 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57391
+2022/09/21 20:56:10 [alert] 53009#0: worker process 57434 exited on signal 11 (core dumped)
+2022/09/21 20:56:10 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57434
+2022/09/21 20:56:10 [alert] 53009#0: worker process 57441 exited on signal 11 (core dumped)
+2022/09/21 20:56:10 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57441
+2022/09/21 20:56:10 [alert] 53009#0: worker process 57448 exited on signal 11 (core dumped)
+2022/09/21 20:56:10 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57448
+2022/09/21 20:56:10 [alert] 53009#0: worker process 57455 exited on signal 11 (core dumped)
+2022/09/21 20:56:10 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57455
+2022/09/21 20:56:10 [alert] 53009#0: worker process 57464 exited on signal 11 (core dumped)
+2022/09/21 20:56:10 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57464
+2022/09/21 20:56:10 [alert] 53009#0: worker process 57469 exited on signal 11 (core dumped)
+2022/09/21 20:56:10 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57469
+2022/09/21 20:56:10 [alert] 53009#0: worker process 57476 exited on signal 11 (core dumped)
+2022/09/21 20:56:10 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57476
+2022/09/21 20:56:11 [alert] 53009#0: worker process 57483 exited on signal 11 (core dumped)
+2022/09/21 20:56:11 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57483
+2022/09/21 20:56:11 [alert] 53009#0: worker process 57490 exited on signal 11 (core dumped)
+2022/09/21 20:56:11 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57490
+2022/09/21 20:56:11 [alert] 53009#0: worker process 57497 exited on signal 11 (core dumped)
+2022/09/21 20:56:11 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57497
+2022/09/21 20:56:11 [alert] 53009#0: worker process 57504 exited on signal 11 (core dumped)
+2022/09/21 20:56:11 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57504
+2022/09/21 20:56:11 [alert] 53009#0: worker process 57511 exited on signal 11 (core dumped)
+2022/09/21 20:56:11 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57511
+2022/09/21 20:56:12 [alert] 53009#0: worker process 57518 exited on signal 11 (core dumped)
+2022/09/21 20:56:12 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57518
+2022/09/21 20:56:12 [alert] 53009#0: worker process 57526 exited on signal 11 (core dumped)
+2022/09/21 20:56:12 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57526
+2022/09/21 20:56:12 [alert] 53009#0: worker process 57533 exited on signal 11 (core dumped)
+2022/09/21 20:56:12 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57533
+2022/09/21 20:56:12 [alert] 53009#0: worker process 57540 exited on signal 11 (core dumped)
+2022/09/21 20:56:12 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57540
+2022/09/21 20:56:12 [alert] 53009#0: worker process 57548 exited on signal 11 (core dumped)
+2022/09/21 20:56:12 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57548
+2022/09/21 20:56:12 [alert] 53009#0: worker process 57555 exited on signal 11 (core dumped)
+2022/09/21 20:56:12 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57555
+2022/09/21 20:56:12 [alert] 53009#0: worker process 57562 exited on signal 11 (core dumped)
+2022/09/21 20:56:12 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57562
+2022/09/21 20:56:13 [alert] 53009#0: worker process 57569 exited on signal 11 (core dumped)
+2022/09/21 20:56:13 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57569
+2022/09/21 20:56:13 [alert] 53009#0: worker process 57577 exited on signal 11 (core dumped)
+2022/09/21 20:56:13 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57577
+2022/09/21 20:56:13 [alert] 53009#0: worker process 57583 exited on signal 11 (core dumped)
+2022/09/21 20:56:13 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57583
+2022/09/21 20:56:13 [alert] 53009#0: worker process 57590 exited on signal 11 (core dumped)
+2022/09/21 20:56:13 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57590
+2022/09/21 20:56:13 [alert] 53009#0: worker process 57597 exited on signal 11 (core dumped)
+2022/09/21 20:56:13 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57597
+2022/09/21 20:56:13 [alert] 53009#0: worker process 57604 exited on signal 11 (core dumped)
+2022/09/21 20:56:13 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57604
+2022/09/21 20:56:13 [alert] 53009#0: worker process 57611 exited on signal 11 (core dumped)
+2022/09/21 20:56:13 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57611
+2022/09/21 20:56:13 [alert] 53009#0: worker process 57618 exited on signal 11 (core dumped)
+2022/09/21 20:56:13 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57618
+2022/09/21 20:56:13 [alert] 53009#0: worker process 57625 exited on signal 11 (core dumped)
+2022/09/21 20:56:13 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57625
+2022/09/21 20:56:14 [alert] 53009#0: worker process 57632 exited on signal 11 (core dumped)
+2022/09/21 20:56:14 [alert] 53009#0: shared memory zone "ngx_test_traffic_status" was locked by 57632
+2022/09/21 22:17:59 [alert] 7451#0: worker process 7452 exited on signal 11 (core dumped)
+2022/09/21 22:17:59 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7452
+2022/09/21 22:17:59 [alert] 7451#0: worker process 7537 exited on signal 11 (core dumped)
+2022/09/21 22:17:59 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7537
+2022/09/21 22:17:59 [alert] 7451#0: worker process 7541 exited on signal 11 (core dumped)
+2022/09/21 22:17:59 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7541
+2022/09/21 22:17:59 [alert] 7451#0: worker process 7549 exited on signal 11 (core dumped)
+2022/09/21 22:17:59 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7549
+2022/09/21 22:18:00 [alert] 7451#0: worker process 7555 exited on signal 11 (core dumped)
+2022/09/21 22:18:00 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7555
+2022/09/21 22:18:00 [alert] 7451#0: worker process 7562 exited on signal 11 (core dumped)
+2022/09/21 22:18:00 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7562
+2022/09/21 22:18:00 [alert] 7451#0: worker process 7569 exited on signal 11 (core dumped)
+2022/09/21 22:18:00 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7569
+2022/09/21 22:18:00 [alert] 7451#0: worker process 7576 exited on signal 11 (core dumped)
+2022/09/21 22:18:00 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7576
+2022/09/21 22:18:00 [alert] 7451#0: worker process 7583 exited on signal 11 (core dumped)
+2022/09/21 22:18:00 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7583
+2022/09/21 22:18:00 [alert] 7451#0: worker process 7590 exited on signal 11 (core dumped)
+2022/09/21 22:18:00 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7590
+2022/09/21 22:18:03 [alert] 7451#0: worker process 7597 exited on signal 11 (core dumped)
+2022/09/21 22:18:03 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7597
+2022/09/21 22:18:03 [alert] 7451#0: worker process 7641 exited on signal 11 (core dumped)
+2022/09/21 22:18:03 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7641
+2022/09/21 22:18:03 [alert] 7451#0: worker process 7648 exited on signal 11 (core dumped)
+2022/09/21 22:18:03 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7648
+2022/09/21 22:18:03 [alert] 7451#0: worker process 7655 exited on signal 11 (core dumped)
+2022/09/21 22:18:03 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7655
+2022/09/21 22:18:03 [alert] 7451#0: worker process 7662 exited on signal 11 (core dumped)
+2022/09/21 22:18:03 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7662
+2022/09/21 22:18:03 [alert] 7451#0: worker process 7669 exited on signal 11 (core dumped)
+2022/09/21 22:18:03 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7669
+2022/09/21 22:18:03 [alert] 7451#0: worker process 7676 exited on signal 11 (core dumped)
+2022/09/21 22:18:03 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7676
+2022/09/21 22:18:03 [alert] 7451#0: worker process 7683 exited on signal 11 (core dumped)
+2022/09/21 22:18:03 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7683
+2022/09/21 22:18:04 [alert] 7451#0: worker process 7690 exited on signal 11 (core dumped)
+2022/09/21 22:18:04 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7690
+2022/09/21 22:18:04 [alert] 7451#0: worker process 7697 exited on signal 11 (core dumped)
+2022/09/21 22:18:04 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7697
+2022/09/21 22:18:05 [alert] 7451#0: worker process 7704 exited on signal 11 (core dumped)
+2022/09/21 22:18:05 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7704
+2022/09/21 22:18:05 [alert] 7451#0: worker process 7712 exited on signal 11 (core dumped)
+2022/09/21 22:18:05 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7712
+2022/09/21 22:18:05 [alert] 7451#0: worker process 7719 exited on signal 11 (core dumped)
+2022/09/21 22:18:05 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7719
+2022/09/21 22:18:06 [alert] 7451#0: worker process 7726 exited on signal 11 (core dumped)
+2022/09/21 22:18:06 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7726
+2022/09/21 22:18:06 [alert] 7451#0: worker process 7734 exited on signal 11 (core dumped)
+2022/09/21 22:18:06 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7734
+2022/09/21 22:18:06 [alert] 7451#0: worker process 7741 exited on signal 11 (core dumped)
+2022/09/21 22:18:06 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7741
+2022/09/21 22:18:06 [alert] 7451#0: worker process 7748 exited on signal 11 (core dumped)
+2022/09/21 22:18:06 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7748
+2022/09/21 22:18:06 [alert] 7451#0: worker process 7755 exited on signal 11 (core dumped)
+2022/09/21 22:18:06 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7755
+2022/09/21 22:18:06 [alert] 7451#0: worker process 7762 exited on signal 11 (core dumped)
+2022/09/21 22:18:06 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7762
+2022/09/21 22:18:06 [alert] 7451#0: worker process 7769 exited on signal 11 (core dumped)
+2022/09/21 22:18:06 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7769
+2022/09/21 22:18:07 [alert] 7451#0: worker process 7776 exited on signal 11 (core dumped)
+2022/09/21 22:18:07 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7776
+2022/09/21 22:18:07 [alert] 7451#0: worker process 7783 exited on signal 11 (core dumped)
+2022/09/21 22:18:07 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7783
+2022/09/21 22:18:07 [alert] 7451#0: worker process 7790 exited on signal 11 (core dumped)
+2022/09/21 22:18:07 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7790
+2022/09/21 22:18:07 [alert] 7451#0: worker process 7797 exited on signal 11 (core dumped)
+2022/09/21 22:18:07 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7797
+2022/09/21 22:18:07 [alert] 7451#0: worker process 7804 exited on signal 11 (core dumped)
+2022/09/21 22:18:07 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7804
+2022/09/21 22:18:07 [alert] 7451#0: worker process 7811 exited on signal 11 (core dumped)
+2022/09/21 22:18:07 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7811
+2022/09/21 22:18:07 [alert] 7451#0: worker process 7818 exited on signal 11 (core dumped)
+2022/09/21 22:18:07 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7818
+2022/09/21 22:18:07 [alert] 7451#0: worker process 7825 exited on signal 11 (core dumped)
+2022/09/21 22:18:07 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7825
+2022/09/21 22:18:07 [alert] 7451#0: worker process 7832 exited on signal 11 (core dumped)
+2022/09/21 22:18:07 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7832
+2022/09/21 22:18:07 [alert] 7451#0: worker process 7839 exited on signal 11 (core dumped)
+2022/09/21 22:18:07 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7839
+2022/09/21 22:18:14 [error] 7846#0: *41 open() "/home/zt/tengine/tengine//html/us" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /us HTTP/1.1", host: "127.0.0.1"
+2022/09/21 22:18:14 [alert] 7451#0: worker process 7846 exited on signal 11 (core dumped)
+2022/09/21 22:18:14 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7846
+2022/09/21 22:19:12 [alert] 7451#0: worker process 7861 exited on signal 11 (core dumped)
+2022/09/21 22:19:12 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 7861
+2022/09/21 22:19:12 [alert] 7451#0: worker process 8357 exited on signal 11 (core dumped)
+2022/09/21 22:19:12 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 8357
+2022/09/21 22:19:12 [alert] 7451#0: worker process 8378 exited on signal 11 (core dumped)
+2022/09/21 22:19:12 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 8378
+2022/09/21 22:19:13 [alert] 7451#0: worker process 8385 exited on signal 11 (core dumped)
+2022/09/21 22:19:13 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 8385
+2022/09/21 22:19:13 [alert] 7451#0: worker process 8407 exited on signal 11 (core dumped)
+2022/09/21 22:19:13 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 8407
+2022/09/21 22:19:15 [alert] 7451#0: worker process 8412 exited on signal 11 (core dumped)
+2022/09/21 22:19:15 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 8412
+2022/09/21 22:19:15 [alert] 7451#0: worker process 8434 exited on signal 11 (core dumped)
+2022/09/21 22:19:15 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 8434
+2022/09/21 22:19:35 [alert] 7451#0: worker process 8440 exited on signal 11 (core dumped)
+2022/09/21 22:19:35 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 8440
+2022/09/21 22:19:35 [alert] 7451#0: worker process 8617 exited on signal 11 (core dumped)
+2022/09/21 22:19:35 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 8617
+2022/09/21 22:19:35 [alert] 7451#0: worker process 8626 exited on signal 11 (core dumped)
+2022/09/21 22:19:35 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 8626
+2022/09/21 22:19:35 [alert] 7451#0: worker process 8632 exited on signal 11 (core dumped)
+2022/09/21 22:19:35 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 8632
+2022/09/21 22:19:35 [alert] 7451#0: worker process 8639 exited on signal 11 (core dumped)
+2022/09/21 22:19:35 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 8639
+2022/09/21 22:19:35 [alert] 7451#0: worker process 8646 exited on signal 11 (core dumped)
+2022/09/21 22:19:35 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 8646
+2022/09/21 22:19:35 [alert] 7451#0: worker process 8650 exited on signal 11 (core dumped)
+2022/09/21 22:19:35 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 8650
+2022/09/21 22:19:35 [alert] 7451#0: worker process 8660 exited on signal 11 (core dumped)
+2022/09/21 22:19:35 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 8660
+2022/09/21 22:19:35 [alert] 7451#0: worker process 8667 exited on signal 11 (core dumped)
+2022/09/21 22:19:35 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 8667
+2022/09/21 22:19:35 [alert] 7451#0: worker process 8674 exited on signal 11 (core dumped)
+2022/09/21 22:19:35 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 8674
+2022/09/21 22:22:25 [emerg] 15737#0: unknown directive "test_traffic_status_zone" in /home/zt/tengine/tengine//conf/nginx.conf:26
+2022/09/21 22:22:52 [notice] 15866#0: signal process started
+2022/09/21 22:22:52 [emerg] 7451#0: unknown directive "vhost_traffic_status_zone" in /home/zt/tengine/tengine//conf/nginx.conf:24
+2022/09/21 22:22:56 [alert] 7451#0: worker process 8682 exited on signal 11 (core dumped)
+2022/09/21 22:22:56 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 8682
+2022/09/21 22:22:56 [alert] 7451#0: worker process 15919 exited on signal 11 (core dumped)
+2022/09/21 22:22:56 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 15919
+2022/09/21 22:22:56 [alert] 7451#0: worker process 15927 exited on signal 11 (core dumped)
+2022/09/21 22:22:56 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 15927
+2022/09/21 22:22:56 [alert] 7451#0: worker process 15936 exited on signal 11 (core dumped)
+2022/09/21 22:22:56 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 15936
+2022/09/21 22:22:56 [alert] 7451#0: worker process 15944 exited on signal 11 (core dumped)
+2022/09/21 22:22:56 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 15944
+2022/09/21 22:22:56 [alert] 7451#0: worker process 15951 exited on signal 11 (core dumped)
+2022/09/21 22:22:56 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 15951
+2022/09/21 22:22:56 [alert] 7451#0: worker process 15958 exited on signal 11 (core dumped)
+2022/09/21 22:22:56 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 15958
+2022/09/21 22:22:56 [alert] 7451#0: worker process 15966 exited on signal 11 (core dumped)
+2022/09/21 22:22:56 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 15966
+2022/09/21 22:22:56 [alert] 7451#0: worker process 15972 exited on signal 11 (core dumped)
+2022/09/21 22:22:56 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 15972
+2022/09/21 22:22:56 [alert] 7451#0: worker process 15979 exited on signal 11 (core dumped)
+2022/09/21 22:22:56 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 15979
+2022/09/21 22:22:59 [alert] 7451#0: worker process 15986 exited on signal 11 (core dumped)
+2022/09/21 22:22:59 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 15986
+2022/09/21 22:22:59 [alert] 7451#0: worker process 16003 exited on signal 11 (core dumped)
+2022/09/21 22:22:59 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16003
+2022/09/21 22:22:59 [alert] 7451#0: worker process 16014 exited on signal 11 (core dumped)
+2022/09/21 22:22:59 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16014
+2022/09/21 22:22:59 [alert] 7451#0: worker process 16020 exited on signal 11 (core dumped)
+2022/09/21 22:22:59 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16020
+2022/09/21 22:22:59 [alert] 7451#0: worker process 16029 exited on signal 11 (core dumped)
+2022/09/21 22:22:59 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16029
+2022/09/21 22:22:59 [alert] 7451#0: worker process 16035 exited on signal 11 (core dumped)
+2022/09/21 22:22:59 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16035
+2022/09/21 22:22:59 [alert] 7451#0: worker process 16042 exited on signal 11 (core dumped)
+2022/09/21 22:22:59 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16042
+2022/09/21 22:23:00 [alert] 7451#0: worker process 16049 exited on signal 11 (core dumped)
+2022/09/21 22:23:00 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16049
+2022/09/21 22:23:00 [alert] 7451#0: worker process 16056 exited on signal 11 (core dumped)
+2022/09/21 22:23:00 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16056
+2022/09/21 22:23:00 [alert] 7451#0: worker process 16063 exited on signal 11 (core dumped)
+2022/09/21 22:23:00 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16063
+2022/09/21 22:23:21 [alert] 7451#0: worker process 16070 exited on signal 11 (core dumped)
+2022/09/21 22:23:21 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16070
+2022/09/21 22:23:21 [alert] 7451#0: worker process 16094 exited on signal 11 (core dumped)
+2022/09/21 22:23:21 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16094
+2022/09/21 22:23:21 [alert] 7451#0: worker process 16102 exited on signal 11 (core dumped)
+2022/09/21 22:23:21 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16102
+2022/09/21 22:23:21 [alert] 7451#0: worker process 16109 exited on signal 11 (core dumped)
+2022/09/21 22:23:21 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16109
+2022/09/21 22:23:21 [alert] 7451#0: worker process 16116 exited on signal 11 (core dumped)
+2022/09/21 22:23:21 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16116
+2022/09/21 22:23:21 [alert] 7451#0: worker process 16124 exited on signal 11 (core dumped)
+2022/09/21 22:23:21 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16124
+2022/09/21 22:23:21 [alert] 7451#0: worker process 16130 exited on signal 11 (core dumped)
+2022/09/21 22:23:21 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16130
+2022/09/21 22:23:21 [alert] 7451#0: worker process 16137 exited on signal 11 (core dumped)
+2022/09/21 22:23:21 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16137
+2022/09/21 22:23:21 [alert] 7451#0: worker process 16144 exited on signal 11 (core dumped)
+2022/09/21 22:23:21 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16144
+2022/09/21 22:23:21 [alert] 7451#0: worker process 16151 exited on signal 11 (core dumped)
+2022/09/21 22:23:21 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16151
+2022/09/21 22:23:23 [alert] 7451#0: worker process 16158 exited on signal 11 (core dumped)
+2022/09/21 22:23:23 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16158
+2022/09/21 22:23:24 [alert] 7451#0: worker process 16204 exited on signal 11 (core dumped)
+2022/09/21 22:23:24 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16204
+2022/09/21 22:23:24 [alert] 7451#0: worker process 16211 exited on signal 11 (core dumped)
+2022/09/21 22:23:24 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16211
+2022/09/21 22:23:24 [alert] 7451#0: worker process 16218 exited on signal 11 (core dumped)
+2022/09/21 22:23:24 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16218
+2022/09/21 22:23:24 [alert] 7451#0: worker process 16225 exited on signal 11 (core dumped)
+2022/09/21 22:23:24 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16225
+2022/09/21 22:23:24 [alert] 7451#0: worker process 16232 exited on signal 11 (core dumped)
+2022/09/21 22:23:24 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16232
+2022/09/21 22:23:24 [alert] 7451#0: worker process 16239 exited on signal 11 (core dumped)
+2022/09/21 22:23:24 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16239
+2022/09/21 22:23:24 [alert] 7451#0: worker process 16246 exited on signal 11 (core dumped)
+2022/09/21 22:23:24 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16246
+2022/09/21 22:23:24 [alert] 7451#0: worker process 16253 exited on signal 11 (core dumped)
+2022/09/21 22:23:24 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16253
+2022/09/21 22:23:24 [alert] 7451#0: worker process 16260 exited on signal 11 (core dumped)
+2022/09/21 22:23:24 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16260
+2022/09/21 22:24:52 [error] 16267#0: *102 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/09/21 22:24:52 [alert] 7451#0: worker process 16267 exited on signal 11 (core dumped)
+2022/09/21 22:24:52 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16267
+2022/09/21 22:25:13 [notice] 16461#0: signal process started
+2022/09/21 22:25:13 [emerg] 7451#0: unknown directive "vhost_traffic_status_zone" in /home/zt/tengine/tengine//conf/nginx.conf:24
+2022/09/21 22:25:33 [alert] 7451#0: worker process 16409 exited on signal 11 (core dumped)
+2022/09/21 22:25:33 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16409
+2022/09/21 22:25:33 [alert] 7451#0: worker process 16534 exited on signal 11 (core dumped)
+2022/09/21 22:25:33 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16534
+2022/09/21 22:25:33 [alert] 7451#0: worker process 16542 exited on signal 11 (core dumped)
+2022/09/21 22:25:33 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16542
+2022/09/21 22:25:33 [alert] 7451#0: worker process 16546 exited on signal 11 (core dumped)
+2022/09/21 22:25:33 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16546
+2022/09/21 22:25:33 [alert] 7451#0: worker process 16558 exited on signal 11 (core dumped)
+2022/09/21 22:25:33 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16558
+2022/09/21 22:25:33 [alert] 7451#0: worker process 16564 exited on signal 11 (core dumped)
+2022/09/21 22:25:33 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16564
+2022/09/21 22:25:33 [alert] 7451#0: worker process 16571 exited on signal 11 (core dumped)
+2022/09/21 22:25:33 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16571
+2022/09/21 22:25:33 [alert] 7451#0: worker process 16578 exited on signal 11 (core dumped)
+2022/09/21 22:25:33 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16578
+2022/09/21 22:25:34 [alert] 7451#0: worker process 16585 exited on signal 11 (core dumped)
+2022/09/21 22:25:34 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16585
+2022/09/21 22:25:34 [alert] 7451#0: worker process 16594 exited on signal 11 (core dumped)
+2022/09/21 22:25:34 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16594
+2022/09/21 22:27:18 [alert] 7451#0: worker process 16599 exited on signal 11 (core dumped)
+2022/09/21 22:27:18 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16599
+2022/09/21 22:27:18 [alert] 7451#0: worker process 16752 exited on signal 11 (core dumped)
+2022/09/21 22:27:18 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16752
+2022/09/21 22:27:18 [alert] 7451#0: worker process 16761 exited on signal 11 (core dumped)
+2022/09/21 22:27:18 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16761
+2022/09/21 22:27:18 [alert] 7451#0: worker process 16767 exited on signal 11 (core dumped)
+2022/09/21 22:27:18 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16767
+2022/09/21 22:27:18 [alert] 7451#0: worker process 16774 exited on signal 11 (core dumped)
+2022/09/21 22:27:18 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16774
+2022/09/21 22:27:18 [alert] 7451#0: worker process 16781 exited on signal 11 (core dumped)
+2022/09/21 22:27:18 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16781
+2022/09/21 22:27:19 [alert] 7451#0: worker process 16788 exited on signal 11 (core dumped)
+2022/09/21 22:27:19 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16788
+2022/09/21 22:27:19 [alert] 7451#0: worker process 16795 exited on signal 11 (core dumped)
+2022/09/21 22:27:19 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16795
+2022/09/21 22:27:19 [alert] 7451#0: worker process 16805 exited on signal 11 (core dumped)
+2022/09/21 22:27:19 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16805
+2022/09/21 22:27:19 [alert] 7451#0: worker process 16812 exited on signal 11 (core dumped)
+2022/09/21 22:27:19 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16812
+2022/09/21 22:35:15 [error] 16819#0: *123 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/09/21 22:35:15 [alert] 7451#0: worker process 16819 exited on signal 11 (core dumped)
+2022/09/21 22:35:15 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 16819
+2022/09/21 22:35:39 [alert] 7451#0: worker process 19168 exited on signal 11 (core dumped)
+2022/09/21 22:35:39 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 19168
+2022/09/21 22:35:39 [alert] 7451#0: worker process 19513 exited on signal 11 (core dumped)
+2022/09/21 22:35:39 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 19513
+2022/09/21 22:35:40 [alert] 7451#0: worker process 19521 exited on signal 11 (core dumped)
+2022/09/21 22:35:40 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 19521
+2022/09/21 22:35:40 [alert] 7451#0: worker process 19556 exited on signal 11 (core dumped)
+2022/09/21 22:35:40 [alert] 7451#0: shared memory zone "ngx_test_traffic_status" was locked by 19556
+2022/09/21 22:45:21 [error] 2564#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/21 22:47:03 [notice] 6065#0: signal process started
+2022/09/21 22:47:03 [emerg] 2563#0: unknown directive "test_traffic_status_zone" in /home/zt/tengine/tengine//conf/nginx.conf:26
+2022/09/21 22:49:04 [alert] 6734#0: worker process 6735 exited on signal 11 (core dumped)
+2022/09/21 22:49:04 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 6735
+2022/09/21 22:49:04 [alert] 6734#0: worker process 7101 exited on signal 11 (core dumped)
+2022/09/21 22:49:04 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7101
+2022/09/21 22:49:04 [alert] 6734#0: worker process 7108 exited on signal 11 (core dumped)
+2022/09/21 22:49:04 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7108
+2022/09/21 22:49:04 [alert] 6734#0: worker process 7115 exited on signal 11 (core dumped)
+2022/09/21 22:49:04 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7115
+2022/09/21 22:49:04 [alert] 6734#0: worker process 7122 exited on signal 11 (core dumped)
+2022/09/21 22:49:04 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7122
+2022/09/21 22:49:04 [alert] 6734#0: worker process 7129 exited on signal 11 (core dumped)
+2022/09/21 22:49:04 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7129
+2022/09/21 22:49:04 [alert] 6734#0: worker process 7136 exited on signal 11 (core dumped)
+2022/09/21 22:49:04 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7136
+2022/09/21 22:49:04 [alert] 6734#0: worker process 7143 exited on signal 11 (core dumped)
+2022/09/21 22:49:04 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7143
+2022/09/21 22:49:04 [alert] 6734#0: worker process 7150 exited on signal 11 (core dumped)
+2022/09/21 22:49:04 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7150
+2022/09/21 22:49:04 [alert] 6734#0: worker process 7157 exited on signal 11 (core dumped)
+2022/09/21 22:49:04 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7157
+2022/09/21 22:49:07 [alert] 6734#0: worker process 7164 exited on signal 11 (core dumped)
+2022/09/21 22:49:07 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7164
+2022/09/21 22:49:07 [alert] 6734#0: worker process 7208 exited on signal 11 (core dumped)
+2022/09/21 22:49:07 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7208
+2022/09/21 22:49:07 [alert] 6734#0: worker process 7215 exited on signal 11 (core dumped)
+2022/09/21 22:49:07 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7215
+2022/09/21 22:49:07 [alert] 6734#0: worker process 7222 exited on signal 11 (core dumped)
+2022/09/21 22:49:07 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7222
+2022/09/21 22:49:07 [alert] 6734#0: worker process 7229 exited on signal 11 (core dumped)
+2022/09/21 22:49:07 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7229
+2022/09/21 22:49:07 [alert] 6734#0: worker process 7236 exited on signal 11 (core dumped)
+2022/09/21 22:49:07 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7236
+2022/09/21 22:49:07 [alert] 6734#0: worker process 7243 exited on signal 11 (core dumped)
+2022/09/21 22:49:07 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7243
+2022/09/21 22:49:07 [alert] 6734#0: worker process 7250 exited on signal 11 (core dumped)
+2022/09/21 22:49:07 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7250
+2022/09/21 22:49:07 [alert] 6734#0: worker process 7257 exited on signal 11 (core dumped)
+2022/09/21 22:49:07 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7257
+2022/09/21 22:49:07 [alert] 6734#0: worker process 7264 exited on signal 11 (core dumped)
+2022/09/21 22:49:07 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7264
+2022/09/21 22:49:08 [alert] 6734#0: worker process 7271 exited on signal 11 (core dumped)
+2022/09/21 22:49:08 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7271
+2022/09/21 22:49:08 [alert] 6734#0: worker process 7278 exited on signal 11 (core dumped)
+2022/09/21 22:49:08 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7278
+2022/09/21 22:49:09 [alert] 6734#0: worker process 7285 exited on signal 11 (core dumped)
+2022/09/21 22:49:09 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7285
+2022/09/21 22:49:09 [alert] 6734#0: worker process 7292 exited on signal 11 (core dumped)
+2022/09/21 22:49:09 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7292
+2022/09/21 22:49:09 [alert] 6734#0: worker process 7299 exited on signal 11 (core dumped)
+2022/09/21 22:49:09 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7299
+2022/09/21 22:49:09 [alert] 6734#0: worker process 7306 exited on signal 11 (core dumped)
+2022/09/21 22:49:09 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7306
+2022/09/21 22:49:09 [alert] 6734#0: worker process 7314 exited on signal 11 (core dumped)
+2022/09/21 22:49:09 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7314
+2022/09/21 22:49:09 [alert] 6734#0: worker process 7320 exited on signal 11 (core dumped)
+2022/09/21 22:49:09 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7320
+2022/09/21 22:49:09 [alert] 6734#0: worker process 7327 exited on signal 11 (core dumped)
+2022/09/21 22:49:09 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7327
+2022/09/21 22:49:09 [alert] 6734#0: worker process 7334 exited on signal 11 (core dumped)
+2022/09/21 22:49:09 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7334
+2022/09/21 22:49:10 [alert] 6734#0: worker process 7341 exited on signal 11 (core dumped)
+2022/09/21 22:49:10 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7341
+2022/09/21 22:49:10 [alert] 6734#0: worker process 7348 exited on signal 11 (core dumped)
+2022/09/21 22:49:10 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7348
+2022/09/21 22:49:10 [alert] 6734#0: worker process 7356 exited on signal 11 (core dumped)
+2022/09/21 22:49:10 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7356
+2022/09/21 22:49:10 [alert] 6734#0: worker process 7363 exited on signal 11 (core dumped)
+2022/09/21 22:49:10 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7363
+2022/09/21 22:49:10 [alert] 6734#0: worker process 7370 exited on signal 11 (core dumped)
+2022/09/21 22:49:10 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7370
+2022/09/21 22:49:10 [alert] 6734#0: worker process 7377 exited on signal 11 (core dumped)
+2022/09/21 22:49:10 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7377
+2022/09/21 22:49:10 [alert] 6734#0: worker process 7384 exited on signal 11 (core dumped)
+2022/09/21 22:49:10 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7384
+2022/09/21 22:49:10 [alert] 6734#0: worker process 7391 exited on signal 11 (core dumped)
+2022/09/21 22:49:10 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7391
+2022/09/21 22:49:11 [alert] 6734#0: worker process 7399 exited on signal 11 (core dumped)
+2022/09/21 22:49:11 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7399
+2022/09/21 22:49:11 [alert] 6734#0: worker process 7406 exited on signal 11 (core dumped)
+2022/09/21 22:49:11 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7406
+2022/09/21 22:49:38 [alert] 6734#0: worker process 7413 exited on signal 11 (core dumped)
+2022/09/21 22:49:38 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7413
+2022/09/21 22:49:38 [alert] 6734#0: worker process 7549 exited on signal 11 (core dumped)
+2022/09/21 22:49:38 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7549
+2022/09/21 22:49:38 [alert] 6734#0: worker process 7556 exited on signal 11 (core dumped)
+2022/09/21 22:49:38 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7556
+2022/09/21 22:49:38 [alert] 6734#0: worker process 7563 exited on signal 11 (core dumped)
+2022/09/21 22:49:38 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7563
+2022/09/21 22:49:39 [alert] 6734#0: worker process 7571 exited on signal 11 (core dumped)
+2022/09/21 22:49:39 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7571
+2022/09/21 22:49:39 [alert] 6734#0: worker process 7579 exited on signal 11 (core dumped)
+2022/09/21 22:49:39 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7579
+2022/09/21 22:49:39 [alert] 6734#0: worker process 7586 exited on signal 11 (core dumped)
+2022/09/21 22:49:39 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7586
+2022/09/21 22:49:39 [alert] 6734#0: worker process 7593 exited on signal 11 (core dumped)
+2022/09/21 22:49:39 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7593
+2022/09/21 22:49:39 [alert] 6734#0: worker process 7601 exited on signal 11 (core dumped)
+2022/09/21 22:49:39 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7601
+2022/09/21 22:49:39 [alert] 6734#0: worker process 7608 exited on signal 11 (core dumped)
+2022/09/21 22:49:39 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7608
+2022/09/21 22:49:43 [alert] 6734#0: worker process 7615 exited on signal 11 (core dumped)
+2022/09/21 22:49:43 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7615
+2022/09/21 22:49:43 [alert] 6734#0: worker process 7627 exited on signal 11 (core dumped)
+2022/09/21 22:49:43 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7627
+2022/09/21 22:49:43 [alert] 6734#0: worker process 7634 exited on signal 11 (core dumped)
+2022/09/21 22:49:43 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7634
+2022/09/21 22:49:43 [alert] 6734#0: worker process 7641 exited on signal 11 (core dumped)
+2022/09/21 22:49:43 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7641
+2022/09/21 22:49:43 [alert] 6734#0: worker process 7648 exited on signal 11 (core dumped)
+2022/09/21 22:49:43 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7648
+2022/09/21 22:49:43 [alert] 6734#0: worker process 7655 exited on signal 11 (core dumped)
+2022/09/21 22:49:43 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7655
+2022/09/21 22:49:43 [alert] 6734#0: worker process 7662 exited on signal 11 (core dumped)
+2022/09/21 22:49:43 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7662
+2022/09/21 22:49:43 [alert] 6734#0: worker process 7669 exited on signal 11 (core dumped)
+2022/09/21 22:49:43 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7669
+2022/09/21 22:49:43 [alert] 6734#0: worker process 7676 exited on signal 11 (core dumped)
+2022/09/21 22:49:43 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7676
+2022/09/21 22:49:43 [alert] 6734#0: worker process 7683 exited on signal 11 (core dumped)
+2022/09/21 22:49:43 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7683
+2022/09/21 22:51:47 [alert] 6734#0: worker process 7690 exited on signal 11 (core dumped)
+2022/09/21 22:51:47 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 7690
+2022/09/21 22:51:47 [alert] 6734#0: worker process 8313 exited on signal 11 (core dumped)
+2022/09/21 22:51:47 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 8313
+2022/09/21 22:51:47 [alert] 6734#0: worker process 8321 exited on signal 11 (core dumped)
+2022/09/21 22:51:47 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 8321
+2022/09/21 22:51:47 [alert] 6734#0: worker process 8328 exited on signal 11 (core dumped)
+2022/09/21 22:51:47 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 8328
+2022/09/21 22:51:47 [alert] 6734#0: worker process 8335 exited on signal 11 (core dumped)
+2022/09/21 22:51:47 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 8335
+2022/09/21 22:51:48 [alert] 6734#0: worker process 8342 exited on signal 11 (core dumped)
+2022/09/21 22:51:48 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 8342
+2022/09/21 22:51:48 [alert] 6734#0: worker process 8349 exited on signal 11 (core dumped)
+2022/09/21 22:51:48 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 8349
+2022/09/21 22:51:48 [alert] 6734#0: worker process 8356 exited on signal 11 (core dumped)
+2022/09/21 22:51:48 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 8356
+2022/09/21 22:51:48 [alert] 6734#0: worker process 8364 exited on signal 11 (core dumped)
+2022/09/21 22:51:48 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 8364
+2022/09/21 22:51:48 [alert] 6734#0: worker process 8370 exited on signal 11 (core dumped)
+2022/09/21 22:51:48 [alert] 6734#0: shared memory zone "ngx_test_traffic_status" was locked by 8370
+2022/09/21 22:53:58 [alert] 12023#0: worker process 12024 exited on signal 11 (core dumped)
+2022/09/21 22:53:58 [alert] 12023#0: shared memory zone "ngx_test_traffic_status" was locked by 12024
+2022/09/21 22:54:14 [alert] 12023#0: worker process 12558 exited on signal 11 (core dumped)
+2022/09/21 22:54:14 [alert] 12023#0: shared memory zone "ngx_test_traffic_status" was locked by 12558
+2022/09/21 22:54:18 [alert] 12023#0: worker process 12671 exited on signal 11 (core dumped)
+2022/09/21 22:54:18 [alert] 12023#0: shared memory zone "ngx_test_traffic_status" was locked by 12671
+2022/09/21 22:54:22 [alert] 12023#0: worker process 12683 exited on signal 11 (core dumped)
+2022/09/21 22:54:22 [alert] 12023#0: shared memory zone "ngx_test_traffic_status" was locked by 12683
+2022/09/21 22:54:31 [alert] 12023#0: worker process 12693 exited on signal 11 (core dumped)
+2022/09/21 22:54:31 [alert] 12023#0: shared memory zone "ngx_test_traffic_status" was locked by 12693
+2022/09/21 22:54:34 [alert] 12023#0: worker process 12965 exited on signal 11 (core dumped)
+2022/09/21 22:54:34 [alert] 12023#0: shared memory zone "ngx_test_traffic_status" was locked by 12965
+2022/09/21 22:54:35 [alert] 12023#0: worker process 12981 exited on signal 11 (core dumped)
+2022/09/21 22:54:35 [alert] 12023#0: shared memory zone "ngx_test_traffic_status" was locked by 12981
+2022/09/21 22:54:35 [alert] 12023#0: worker process 12988 exited on signal 11 (core dumped)
+2022/09/21 22:54:35 [alert] 12023#0: shared memory zone "ngx_test_traffic_status" was locked by 12988
+2022/09/21 22:54:36 [alert] 12023#0: worker process 12995 exited on signal 11 (core dumped)
+2022/09/21 22:54:36 [alert] 12023#0: shared memory zone "ngx_test_traffic_status" was locked by 12995
+2022/09/21 22:54:39 [alert] 12023#0: worker process 13003 exited on signal 11 (core dumped)
+2022/09/21 22:54:39 [alert] 12023#0: shared memory zone "ngx_test_traffic_status" was locked by 13003
+2022/09/21 22:54:40 [alert] 12023#0: worker process 13010 exited on signal 11 (core dumped)
+2022/09/21 22:54:40 [alert] 12023#0: shared memory zone "ngx_test_traffic_status" was locked by 13010
+2022/09/21 22:54:41 [alert] 12023#0: worker process 13017 exited on signal 11 (core dumped)
+2022/09/21 22:54:41 [alert] 12023#0: shared memory zone "ngx_test_traffic_status" was locked by 13017
+2022/09/21 22:54:41 [alert] 12023#0: worker process 13025 exited on signal 11 (core dumped)
+2022/09/21 22:54:41 [alert] 12023#0: shared memory zone "ngx_test_traffic_status" was locked by 13025
+2022/09/21 22:54:42 [alert] 12023#0: worker process 13033 exited on signal 11 (core dumped)
+2022/09/21 22:54:42 [alert] 12023#0: shared memory zone "ngx_test_traffic_status" was locked by 13033

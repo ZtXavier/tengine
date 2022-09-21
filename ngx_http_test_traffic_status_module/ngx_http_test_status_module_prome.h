@@ -46,9 +46,7 @@
     "nginx_vts_server_requests_total{host=\"%V\",code=\"2xx\"} %uA\n"          \
     "nginx_vts_server_requests_total{host=\"%V\",code=\"3xx\"} %uA\n"          \
     "nginx_vts_server_requests_total{host=\"%V\",code=\"4xx\"} %uA\n"          \
-    "nginx_vts_server_requests_total{host=\"%V\",code=\"5xx\"} %uA\n"          \
-    "nginx_vts_server_request_seconds_total{host=\"%V\"} %.3f\n"               \
-    "nginx_vts_server_request_seconds{host=\"%V\"} %.3f\n"
+    "nginx_vts_server_requests_total{host=\"%V\",code=\"5xx\"} %uA\n"          
 
 
 /* #if (NGX_HTTP_CACHE)
@@ -127,7 +125,7 @@
     "status=\"scarce\"} %uA\n"
 #endif */
 
-#define NGX_HTTP_TEST_TRAFFIC_STATUS_PROMETHEUS_FMT_UPSTREAM_S                \
+/* #define NGX_HTTP_TEST_TRAFFIC_STATUS_PROMETHEUS_FMT_UPSTREAM_S                \
     "# HELP nginx_vts_upstream_bytes_total The request/response bytes\n"       \
     "# TYPE nginx_vts_upstream_bytes_total counter\n"                          \
     "# HELP nginx_vts_upstream_requests_total The upstream requests counter\n" \
@@ -173,7 +171,7 @@
     "nginx_vts_upstream_response_seconds_total{upstream=\"%V\","               \
     "backend=\"%V\"} %.3f\n"                                                   \
     "nginx_vts_upstream_response_seconds{upstream=\"%V\","                     \
-    "backend=\"%V\"} %.3f\n"
+    "backend=\"%V\"} %.3f\n" */
 
 
 u_char *ngx_http_test_traffic_status_display_prometheus_set_main(

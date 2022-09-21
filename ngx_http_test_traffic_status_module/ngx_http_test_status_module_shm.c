@@ -1,6 +1,7 @@
 #include"ngx_http_test_status_module.h"
 #include "ngx_http_test_status_module_shm.h"
 #include "ngx_http_test_status_module_node.h"
+#include "ngx_http_test_status_module_filter.h"
 
 void
 ngx_http_test_traffic_status_shm_info_node(ngx_http_request_t *r,
@@ -128,7 +129,7 @@ ngx_http_test_traffic_status_shm_add_node(ngx_http_request_t *r,
         node->key = hash;
         vtsn->len = (u_short) key->len;
         ngx_http_test_traffic_status_node_init(r, vtsn);
-        vtsn->stat_upstream.type = type;
+        // vtsn->stat_upstream.type = type;
         ngx_memcpy(vtsn->data, key->data, key->len);
 
         ngx_rbtree_insert(ctx->rbtree, node);

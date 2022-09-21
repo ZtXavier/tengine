@@ -1,6 +1,9 @@
 #include"ngx_http_test_status_module.h"
 #include"ngx_http_test_status_module_shm.h"
 #include"ngx_http_test_status_module_node.h"
+// #include"ngx_http_test_status_module_filter.h"
+
+
 
 ngx_int_t
 ngx_http_test_traffic_status_node_generate_key(ngx_pool_t *pool,
@@ -185,37 +188,37 @@ ngx_http_test_traffic_status_find_lru_node(ngx_http_request_t *r,
 }
 
 
-ngx_rbtree_node_t *
-ngx_http_test_traffic_status_find_lru_node_cmp(ngx_http_request_t *r,
-    ngx_rbtree_node_t *a, ngx_rbtree_node_t *b)
-{
-    ngx_int_t                                         ai, bi;
-    ngx_http_test_traffic_status_node_t             *avtsn, *bvtsn;
-    ngx_http_test_traffic_status_node_time_queue_t  *aq, *bq;
+// ngx_rbtree_node_t *
+// ngx_http_test_traffic_status_find_lru_node_cmp(ngx_http_request_t *r,
+//     ngx_rbtree_node_t *a, ngx_rbtree_node_t *b)
+// {
+//     ngx_int_t                                         ai, bi;
+//     ngx_http_test_traffic_status_node_t             *avtsn, *bvtsn;
+//     ngx_http_test_traffic_status_node_time_queue_t  *aq, *bq;
 
-    if (a == NULL) {
-        return b;
-    }
+//     if (a == NULL) {
+//         return b;
+//     }
 
-    avtsn = (ngx_http_test_traffic_status_node_t *) &a->color;
-    bvtsn = (ngx_http_test_traffic_status_node_t *) &b->color;
+//     avtsn = (ngx_http_test_traffic_status_node_t *) &a->color;
+//     bvtsn = (ngx_http_test_traffic_status_node_t *) &b->color;
 
-    aq = &avtsn->stat_request_times;
-    bq = &bvtsn->stat_request_times;
+//     aq = &avtsn->stat_request_times;
+//     bq = &bvtsn->stat_request_times;
 
-    if (aq->front == aq->rear) {
-        return a;
-    }
+//     if (aq->front == aq->rear) {
+//         return a;
+//     }
 
-    if (bq->front == bq->rear) {
-        return b;
-    }
+//     if (bq->front == bq->rear) {
+//         return b;
+//     }
 
-    ai = ngx_http_test_traffic_status_node_time_queue_rear(aq);
-    bi = ngx_http_test_traffic_status_node_time_queue_rear(bq);
+//     ai = ngx_http_test_traffic_status_node_time_queue_rear(aq);
+//     bi = ngx_http_test_traffic_status_node_time_queue_rear(bq);
 
-    return (aq->times[ai].time < bq->times[bi].time) ? a : b;
-}
+//     return (aq->times[ai].time < bq->times[bi].time) ? a : b;
+// }
 
 
 ngx_rbtree_node_t *
@@ -269,8 +272,8 @@ ngx_http_test_traffic_status_node_zero(ngx_http_test_traffic_status_node_t *vtsn
     vtsn->stat_4xx_counter = 0;
     vtsn->stat_5xx_counter = 0;
 
-    vtsn->stat_request_time_counter = 0;
-    vtsn->stat_request_time = 0;
+    // vtsn->stat_request_time_counter = 0;
+    // vtsn->stat_request_time = 0;
 
     // vtsn->stat_request_counter_oc = 0;
     // vtsn->stat_in_bytes_oc = 0;
@@ -314,26 +317,26 @@ void
 ngx_http_test_traffic_status_node_init(ngx_http_request_t *r,
     ngx_http_test_traffic_status_node_t *vtsn)
 {
-    ngx_msec_int_t  ms;
+    // ngx_msec_int_t  ms;
 
     /* init serverZone */
     ngx_http_test_traffic_status_node_zero(vtsn);
-    ngx_http_test_traffic_status_node_time_queue_init(&vtsn->stat_request_times);
+    // ngx_http_test_traffic_status_node_time_queue_init(&vtsn->stat_request_times);
     // ngx_http_test_traffic_status_node_histogram_bucket_init(r, &vtsn->stat_request_buckets);
 
-    /* init upstreamZone */
-    vtsn->stat_upstream.type = NGX_HTTP_TEST_TRAFFIC_STATUS_UPSTREAM_NO;
-    vtsn->stat_upstream.response_time_counter = 0;
-    vtsn->stat_upstream.response_time = 0;
-    ngx_http_test_traffic_status_node_time_queue_init(&vtsn->stat_upstream.response_times);
+    // /* init upstreamZone */
+    // vtsn->stat_upstream.type = NGX_HTTP_TEST_TRAFFIC_STATUS_UPSTREAM_NO;
+    // vtsn->stat_upstream.response_time_counter = 0;
+    // vtsn->stat_upstream.response_time = 0;
+    // ngx_http_test_traffic_status_node_time_queue_init(&vtsn->stat_upstream.response_times);
     // ngx_http_test_traffic_status_node_histogram_bucket_init(r,
     //     &vtsn->stat_upstream.response_buckets);
 
     /* set serverZone */
-    ms = ngx_http_test_traffic_status_request_time(r);
-    vtsn->stat_request_time = (ngx_msec_t) ms;
+    // ms = ngx_http_test_traffic_status_request_time(r);
+    // vtsn->stat_request_time = (ngx_msec_t) ms;
 
-    ngx_http_test_traffic_status_node_update(r, vtsn, ms);
+    ngx_http_test_traffic_status_node_update(r, vtsn);
 }
 
 
@@ -345,20 +348,20 @@ void
 ngx_http_test_traffic_status_node_set(ngx_http_request_t *r,
     ngx_http_test_traffic_status_node_t *vtsn)
 {
-    ngx_msec_int_t                             ms;
+    // ngx_msec_int_t                             ms;
     ngx_http_test_traffic_status_node_t       ovtsn;
-    ngx_http_test_traffic_status_loc_conf_t  *vtscf;
+    // ngx_http_test_traffic_status_loc_conf_t  *vtscf;
 
-    vtscf = ngx_http_get_module_loc_conf(r, ngx_http_test_traffic_status_module);
+    // vtscf = ngx_http_get_module_loc_conf(r, ngx_http_test_traffic_status_module);
 
     ovtsn = *vtsn;
 
-    ms = ngx_http_test_traffic_status_request_time(r);
-    ngx_http_test_traffic_status_node_update(r, vtsn, ms);
+    // ms = ngx_http_test_traffic_status_request_time(r);
+    ngx_http_test_traffic_status_node_update(r, vtsn);
 
-    vtsn->stat_request_time = ngx_http_test_traffic_status_node_time_queue_average(
-                                  &vtsn->stat_request_times, vtscf->average_method,
-                                  vtscf->average_period);
+    // vtsn->stat_request_time = ngx_http_test_traffic_status_node_time_queue_average(
+    //                               &vtsn->stat_request_times, vtscf->average_method,
+    //                               vtscf->average_period);
 
     ngx_http_test_traffic_status_add_oc((&ovtsn), vtsn);
 }
@@ -366,7 +369,7 @@ ngx_http_test_traffic_status_node_set(ngx_http_request_t *r,
 
 void
 ngx_http_test_traffic_status_node_update(ngx_http_request_t *r,
-    ngx_http_test_traffic_status_node_t *vtsn, ngx_msec_int_t ms)
+    ngx_http_test_traffic_status_node_t *vtsn)
 {
     ngx_uint_t status = r->headers_out.status;
 
@@ -376,10 +379,10 @@ ngx_http_test_traffic_status_node_update(ngx_http_request_t *r,
 
     ngx_http_test_traffic_status_add_rc(status, vtsn);
 
-    vtsn->stat_request_time_counter += (ngx_atomic_uint_t) ms;
+    // vtsn->stat_request_time_counter += (ngx_atomic_uint_t) ms;
 
-    ngx_http_test_traffic_status_node_time_queue_insert(&vtsn->stat_request_times,
-                                                         ms);
+    // ngx_http_test_traffic_status_node_time_queue_insert(&vtsn->stat_request_times,
+    //                                                      ms);
 
     // ngx_http_test_traffic_status_node_histogram_observe(&vtsn->stat_request_buckets,
     //                                                      ms);
@@ -392,178 +395,178 @@ ngx_http_test_traffic_status_node_update(ngx_http_request_t *r,
 }
 
 
-void
-ngx_http_test_traffic_status_node_time_queue_zero(
-    ngx_http_test_traffic_status_node_time_queue_t *q)
-{
-    ngx_memzero(q, sizeof(ngx_http_test_traffic_status_node_time_queue_t));
-}
+// void
+// ngx_http_test_traffic_status_node_time_queue_zero(
+//     ngx_http_test_traffic_status_node_time_queue_t *q)
+// {
+//     ngx_memzero(q, sizeof(ngx_http_test_traffic_status_node_time_queue_t));
+// }
 
 
-void
-ngx_http_test_traffic_status_node_time_queue_init(
-    ngx_http_test_traffic_status_node_time_queue_t *q)
-{
-    ngx_http_test_traffic_status_node_time_queue_zero(q);
-    q->rear = NGX_HTTP_TEST_TRAFFIC_STATUS_DEFAULT_QUEUE_LEN - 1;
-    q->len = NGX_HTTP_TEST_TRAFFIC_STATUS_DEFAULT_QUEUE_LEN;
-}
+// void
+// ngx_http_test_traffic_status_node_time_queue_init(
+//     ngx_http_test_traffic_status_node_time_queue_t *q)
+// {
+//     ngx_http_test_traffic_status_node_time_queue_zero(q);
+//     q->rear = NGX_HTTP_TEST_TRAFFIC_STATUS_DEFAULT_QUEUE_LEN - 1;
+//     q->len = NGX_HTTP_TEST_TRAFFIC_STATUS_DEFAULT_QUEUE_LEN;
+// }
 
 
-ngx_int_t
-ngx_http_test_traffic_status_node_time_queue_push(
-    ngx_http_test_traffic_status_node_time_queue_t *q,
-    ngx_msec_int_t x)
-{
-    if ((q->rear + 1) % q->len == q->front) {
-        return NGX_ERROR;
-    }
+// ngx_int_t
+// ngx_http_test_traffic_status_node_time_queue_push(
+//     ngx_http_test_traffic_status_node_time_queue_t *q,
+//     ngx_msec_int_t x)
+// {
+//     if ((q->rear + 1) % q->len == q->front) {
+//         return NGX_ERROR;
+//     }
 
-    q->times[q->rear].time = ngx_http_test_traffic_status_current_msec();
-    q->times[q->rear].msec = x;
-    q->rear = (q->rear + 1) % q->len;
+//     q->times[q->rear].time = ngx_http_test_traffic_status_current_msec();
+//     q->times[q->rear].msec = x;
+//     q->rear = (q->rear + 1) % q->len;
 
-    return NGX_OK;
-}
-
-
-ngx_int_t
-ngx_http_test_traffic_status_node_time_queue_pop(
-    ngx_http_test_traffic_status_node_time_queue_t *q,
-    ngx_http_test_traffic_status_node_time_t *x)
-{
-    if (q->front == q->rear) {
-        return NGX_ERROR;
-    }
-
-    *x = q->times[q->front];
-    q->front = (q->front + 1) % q->len;
-
-    return NGX_OK;
-}
+//     return NGX_OK;
+// }
 
 
-ngx_int_t
-ngx_http_test_traffic_status_node_time_queue_rear(
-    ngx_http_test_traffic_status_node_time_queue_t *q)
-{
-    return (q->rear > 0) ? (q->rear - 1) : (NGX_HTTP_TEST_TRAFFIC_STATUS_DEFAULT_QUEUE_LEN - 1);
-}
+// ngx_int_t
+// ngx_http_test_traffic_status_node_time_queue_pop(
+//     ngx_http_test_traffic_status_node_time_queue_t *q,
+//     ngx_http_test_traffic_status_node_time_t *x)
+// {
+//     if (q->front == q->rear) {
+//         return NGX_ERROR;
+//     }
+
+//     *x = q->times[q->front];
+//     q->front = (q->front + 1) % q->len;
+
+//     return NGX_OK;
+// }
 
 
-void
-ngx_http_test_traffic_status_node_time_queue_insert(
-    ngx_http_test_traffic_status_node_time_queue_t *q,
-    ngx_msec_int_t x)
-{
-    ngx_int_t                                  rc;
-    ngx_http_test_traffic_status_node_time_t  rx;
-    rc = ngx_http_test_traffic_status_node_time_queue_pop(q, &rx)
-         | ngx_http_test_traffic_status_node_time_queue_push(q, x);
-
-    if (rc != NGX_OK) {
-        ngx_http_test_traffic_status_node_time_queue_init(q);
-    }
-}
+// ngx_int_t
+// ngx_http_test_traffic_status_node_time_queue_rear(
+//     ngx_http_test_traffic_status_node_time_queue_t *q)
+// {
+//     return (q->rear > 0) ? (q->rear - 1) : (NGX_HTTP_TEST_TRAFFIC_STATUS_DEFAULT_QUEUE_LEN - 1);
+// }
 
 
-ngx_msec_t
-ngx_http_test_traffic_status_node_time_queue_average(
-    ngx_http_test_traffic_status_node_time_queue_t *q,
-    ngx_int_t method, ngx_msec_t period)
-{
-    ngx_msec_t  avg;
+// void
+// ngx_http_test_traffic_status_node_time_queue_insert(
+//     ngx_http_test_traffic_status_node_time_queue_t *q,
+//     ngx_msec_int_t x)
+// {
+//     ngx_int_t                                  rc;
+//     ngx_http_test_traffic_status_node_time_t  rx;
+//     rc = ngx_http_test_traffic_status_node_time_queue_pop(q, &rx)
+//          | ngx_http_test_traffic_status_node_time_queue_push(q, x);
 
-    if (method == NGX_HTTP_TEST_TRAFFIC_STATUS_AVERAGE_METHOD_AMM) {
-        avg = ngx_http_test_traffic_status_node_time_queue_amm(q, period);
-    } else {
-        avg = ngx_http_test_traffic_status_node_time_queue_wma(q, period);
-    }
-
-    return avg;
-}
-
-
-ngx_msec_t
-ngx_http_test_traffic_status_node_time_queue_amm(
-    ngx_http_test_traffic_status_node_time_queue_t *q,
-    ngx_msec_t period)
-{
-    ngx_int_t   c, i, j, k;
-    ngx_msec_t  x, current_msec;
-
-    current_msec = ngx_http_test_traffic_status_current_msec();
-
-    c = 0;
-    x = period ? (current_msec - period) : 0;
-
-    for (i = q->front, j = 1, k = 0; i != q->rear; i = (i + 1) % q->len, j++) {
-        if (x < q->times[i].time) {
-            k += (ngx_int_t) q->times[i].msec;
-            c++;
-        }
-    }
-
-    if (j != q->len) {
-        ngx_http_test_traffic_status_node_time_queue_init(q);
-    }
-
-    return (c == 0) ? (ngx_msec_t) 0 : (ngx_msec_t) (k / c);
-}
+//     if (rc != NGX_OK) {
+//         ngx_http_test_traffic_status_node_time_queue_init(q);
+//     }
+// }
 
 
-ngx_msec_t
-ngx_http_test_traffic_status_node_time_queue_wma(
-    ngx_http_test_traffic_status_node_time_queue_t *q,
-    ngx_msec_t period)
-{
-    ngx_int_t   c, i, j, k;
-    ngx_msec_t  x, current_msec;
+// ngx_msec_t
+// ngx_http_test_traffic_status_node_time_queue_average(
+//     ngx_http_test_traffic_status_node_time_queue_t *q,
+//     ngx_int_t method, ngx_msec_t period)
+// {
+//     ngx_msec_t  avg;
 
-    current_msec = ngx_http_test_traffic_status_current_msec();
+//     if (method == NGX_HTTP_TEST_TRAFFIC_STATUS_AVERAGE_METHOD_AMM) {
+//         avg = ngx_http_test_traffic_status_node_time_queue_amm(q, period);
+//     } else {
+//         avg = ngx_http_test_traffic_status_node_time_queue_wma(q, period);
+//     }
 
-    c = 0;
-    x = period ? (current_msec - period) : 0;
+//     return avg;
+// }
 
-    for (i = q->front, j = 1, k = 0; i != q->rear; i = (i + 1) % q->len, j++) {
-        if (x < q->times[i].time) {
-            k += (ngx_int_t) q->times[i].msec * ++c;
-        }
-    }
+// //计算处理时间的算术平均值
+// ngx_msec_t
+// ngx_http_test_traffic_status_node_time_queue_amm(
+//     ngx_http_test_traffic_status_node_time_queue_t *q,
+//     ngx_msec_t period)
+// {
+//     ngx_int_t   c, i, j, k;
+//     ngx_msec_t  x, current_msec;
 
-    if (j != q->len) {
-        ngx_http_test_traffic_status_node_time_queue_init(q);
-    }
+//     current_msec = ngx_http_test_traffic_status_current_msec();
 
-    return (c == 0) ? (ngx_msec_t) 0 : (ngx_msec_t)
-           (k / (ngx_int_t) ngx_http_test_traffic_status_triangle(c));
-}
+//     c = 0;
+//     x = period ? (current_msec - period) : 0;
+
+//     for (i = q->front, j = 1, k = 0; i != q->rear; i = (i + 1) % q->len, j++) {
+//         if (x < q->times[i].time) {
+//             k += (ngx_int_t) q->times[i].msec;
+//             c++;
+//         }
+//     }
+
+//     if (j != q->len) {
+//         ngx_http_test_traffic_status_node_time_queue_init(q);
+//     }
+
+//     return (c == 0) ? (ngx_msec_t) 0 : (ngx_msec_t) (k / c);
+// }
 
 
-void
-ngx_http_test_traffic_status_node_time_queue_merge(
-    ngx_http_test_traffic_status_node_time_queue_t *a,
-    ngx_http_test_traffic_status_node_time_queue_t *b,
-    ngx_msec_t period)
-{
-    ngx_int_t   i;
-    ngx_msec_t  x, current_msec;
+// ngx_msec_t
+// ngx_http_test_traffic_status_node_time_queue_wma(
+//     ngx_http_test_traffic_status_node_time_queue_t *q,
+//     ngx_msec_t period)
+// {
+//     ngx_int_t   c, i, j, k;
+//     ngx_msec_t  x, current_msec;
 
-    current_msec = ngx_http_test_traffic_status_current_msec();
+//     current_msec = ngx_http_test_traffic_status_current_msec();
 
-    x = period ? (current_msec - period) : 0;
+//     c = 0;
+//     x = period ? (current_msec - period) : 0;
 
-    for (i = a->front; i != a->rear; i = (i + 1) % a->len) {
-            a->times[i].time = (a->times[i].time > b->times[i].time)
-                               ? a->times[i].time
-                               : b->times[i].time;
+//     for (i = q->front, j = 1, k = 0; i != q->rear; i = (i + 1) % q->len, j++) {
+//         if (x < q->times[i].time) {
+//             k += (ngx_int_t) q->times[i].msec * ++c;
+//         }
+//     }
 
-            if (x < a->times[i].time) {
-                a->times[i].msec = (a->times[i].msec + b->times[i].msec) / 2
-                                   + (a->times[i].msec + b->times[i].msec) % 2;
+//     if (j != q->len) {
+//         ngx_http_test_traffic_status_node_time_queue_init(q);
+//     }
 
-            } else {
-                a->times[i].msec = 0;
-            }
-    }
-}
+//     return (c == 0) ? (ngx_msec_t) 0 : (ngx_msec_t)
+//            (k / (ngx_int_t) ngx_http_test_traffic_status_triangle(c));
+// }
+
+
+// void
+// ngx_http_test_traffic_status_node_time_queue_merge(
+//     ngx_http_test_traffic_status_node_time_queue_t *a,
+//     ngx_http_test_traffic_status_node_time_queue_t *b,
+//     ngx_msec_t period)
+// {
+//     ngx_int_t   i;
+//     ngx_msec_t  x, current_msec;
+
+//     current_msec = ngx_http_test_traffic_status_current_msec();
+
+//     x = period ? (current_msec - period) : 0;
+
+//     for (i = a->front; i != a->rear; i = (i + 1) % a->len) {
+//             a->times[i].time = (a->times[i].time > b->times[i].time)
+//                                ? a->times[i].time
+//                                : b->times[i].time;
+
+//             if (x < a->times[i].time) {
+//                 a->times[i].msec = (a->times[i].msec + b->times[i].msec) / 2
+//                                    + (a->times[i].msec + b->times[i].msec) % 2;
+
+//             } else {
+//                 a->times[i].msec = 0;
+//             }
+//     }
+// }

@@ -74,10 +74,7 @@
 }
 
 
-#define ngx_http_test_traffic_status_add_oc(o, c) {                           \
-    if (o->stat_request_counter > c->stat_request_counter) {                   \
-        c->stat_request_counter_oc++;                                          \
-    }                                                                          \
+#define ngx_http_test_traffic_status_add_oc(o, c) {                 \
     if (o->stat_in_bytes > c->stat_in_bytes) {                                 \
         c->stat_in_bytes_oc++;                                                 \
     }                                                                          \
@@ -98,10 +95,7 @@
     }                                                                          \
     if (o->stat_5xx_counter > c->stat_5xx_counter) {                           \
         c->stat_5xx_counter_oc++;                                              \
-    }                                                                          \
-    if (o->stat_request_time_counter > c->stat_request_time_counter) {         \
-        c->stat_request_time_counter_oc++;                                     \
-    }                                                                          \
+    }                                                                              \
 }
 
 

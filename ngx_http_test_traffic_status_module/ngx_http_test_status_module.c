@@ -3,6 +3,8 @@
 #include"ngx_http_test_status_module_prome.h"
 #include"ngx_http_test_status_module_variable.h"
 #include"ngx_http_test_status_module_shm.h"
+#include"ngx_http_test_status_module_filter.h"
+#include"ngx_http_test_status_module_limit.h"
 
 ngx_int_t ngx_http_test_traffic_status_display_get_upstream_nelts(ngx_http_request_t *r);
 ngx_int_t ngx_http_test_traffic_status_display_get_size(ngx_http_request_t *r,ngx_int_t format);
@@ -152,7 +154,7 @@ ngx_http_test_traffic_status_init_main_conf(ngx_conf_t *cf, void *conf)
 {
     ngx_http_test_traffic_status_ctx_t  *ctx = conf;
 
-    ngx_int_t                                  rc;
+    // ngx_int_t                                  rc;
     ngx_http_test_traffic_status_loc_conf_t  *vtscf;
 
     ngx_log_debug0(NGX_LOG_DEBUG_HTTP, cf->log, 0,
@@ -160,31 +162,31 @@ ngx_http_test_traffic_status_init_main_conf(ngx_conf_t *cf, void *conf)
 
     vtscf = ngx_http_conf_get_module_loc_conf(cf, ngx_http_test_traffic_status_module);
 
-    if (vtscf->filter_check_duplicate != 0) {
-        rc = ngx_http_test_traffic_status_filter_unique(cf->pool, &ctx->filter_keys);
-        if (rc != NGX_OK) {
-            ngx_conf_log_error(NGX_LOG_EMERG, cf, 0,
-                               "init_main_conf::filter_unique() failed");
-            return NGX_CONF_ERROR;
-        }
-    }
+    // if (vtscf->filter_check_duplicate != 0) {
+    //     rc = ngx_http_test_traffic_status_filter_unique(cf->pool, &ctx->filter_keys);
+    //     if (rc != NGX_OK) {
+    //         ngx_conf_log_error(NGX_LOG_EMERG, cf, 0,
+    //                            "init_main_conf::filter_unique() failed");
+    //         return NGX_CONF_ERROR;
+    //     }
+    // }
 
-    if (vtscf->limit_check_duplicate != 0) {
-        rc = ngx_http_test_traffic_status_limit_traffic_unique(cf->pool, &ctx->limit_traffics);
-        if (rc != NGX_OK) {
-            ngx_conf_log_error(NGX_LOG_EMERG, cf, 0,
-                               "init_main_conf::limit_traffic_unique(server) failed");
-            return NGX_CONF_ERROR;
-        }
+    // if (vtscf->limit_check_duplicate != 0) {
+    //     rc = ngx_http_test_traffic_status_limit_traffic_unique(cf->pool, &ctx->limit_traffics);
+    //     if (rc != NGX_OK) {
+    //         ngx_conf_log_error(NGX_LOG_EMERG, cf, 0,
+    //                            "init_main_conf::limit_traffic_unique(server) failed");
+    //         return NGX_CONF_ERROR;
+    //     }
 
-        rc = ngx_http_test_traffic_status_limit_traffic_unique(cf->pool,
-                                                                &ctx->limit_filter_traffics);
-        if (rc != NGX_OK) {
-            ngx_conf_log_error(NGX_LOG_EMERG, cf, 0,
-                               "init_main_conf::limit_traffic_unique(filter) failed");
-            return NGX_CONF_ERROR;
-        }
-    }
+    //     rc = ngx_http_test_traffic_status_limit_traffic_unique(cf->pool,
+    //                                                             &ctx->limit_filter_traffics);
+    //     if (rc != NGX_OK) {
+    //         ngx_conf_log_error(NGX_LOG_EMERG, cf, 0,
+    //                            "init_main_conf::limit_traffic_unique(filter) failed");
+    //         return NGX_CONF_ERROR;
+    //     }
+    // }
 
     ngx_conf_init_uint_value(ctx->filter_max_node, 0);
     ngx_conf_init_value(ctx->enable, 0);
@@ -228,7 +230,7 @@ ngx_http_test_traffic_status_create_loc_conf(ngx_conf_t *cf)
     }
     conf->shm_zone = NGX_CONF_UNSET_PTR;
     conf->enable = NGX_CONF_UNSET;
-    
+    conf->format = NGX_CONF_UNSET;
     conf->start_msec = ngx_http_test_traffic_status_current_msec();
 
     return conf;
@@ -858,8 +860,8 @@ ngx_http_test_traffic_status_display_get_size(ngx_http_request_t *r,
     ngx_http_test_traffic_status_shm_info(r, shm_info);
 
     /* allocate memory for the upstream groups even if upstream node not exists */
-    un = shm_info->used_node
-         + (ngx_uint_t) ngx_http_test_traffic_status_display_get_upstream_nelts(r);
+    un = shm_info->used_node;
+        //  + (ngx_uint_t) ngx_http_test_traffic_status_display_get_upstream_nelts(r);
 
     size = 0;
 
@@ -889,56 +891,56 @@ ngx_http_test_traffic_status_display_get_size(ngx_http_request_t *r,
 }
 
 
-ngx_int_t
-ngx_http_test_traffic_status_display_get_upstream_nelts(ngx_http_request_t *r)
-{
-    ngx_uint_t                      i, j, n;
-    ngx_http_upstream_server_t     *us;
-#if (NGX_HTTP_UPSTREAM_ZONE)
-    ngx_http_upstream_rr_peer_t    *peer;
-    ngx_http_upstream_rr_peers_t   *peers;
-#endif
-    ngx_http_upstream_srv_conf_t   *uscf, **uscfp;
-    ngx_http_upstream_main_conf_t  *umcf;
+// ngx_int_t
+// ngx_http_test_traffic_status_display_get_upstream_nelts(ngx_http_request_t *r)
+// {
+//     ngx_uint_t                      i, j, n;
+//     ngx_http_upstream_server_t     *us;
+// #if (NGX_HTTP_UPSTREAM_ZONE)
+//     ngx_http_upstream_rr_peer_t    *peer;
+//     ngx_http_upstream_rr_peers_t   *peers;
+// #endif
+//     ngx_http_upstream_srv_conf_t   *uscf, **uscfp;
+//     ngx_http_upstream_main_conf_t  *umcf;
 
-    umcf = ngx_http_get_module_main_conf(r, ngx_http_upstream_module);
-    uscfp = umcf->upstreams.elts;
+//     umcf = ngx_http_get_module_main_conf(r, ngx_http_upstream_module);
+//     uscfp = umcf->upstreams.elts;
 
-    for (i = 0, j = 0, n = 0; i < umcf->upstreams.nelts; i++) {
+//     for (i = 0, j = 0, n = 0; i < umcf->upstreams.nelts; i++) {
 
-        uscf = uscfp[i];
+//         uscf = uscfp[i];
 
-        /* groups */
-        if (uscf->servers && !uscf->port) {
-            us = uscf->servers->elts;
+//         /* groups */
+//         if (uscf->servers && !uscf->port) {
+//             us = uscf->servers->elts;
 
-#if (NGX_HTTP_UPSTREAM_ZONE)
-            if (uscf->shm_zone == NULL) {
-                goto not_supported;
-            }
+// #if (NGX_HTTP_UPSTREAM_ZONE)
+//             if (uscf->shm_zone == NULL) {
+//                 goto not_supported;
+//             }
 
-            peers = uscf->peer.data;
+//             peers = uscf->peer.data;
 
-            ngx_http_upstream_rr_peers_rlock(peers);
+//             ngx_http_upstream_rr_peers_rlock(peers);
 
-            for (peer = peers->peer; peer; peer = peer->next) {
-                n++;
-            }
+//             for (peer = peers->peer; peer; peer = peer->next) {
+//                 n++;
+//             }
 
-            ngx_http_upstream_rr_peers_unlock(peers);
+//             ngx_http_upstream_rr_peers_unlock(peers);
 
-not_supported:
+// not_supported:
 
-#endif
+// #endif
 
-            for (j = 0; j < uscf->servers->nelts; j++) {
-                n += us[j].naddrs;
-            }
-        }
-    }
+//             for (j = 0; j < uscf->servers->nelts; j++) {
+//                 n += us[j].naddrs;
+//             }
+//         }
+//     }
 
-    return n;
-}
+//     return n;
+// }
 
 
 
