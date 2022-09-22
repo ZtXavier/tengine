@@ -2,7 +2,7 @@
 #include <ngx_config.h>
 #include <ngx_core.h>
 #include <ngx_http.h>
-
+#include<ngx_proc.h>
 
 #define NGX_HTTP_REQSTAT_RSRV    29
 #define NGX_HTTP_REQSTAT_MAX     50
@@ -75,6 +75,7 @@ typedef struct {
     ngx_int_t                    index;
     ngx_array_t                 *user_select;
     ngx_array_t                 *user_defined_str;
+    ngx_str_t                    *prome_ctl;
 } ngx_http_reqstat_conf_t;
 
 

@@ -3,8 +3,7 @@
 #include"ngx_http_test_status_module_prome.h"
 #include"ngx_http_test_status_module_variable.h"
 #include"ngx_http_test_status_module_shm.h"
-#include"ngx_http_test_status_module_filter.h"
-#include"ngx_http_test_status_module_limit.h"
+
 
 ngx_int_t ngx_http_test_traffic_status_display_get_upstream_nelts(ngx_http_request_t *r);
 ngx_int_t ngx_http_test_traffic_status_display_get_size(ngx_http_request_t *r,ngx_int_t format);
@@ -781,14 +780,14 @@ ngx_http_test_traffic_status_display_handler_default(ngx_http_request_t *r)
             return rc;
         }
     }
-
+    // 获取需要创建共享内存的大小
     size = ngx_http_test_traffic_status_display_get_size(r, format);
     if (size == NGX_ERROR) {
         ngx_log_error(NGX_LOG_ERR, r->connection->log, 0,
                       "display_handler_default::display_get_size() failed");
         return NGX_HTTP_INTERNAL_SERVER_ERROR;
     }
-
+    // 创建一个临时的buf
     b = ngx_create_temp_buf(r->pool, size);
     if (b == NULL) {
         ngx_log_error(NGX_LOG_ERR, r->connection->log, 0,

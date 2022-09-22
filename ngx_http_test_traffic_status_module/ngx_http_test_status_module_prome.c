@@ -103,7 +103,7 @@ ngx_http_test_traffic_status_display_prometheus_set_server(ngx_http_request_t *r
 
             key.data = vtsn->data;
             key.len = vtsn->len;
-
+            // 
             ngx_http_test_traffic_status_escape_prometheus(r->pool, &escaped_key, key.data, key.len);
             buf = ngx_http_test_traffic_status_display_prometheus_set_server_node(r, buf, &escaped_key, vtsn);
 
@@ -386,7 +386,7 @@ ngx_http_test_traffic_status_escape_prometheus(ngx_pool_t *pool, ngx_str_t *buf,
     last = p + n;
     pa = p;
     size = 0;
-
+    // 找到第一个需要转义的字符
     /* Find the first character that needs to be escaped */
     while (pa < last) {
         if isascii(*pa) {
@@ -487,6 +487,7 @@ ngx_http_test_traffic_status_display_prometheus_set(ngx_http_request_t *r,
 
     vtscf = ngx_http_get_module_loc_conf(r, ngx_http_test_traffic_status_module);
 
+    // 获取到红黑树的根节点
     node = ctx->rbtree->root;
 
     /* init stats */
@@ -494,6 +495,7 @@ ngx_http_test_traffic_status_display_prometheus_set(ngx_http_request_t *r,
     // ngx_http_test_traffic_status_node_time_queue_init(&vtscf->stats.stat_request_times);
 
     /* main & connections */
+    // 格式化输入基本的nginx状态信息
     buf = ngx_http_test_traffic_status_display_prometheus_set_main(r, buf);
 
     /* serverZones */
@@ -501,8 +503,10 @@ ngx_http_test_traffic_status_display_prometheus_set(ngx_http_request_t *r,
 // #if (NGX_HTTP_CACHE)
 //     buf = ngx_sprintf(buf, NGX_HTTP_TEST_TRAFFIC_STATUS_PROMETHEUS_FMT_SERVER_CACHE_S);
 // #endif
+    // 通过递归的方式来获取server的节点信息
     buf = ngx_http_test_traffic_status_display_prometheus_set_server(r, buf, node);
 
+    // 找到第一个需要转译的字符
     ngx_http_test_traffic_status_escape_prometheus(r->pool, &escaped_key, vtscf->sum_key.data, vtscf->sum_key.len);
     buf = ngx_http_test_traffic_status_display_prometheus_set_server_node(r, buf, &escaped_key, &vtscf->stats);
     

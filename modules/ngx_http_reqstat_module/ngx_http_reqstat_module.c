@@ -128,6 +128,8 @@ void *conf);
 
 static ngx_int_t ngx_http_reqstat_prome_handler(ngx_http_request_t *r);
 
+static char *ngx_http_reqstat_prome_zone(ngx_conf_t *cf, ngx_command_t *cmd,
+    void *conf);
 
 static ngx_command_t   ngx_http_reqstat_commands[] = {
 
@@ -194,12 +196,20 @@ static ngx_command_t   ngx_http_reqstat_commands[] = {
       0,
       NULL },
 
-      { ngx_string("req_status_prome"),
-        NGX_HTTP_LOC_CONF | NGX_CONF_ANY,
-        ngx_http_reqstat_prome,
-        0,
-        0,
-        NULL },
+    { ngx_string("req_prome_status_zone"),
+      NGX_HTTP_MAIN_CONF|NGX_CONF_2MORE,
+      ngx_http_reqstat_prome_zone,
+      0,
+      0,
+      NULL },
+    
+
+    { ngx_string("req_status_prome"),
+      NGX_HTTP_LOC_CONF | NGX_CONF_ANY,
+      ngx_http_reqstat_prome,
+      0,
+      0,
+      NULL },
 
       ngx_null_command
 };
@@ -259,6 +269,7 @@ ngx_http_reqstat_create_loc_conf(ngx_conf_t *cf)
     conf->display = NGX_CONF_UNSET_PTR;
     conf->user_select = NGX_CONF_UNSET_PTR;
     conf->user_defined_str = NGX_CONF_UNSET_PTR;
+    conf->prome_ctl = NGX_CONF_UNSET_PTR;
 
     return conf;
 }
@@ -1702,14 +1713,89 @@ ngx_http_reqstat_check_enable(ngx_http_request_t *r,
 }
 
 
-
-static char * ngx_http_reqstat_prome(ngx_conf_t *cf,ngx_command_t *cmd,void *conf)
+static char * 
+ngx_http_reqstat_prome(ngx_conf_t *cf,ngx_command_t *cmd,void *conf)
 {
     ngx_str_t       *value;
     ngx_uint_t      i;
     ngx_shm_zone_t      *shm_zone,**z;
     ngx_http_core_loc_conf_t        *clcf;
     ngx_http_reqstat_conf_t          *rlcf = conf;
+    // 处理指令请求
+    value = cf->args->elts;
+    if(rlcf->prome_ctl != NGX_CONF_UNSET_PTR){
+        return "is duplicate";
+    }
+
+
+    
+    // 注册回调函数
+    clcf = ngx_http_conf_get_module_loc_conf(cf,ngx_http_core_module);
+    clcf->handler = ngx_http_reqstat_prome_handler;
+    return NGX_CONF_OK;
 }
 
-static ngx_int_t ngx_http_reqstat_prome_handler(ngx_http_request_t *r);
+static ngx_int_t 
+ngx_http_reqstat_prome_handler(ngx_http_request_t *r)
+{
+
+}
+
+
+static ngx_int_t
+ngx_http_reqstat_prome_init_zone(ngx_shm_zone_t *shm_zone, void *data)
+{
+    
+}
+
+static char *
+ngx_http_reqstat_prome_zone(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
+{
+    // 获取指令
+    // 已有的req_stat_zone的指令格式为req_status_zone server "$host,$server_addr:$server_port" 10M;
+    // 目前思路:先按照已有的命令进行解析 问题:是否和req_stat一样引入变量("$host,$server_addr:$server_port")?
+    ssize_t                 size; //共享内存的大小
+    ngx_str_t              *value; //用于解析指令的指针
+    ngx_shm_zone_t     *shm_zone;//共享内存的指针
+    ngx_http_reqstat_ctx_t     *ctx;//用来存储解析conf的指针
+    ngx_http_compile_complex_value_t ccv;//是来保存解析出第二个指令
+
+    value = cf->args->elts;
+    // 获取指令给定的第三个值的大小
+    size = ngx_parse_size(&value[3]);
+    if(size == NGX_ERROR){
+        ngx_conf_log_error(NGX_LOG_EMERG,cf,0,
+                                "invalid prome zone size \"%V\"",&value[3]);
+        return NGX_CONF_ERROR;
+    }
+
+
+    // 这里是按照原有的共享内存来判断大小,最小设置32k
+    if(size < (ssize_t)(8 * ngx_pagesize)) {
+        ngx_conf_log_error(NGX_LOG_EMERG,cf,0,
+                                "zone \"%V\" is too small",&value[1]);
+        return NGX_CONF_ERROR;
+    }
+
+    ctx = ngx_pcalloc(cf->pool,sizeof(ngx_http_reqstat_ctx_t));
+    if(ctx == NULL) {
+        return NGX_CONF_ERROR;
+    }
+
+    shm_zone = ngx_shared_memory_add(cf,&value[1],size,
+                                    &ngx_http_reqstat_module);
+    if(shm_zone == NULL) {
+        return NGX_CONF_ERROR;
+    }
+
+    if(shm_zone->data) {
+        ctx = shm_zone->data;
+       return NGX_CONF_ERROR;
+    }
+
+    shm_zone->init = ngx_http_reqstat_prome_init_zone;
+    shm_zone->data = ctx;
+
+    return NGX_CONF_OK;
+
+}

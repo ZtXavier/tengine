@@ -1,7 +1,7 @@
 #include"ngx_http_test_status_module.h"
 #include "ngx_http_test_status_module_shm.h"
 #include "ngx_http_test_status_module_node.h"
-#include "ngx_http_test_status_module_filter.h"
+
 
 void
 ngx_http_test_traffic_status_shm_info_node(ngx_http_request_t *r,
