@@ -3,6 +3,8 @@
 #include <ngx_core.h>
 #include <ngx_http.h>
 #include<ngx_proc.h>
+#include<ngx_channel.h>
+
 
 #define NGX_HTTP_REQSTAT_RSRV    29
 #define NGX_HTTP_REQSTAT_MAX     50

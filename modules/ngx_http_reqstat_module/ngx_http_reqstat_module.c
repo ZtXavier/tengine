@@ -123,10 +123,10 @@ static ngx_int_t ngx_http_reqstat_input_body_filter(ngx_http_request_t *r,
 ngx_int_t ngx_http_reqstat_log_flow(ngx_http_request_t *r);
 
 // 添加的功能
-static char * ngx_http_reqstat_prome(ngx_conf_t *cf,ngx_command_t *cmd,
+static char * ngx_http_reqstat_traffic_prome(ngx_conf_t *cf,ngx_command_t *cmd,
 void *conf);
 
-static ngx_int_t ngx_http_reqstat_prome_handler(ngx_http_request_t *r);
+static ngx_int_t ngx_http_reqstat_traffic_handler(ngx_http_request_t *r);
 
 static char *ngx_http_reqstat_prome_zone(ngx_conf_t *cf, ngx_command_t *cmd,
     void *conf);
@@ -196,20 +196,20 @@ static ngx_command_t   ngx_http_reqstat_commands[] = {
       0,
       NULL },
 
-    { ngx_string("req_prome_status_zone"),
-      NGX_HTTP_MAIN_CONF|NGX_CONF_2MORE,
-      ngx_http_reqstat_prome_zone,
-      0,
-      0,
-      NULL },
+    // { ngx_string("req_prome_status_zone"),
+    //   NGX_HTTP_MAIN_CONF|NGX_CONF_2MORE,
+    //   ngx_http_reqstat_prome_zone,
+    //   0,
+    //   0,
+    //   NULL },
     
 
-    { ngx_string("req_status_prome"),
-      NGX_HTTP_LOC_CONF | NGX_CONF_ANY,
-      ngx_http_reqstat_prome,
-      0,
-      0,
-      NULL },
+    // { ngx_string("req_status_prome"),
+    //   NGX_HTTP_LOC_CONF | NGX_CONF_ANY,
+    //   ngx_http_reqstat_traffic,
+    //   0,
+    //   0,
+    //   NULL },
 
       ngx_null_command
 };
@@ -1714,7 +1714,7 @@ ngx_http_reqstat_check_enable(ngx_http_request_t *r,
 
 
 static char * 
-ngx_http_reqstat_prome(ngx_conf_t *cf,ngx_command_t *cmd,void *conf)
+ngx_http_reqstat_traffic(ngx_conf_t *cf,ngx_command_t *cmd,void *conf)
 {
     ngx_str_t       *value;
     ngx_uint_t      i;
@@ -1731,12 +1731,12 @@ ngx_http_reqstat_prome(ngx_conf_t *cf,ngx_command_t *cmd,void *conf)
     
     // 注册回调函数
     clcf = ngx_http_conf_get_module_loc_conf(cf,ngx_http_core_module);
-    clcf->handler = ngx_http_reqstat_prome_handler;
+    clcf->handler = ngx_http_reqstat_traffic_handler;
     return NGX_CONF_OK;
 }
 
 static ngx_int_t 
-ngx_http_reqstat_prome_handler(ngx_http_request_t *r)
+ngx_http_reqstat_traffic_handler(ngx_http_request_t *r)
 {
 
 }
@@ -1745,7 +1745,7 @@ ngx_http_reqstat_prome_handler(ngx_http_request_t *r)
 static ngx_int_t
 ngx_http_reqstat_prome_init_zone(ngx_shm_zone_t *shm_zone, void *data)
 {
-    
+
 }
 
 static char *

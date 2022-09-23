@@ -1295,3 +1295,30 @@
 2022/09/22 00:18:01 [alert] 12023#0: shared memory zone "ngx_test_traffic_status" was locked by 17919
 2022/09/22 00:19:45 [alert] 12023#0: worker process 17931 exited on signal 11 (core dumped)
 2022/09/22 00:19:45 [alert] 12023#0: shared memory zone "ngx_test_traffic_status" was locked by 17931
+2022/09/23 00:58:48 [emerg] 92756#0: "processes" directive is not allowed here in /home/zt/tengine/tengine//conf/nginx.conf:81
+2022/09/23 00:59:34 [emerg] 92884#0: no echo process module in /home/zt/tengine/tengine//conf/nginx.conf:18
+2022/09/23 01:14:40 [emerg] 93802#0: "processes" directive is not allowed here in /home/zt/tengine/tengine//conf/nginx.conf:81
+2022/09/23 01:20:39 [emerg] 94482#0: "process" directive is not allowed here in /home/zt/tengine/tengine//conf/nginx.conf:4
+2022/09/23 01:20:54 [emerg] 94570#0: "processes" directive is not allowed here in /home/zt/tengine/tengine//conf/nginx.conf:80
+2022/09/23 01:21:21 [emerg] 94674#0: no echo process module in /home/zt/tengine/tengine//conf/nginx.conf:18
+2022/09/23 01:22:34 [emerg] 94825#0: "processes" directive is not allowed here in /home/zt/tengine/tengine//conf/nginx.conf:44
+2022/09/23 01:26:27 [emerg] 98531#0: no echo process module in /home/zt/tengine/tengine//conf/nginx.conf:18
+2022/09/23 01:26:47 [emerg] 98634#0: "processes" directive is not allowed here in /home/zt/tengine/tengine//conf/nginx.conf:81
+2022/09/23 01:27:21 [emerg] 98765#0: no echo process module in /home/zt/tengine/tengine//conf/nginx.conf:18
+2022/09/23 01:27:43 [emerg] 98861#0: no echo process module in /home/zt/tengine/tengine//conf/nginx.conf:173
+2022/09/23 13:05:28 [emerg] 108365#0: no example process module in /home/zt/tengine/tengine//conf/nginx.conf:173
+2022/09/23 16:30:00 [emerg] 110237#0: no example process module in /home/zt/tengine/tengine//conf/nginx.conf:173
+2022/09/23 17:32:12 [emerg] 128866#0: unknown directive "test_traffic_status_zone" in /home/zt/tengine/tengine//conf/nginx.conf:27
+2022/09/23 17:32:38 [emerg] 128987#0: field "limit" does not exist
+2022/09/23 17:32:56 [emerg] 129094#0: no traffic_prome process module in /home/zt/tengine/tengine//conf/nginx.conf:173
+2022/09/23 17:37:50 [emerg] 129887#0: unknown directive "traffic_prome" in /home/zt/tengine/tengine//conf/nginx.conf:173
+2022/09/23 17:38:11 [emerg] 129992#0: no traffic_prome process module in /home/zt/tengine/tengine//conf/nginx.conf:173
+2022/09/23 18:10:20 [emerg] 142308#0: no traffic_prome process module in /home/zt/tengine/tengine//conf/nginx.conf:173
+2022/09/23 18:14:05 [emerg] 145771#0: no traffic_prome process module in /home/zt/tengine/tengine//conf/nginx.conf:173
+2022/09/23 18:15:39 [emerg] 146020#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/09/23 18:15:39 [emerg] 146020#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/09/23 18:15:39 [emerg] 146020#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/09/23 18:15:39 [emerg] 146020#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/09/23 18:15:39 [emerg] 146020#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/09/23 18:15:39 [emerg] 146020#0: still could not bind()
+2022/09/23 18:19:25 [emerg] 146692#0: unknown "limit" variable
