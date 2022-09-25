@@ -1745,7 +1745,42 @@ ngx_http_reqstat_traffic_handler(ngx_http_request_t *r)
 static ngx_int_t
 ngx_http_reqstat_prome_init_zone(ngx_shm_zone_t *shm_zone, void *data)
 {
+    size_t            size;
+    ngx_http_reqstat_ctx_t *ctx,*oldctx;
+    
+    oldctx = data;
+    ctx = shm_zone->data;
 
+    if(oldctx != NULL) {
+        if(ngx_strcmp(ctx->val->data,oldctx->val->data) != 0) {
+            return NGX_ERROR;
+        }
+
+        ctx->shpool = oldctx->shpool;
+        ctx->sh = oldctx->sh;
+
+        return NGX_OK;
+    }
+    ctx->shpool = (ngx_slab_pool_t*) shm_zone->shm.addr;
+
+    ctx->sh = ngx_slab_alloc(ctx->shpool,sizeof(ngx_http_reqstat_shctx_t));
+    if(ctx->sh == NULL) {
+        return NGX_ERROR;
+    }
+    ctx->shpool->data = ctx->sh;
+
+    size = sizeof(" make prome_zone \"\"") + shm_zone->shm.name.len;
+    ctx->shpool->log_ctx = ngx_slab_alloc(ctx->shpool,size);
+    if (ctx->shpool->log_ctx == NULL) {
+        return NGX_ERROR;
+    }
+    ngx_sprintf(ctx->shpool->log_ctx,
+                    "in prome_zone \" %V \"%Z",
+                    &shm_zone->shm.name);
+
+    ngx_queue_init(&ctx->sh->queue);
+    
+    return NGX_OK;
 }
 
 static char *
@@ -1788,6 +1823,7 @@ ngx_http_reqstat_prome_zone(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
         return NGX_CONF_ERROR;
     }
 
+    // 共享内存已经存在就返回错误
     if(shm_zone->data) {
         ctx = shm_zone->data;
        return NGX_CONF_ERROR;
