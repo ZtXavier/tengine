@@ -1323,3 +1323,242 @@
 2022/09/23 18:15:39 [emerg] 146020#0: still could not bind()
 2022/09/23 18:19:25 [emerg] 146692#0: unknown "limit" variable
 2022/09/25 20:58:09 [emerg] 15298#0: unknown directive "location/prome_traffic" in /home/zt/tengine/tengine//conf/nginx.conf:176
+2022/09/26 22:29:03 [error] 15511#0: *1 open() "/home/zt/tengine/tengine//html/status" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /status HTTP/1.1", host: "127.0.0.1"
+2022/09/26 22:29:03 [error] 15511#0: *1 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/status"
+2022/09/26 22:31:28 [notice] 34279#0: signal process started
+2022/09/26 22:31:34 [error] 34280#0: *3 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/09/26 22:46:43 [emerg] 35195#0: the value "www.taobao.com" is a constant in /home/zt/tengine/tengine//conf/nginx.conf:23
+2022/09/26 22:49:03 [notice] 35504#0: signal process started
+2022/09/27 02:21:53 [emerg] 62904#0: "req_status_prome" directive is duplicate in /home/zt/tengine/tengine//conf/nginx.conf:64
+2022/09/27 02:27:46 [emerg] 63797#0: "req_status_prome" directive is duplicate in /home/zt/tengine/tengine//conf/nginx.conf:64
+2022/09/27 02:29:14 [emerg] 67014#0: "req_status_prome" directive is duplicate in /home/zt/tengine/tengine//conf/nginx.conf:64
+2022/09/27 02:30:41 [emerg] 67197#0: "req_status_prome" directive is duplicatexxxxxxxxxxxxxx in /home/zt/tengine/tengine//conf/nginx.conf:64
+2022/09/27 02:36:40 [emerg] 67587#0: "req_status_prome" directive is duplicatexxxxxxxxxxxxxx in /home/zt/tengine/tengine//conf/nginx.conf:64
+2022/09/27 02:36:55 [emerg] 67668#0: invalid number of arguments in "req_status_prome" directive in /home/zt/tengine/tengine//conf/nginx.conf:64
+2022/09/27 02:37:28 [emerg] 67772#0: "req_status_prome" directive is duplicatexxxxxxxxxxxxxx in /home/zt/tengine/tengine//conf/nginx.conf:64
+2022/09/27 02:40:51 [emerg] 68002#0: "req_status_prome" directive is duplicatexxxxxxxxxxxxxx in /home/zt/tengine/tengine//conf/nginx.conf:64
+2022/09/27 02:43:23 [emerg] 68635#0: "req_status_prome" directive is duplicate in /home/zt/tengine/tengine//conf/nginx.conf:64
+2022/09/27 02:44:06 [emerg] 68760#0: "req_status_prome" directive is duplicate in /home/zt/tengine/tengine//conf/nginx.conf:64
+2022/09/27 02:44:09 [emerg] 68858#0: "req_status_prome" directive is duplicate in /home/zt/tengine/tengine//conf/nginx.conf:64
+2022/09/27 02:48:17 [emerg] 69938#0: "req_status_prome" directive is duplicate in /home/zt/tengine/tengine//conf/nginx.conf:64
+2022/09/27 02:49:23 [emerg] 73147#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:64
+2022/09/27 02:50:12 [emerg] 73259#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/27 02:50:17 [emerg] 73348#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/27 02:58:22 [emerg] 73734#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/27 02:59:31 [emerg] 73901#0: "req_status_prome" directive 1 in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/27 02:59:48 [emerg] 74071#0: "req_status_prome" directive  ADWDADAD in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/27 03:02:14 [emerg] 74604#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/27 03:02:44 [emerg] 74780#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/27 03:05:05 [emerg] 75476#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/27 03:05:46 [emerg] 75752#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/27 03:06:03 [emerg] 75883#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/27 03:06:07 [emerg] 75978#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/27 03:07:37 [notice] 76296#0: signal process started
+2022/09/27 03:07:37 [emerg] 15510#0: "req_status_prome" directive is duplicate in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/27 03:07:46 [error] 35505#0: *6 open() "/home/zt/tengine/tengine//html/status" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /status HTTP/1.1", host: "127.0.0.1"
+2022/09/27 03:08:15 [error] 35505#0: *6 open() "/home/zt/tengine/tengine//html/status" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /status HTTP/1.1", host: "127.0.0.1"
+2022/09/27 03:09:01 [error] 35505#0: *6 open() "/home/zt/tengine/tengine//html/status" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /status HTTP/1.1", host: "127.0.0.1"
+2022/09/27 03:09:57 [notice] 76733#0: signal process started
+2022/09/27 03:09:57 [emerg] 15510#0: "req_status_prome" directive is duplicate in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/27 03:10:01 [error] 35505#0: *6 open() "/home/zt/tengine/tengine//html/status" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /status HTTP/1.1", host: "127.0.0.1"
+2022/09/27 03:10:02 [error] 35505#0: *6 open() "/home/zt/tengine/tengine//html/status" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /status HTTP/1.1", host: "127.0.0.1"
+2022/09/27 03:10:03 [error] 35505#0: *6 open() "/home/zt/tengine/tengine//html/status" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /status HTTP/1.1", host: "127.0.0.1"
+2022/09/27 03:10:03 [error] 35505#0: *6 open() "/home/zt/tengine/tengine//html/status" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /status HTTP/1.1", host: "127.0.0.1"
+2022/09/27 03:10:03 [error] 35505#0: *6 open() "/home/zt/tengine/tengine//html/status" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /status HTTP/1.1", host: "127.0.0.1"
+2022/09/27 03:10:34 [error] 35505#0: *6 open() "/home/zt/tengine/tengine//html/status" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /status HTTP/1.1", host: "127.0.0.1"
+2022/09/27 10:33:16 [emerg] 77668#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/27 10:34:18 [error] 35505#0: *7 open() "/home/zt/tengine/tengine//html/status" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /status HTTP/1.1", host: "127.0.0.1"
+2022/09/27 11:26:08 [emerg] 79544#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/27 11:27:15 [emerg] 79884#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/27 11:27:27 [emerg] 80020#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/27 11:30:00 [emerg] 80633#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/27 11:30:20 [emerg] 80683#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/27 11:30:58 [emerg] 80735#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/27 11:31:44 [emerg] 81030#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/27 11:33:57 [emerg] 81353#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/27 11:36:22 [emerg] 81581#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/27 11:37:23 [emerg] 81977#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/27 11:37:38 [emerg] 82091#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/27 11:37:43 [emerg] 82148#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/27 11:38:39 [emerg] 82325#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/27 11:40:12 [emerg] 82611#0: bind() to 0.0.0.0:80 failed (13: Permission denied)
+2022/09/27 11:40:19 [emerg] 82692#0: bind() to 0.0.0.0:80 failed (13: Permission denied)
+2022/09/27 11:40:56 [emerg] 82946#0: bind() to 0.0.0.0:80 failed (13: Permission denied)
+2022/09/27 11:41:35 [emerg] 83094#0: bind() to 0.0.0.0:80 failed (13: Permission denied)
+2022/09/27 11:42:18 [emerg] 83323#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/09/27 11:42:18 [emerg] 83323#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/09/27 11:42:18 [emerg] 83323#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/09/27 11:42:18 [emerg] 83323#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/09/27 11:42:18 [emerg] 83323#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/09/27 11:42:18 [emerg] 83323#0: still could not bind()
+2022/09/27 11:43:04 [error] 83273#0: *1 "/home/zt/tengine/tengine//html/index.html" is forbidden (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2022/09/27 11:43:11 [alert] 83272#0: worker process 83273 exited on signal 11 (core dumped)
+2022/09/27 11:43:11 [alert] 83272#0: worker process 83634 exited on signal 11 (core dumped)
+2022/09/27 11:43:11 [alert] 83272#0: worker process 83644 exited on signal 11 (core dumped)
+2022/09/27 11:43:11 [alert] 83272#0: worker process 83652 exited on signal 11 (core dumped)
+2022/09/27 11:43:11 [alert] 83272#0: worker process 83660 exited on signal 11 (core dumped)
+2022/09/27 11:43:11 [alert] 83272#0: worker process 83669 exited on signal 11 (core dumped)
+2022/09/27 11:43:11 [alert] 83272#0: worker process 83676 exited on signal 11 (core dumped)
+2022/09/27 11:43:11 [alert] 83272#0: worker process 83683 exited on signal 11 (core dumped)
+2022/09/27 11:43:11 [alert] 83272#0: worker process 83689 exited on signal 11 (core dumped)
+2022/09/27 11:43:11 [alert] 83272#0: worker process 83696 exited on signal 11 (core dumped)
+2022/09/27 11:43:13 [alert] 83272#0: worker process 83705 exited on signal 11 (core dumped)
+2022/09/27 11:43:14 [alert] 83272#0: worker process 83715 exited on signal 11 (core dumped)
+2022/09/27 11:43:14 [alert] 83272#0: worker process 83722 exited on signal 11 (core dumped)
+2022/09/27 11:43:14 [alert] 83272#0: worker process 83728 exited on signal 11 (core dumped)
+2022/09/27 11:43:14 [alert] 83272#0: worker process 83736 exited on signal 11 (core dumped)
+2022/09/27 11:43:14 [alert] 83272#0: worker process 83743 exited on signal 11 (core dumped)
+2022/09/27 11:43:14 [alert] 83272#0: worker process 83750 exited on signal 11 (core dumped)
+2022/09/27 11:43:14 [alert] 83272#0: worker process 83757 exited on signal 11 (core dumped)
+2022/09/27 11:43:14 [alert] 83272#0: worker process 83766 exited on signal 11 (core dumped)
+2022/09/27 11:43:14 [alert] 83272#0: worker process 83772 exited on signal 11 (core dumped)
+2022/09/27 11:43:15 [alert] 83272#0: worker process 83780 exited on signal 11 (core dumped)
+2022/09/27 11:43:15 [alert] 83272#0: worker process 83788 exited on signal 11 (core dumped)
+2022/09/27 11:43:15 [alert] 83272#0: worker process 83794 exited on signal 11 (core dumped)
+2022/09/27 11:43:15 [alert] 83272#0: worker process 83802 exited on signal 11 (core dumped)
+2022/09/27 11:43:15 [alert] 83272#0: worker process 83809 exited on signal 11 (core dumped)
+2022/09/27 11:43:15 [alert] 83272#0: worker process 83816 exited on signal 11 (core dumped)
+2022/09/27 11:43:15 [alert] 83272#0: worker process 83824 exited on signal 11 (core dumped)
+2022/09/27 11:43:15 [alert] 83272#0: worker process 83830 exited on signal 11 (core dumped)
+2022/09/27 11:43:15 [alert] 83272#0: worker process 83837 exited on signal 11 (core dumped)
+2022/09/27 11:43:15 [alert] 83272#0: worker process 83844 exited on signal 11 (core dumped)
+2022/09/27 11:43:16 [alert] 83272#0: worker process 83851 exited on signal 11 (core dumped)
+2022/09/27 11:43:16 [alert] 83272#0: worker process 83858 exited on signal 11 (core dumped)
+2022/09/27 11:43:16 [alert] 83272#0: worker process 83866 exited on signal 11 (core dumped)
+2022/09/27 11:43:16 [alert] 83272#0: worker process 83872 exited on signal 11 (core dumped)
+2022/09/27 11:43:16 [alert] 83272#0: worker process 83879 exited on signal 11 (core dumped)
+2022/09/27 11:43:16 [alert] 83272#0: worker process 83887 exited on signal 11 (core dumped)
+2022/09/27 11:43:16 [alert] 83272#0: worker process 83893 exited on signal 11 (core dumped)
+2022/09/27 11:43:16 [alert] 83272#0: worker process 83901 exited on signal 11 (core dumped)
+2022/09/27 11:43:16 [alert] 83272#0: worker process 83907 exited on signal 11 (core dumped)
+2022/09/27 11:43:16 [alert] 83272#0: worker process 83914 exited on signal 11 (core dumped)
+2022/09/27 11:43:17 [alert] 83272#0: worker process 83921 exited on signal 11 (core dumped)
+2022/09/27 11:43:17 [alert] 83272#0: worker process 83929 exited on signal 11 (core dumped)
+2022/09/27 11:43:17 [alert] 83272#0: worker process 83936 exited on signal 11 (core dumped)
+2022/09/27 11:43:17 [alert] 83272#0: worker process 83943 exited on signal 11 (core dumped)
+2022/09/27 11:43:17 [alert] 83272#0: worker process 83950 exited on signal 11 (core dumped)
+2022/09/27 11:43:17 [alert] 83272#0: worker process 83958 exited on signal 11 (core dumped)
+2022/09/27 11:43:17 [alert] 83272#0: worker process 83964 exited on signal 11 (core dumped)
+2022/09/27 11:43:17 [alert] 83272#0: worker process 83971 exited on signal 11 (core dumped)
+2022/09/27 11:43:17 [alert] 83272#0: worker process 83978 exited on signal 11 (core dumped)
+2022/09/27 11:43:18 [alert] 83272#0: worker process 83985 exited on signal 11 (core dumped)
+2022/09/27 11:43:18 [alert] 83272#0: worker process 83992 exited on signal 11 (core dumped)
+2022/09/27 11:43:18 [alert] 83272#0: worker process 83999 exited on signal 11 (core dumped)
+2022/09/27 11:43:18 [alert] 83272#0: worker process 84006 exited on signal 11 (core dumped)
+2022/09/27 11:43:18 [alert] 83272#0: worker process 84013 exited on signal 11 (core dumped)
+2022/09/27 11:43:18 [alert] 83272#0: worker process 84020 exited on signal 11 (core dumped)
+2022/09/27 11:43:18 [alert] 83272#0: worker process 84027 exited on signal 11 (core dumped)
+2022/09/27 11:43:18 [alert] 83272#0: worker process 84035 exited on signal 11 (core dumped)
+2022/09/27 11:43:19 [alert] 83272#0: worker process 84041 exited on signal 11 (core dumped)
+2022/09/27 11:43:19 [alert] 83272#0: worker process 84049 exited on signal 11 (core dumped)
+2022/09/27 11:43:19 [alert] 83272#0: worker process 84055 exited on signal 11 (core dumped)
+2022/09/27 11:43:20 [alert] 83272#0: worker process 84062 exited on signal 11 (core dumped)
+2022/09/27 11:43:20 [alert] 83272#0: worker process 84070 exited on signal 11 (core dumped)
+2022/09/27 11:43:20 [alert] 83272#0: worker process 84076 exited on signal 11 (core dumped)
+2022/09/27 11:43:20 [alert] 83272#0: worker process 84083 exited on signal 11 (core dumped)
+2022/09/27 11:43:20 [alert] 83272#0: worker process 84090 exited on signal 11 (core dumped)
+2022/09/27 11:43:20 [alert] 83272#0: worker process 84097 exited on signal 11 (core dumped)
+2022/09/27 11:43:20 [alert] 83272#0: worker process 84104 exited on signal 11 (core dumped)
+2022/09/27 11:43:21 [alert] 83272#0: worker process 84111 exited on signal 11 (core dumped)
+2022/09/27 11:43:21 [alert] 83272#0: worker process 84119 exited on signal 11 (core dumped)
+2022/09/27 11:43:21 [alert] 83272#0: worker process 84125 exited on signal 11 (core dumped)
+2022/09/27 11:43:23 [alert] 83272#0: worker process 84132 exited on signal 11 (core dumped)
+2022/09/27 11:43:23 [alert] 83272#0: worker process 84148 exited on signal 11 (core dumped)
+2022/09/27 11:43:24 [alert] 83272#0: worker process 84157 exited on signal 11 (core dumped)
+2022/09/27 11:43:24 [alert] 83272#0: worker process 84163 exited on signal 11 (core dumped)
+2022/09/27 11:43:24 [alert] 83272#0: worker process 84170 exited on signal 11 (core dumped)
+2022/09/27 11:43:24 [alert] 83272#0: worker process 84177 exited on signal 11 (core dumped)
+2022/09/27 11:43:24 [alert] 83272#0: worker process 84184 exited on signal 11 (core dumped)
+2022/09/27 11:43:24 [alert] 83272#0: worker process 84191 exited on signal 11 (core dumped)
+2022/09/27 11:43:24 [alert] 83272#0: worker process 84198 exited on signal 11 (core dumped)
+2022/09/27 11:43:24 [alert] 83272#0: worker process 84205 exited on signal 11 (core dumped)
+2022/09/27 11:43:26 [alert] 83272#0: worker process 84213 exited on signal 11 (core dumped)
+2022/09/27 11:43:27 [alert] 83272#0: worker process 84220 exited on signal 11 (core dumped)
+2022/09/27 11:43:27 [alert] 83272#0: worker process 84227 exited on signal 11 (core dumped)
+2022/09/27 11:43:27 [alert] 83272#0: worker process 84233 exited on signal 11 (core dumped)
+2022/09/27 11:43:27 [alert] 83272#0: worker process 84240 exited on signal 11 (core dumped)
+2022/09/27 11:43:27 [alert] 83272#0: worker process 84247 exited on signal 11 (core dumped)
+2022/09/27 11:43:27 [alert] 83272#0: worker process 84255 exited on signal 11 (core dumped)
+2022/09/27 11:43:27 [alert] 83272#0: worker process 84262 exited on signal 11 (core dumped)
+2022/09/27 11:43:27 [alert] 83272#0: worker process 84270 exited on signal 11 (core dumped)
+2022/09/27 11:43:27 [alert] 83272#0: worker process 84276 exited on signal 11 (core dumped)
+2022/09/27 11:43:55 [alert] 83272#0: worker process 84283 exited on signal 11 (core dumped)
+2022/09/27 11:43:55 [alert] 83272#0: worker process 84333 exited on signal 11 (core dumped)
+2022/09/27 11:43:55 [alert] 83272#0: worker process 84341 exited on signal 11 (core dumped)
+2022/09/27 11:43:55 [alert] 83272#0: worker process 84347 exited on signal 11 (core dumped)
+2022/09/27 11:43:55 [alert] 83272#0: worker process 84354 exited on signal 11 (core dumped)
+2022/09/27 11:43:55 [alert] 83272#0: worker process 84362 exited on signal 11 (core dumped)
+2022/09/27 11:43:55 [alert] 83272#0: worker process 84368 exited on signal 11 (core dumped)
+2022/09/27 11:43:55 [alert] 83272#0: worker process 84376 exited on signal 11 (core dumped)
+2022/09/27 11:43:56 [alert] 83272#0: worker process 84382 exited on signal 11 (core dumped)
+2022/09/27 11:43:56 [alert] 83272#0: worker process 84389 exited on signal 11 (core dumped)
+2022/09/27 11:51:55 [notice] 84910#0: signal process started
+2022/09/27 11:51:59 [alert] 83272#0: worker process 84911 exited on signal 11 (core dumped)
+2022/09/27 11:51:59 [alert] 83272#0: worker process 84980 exited on signal 11 (core dumped)
+2022/09/27 11:51:59 [alert] 83272#0: worker process 84988 exited on signal 11 (core dumped)
+2022/09/27 11:51:59 [alert] 83272#0: worker process 84997 exited on signal 11 (core dumped)
+2022/09/27 11:51:59 [alert] 83272#0: worker process 85003 exited on signal 11 (core dumped)
+2022/09/27 11:51:59 [alert] 83272#0: worker process 85017 exited on signal 11 (core dumped)
+2022/09/27 11:51:59 [alert] 83272#0: worker process 85020 exited on signal 11 (core dumped)
+2022/09/27 11:51:59 [alert] 83272#0: worker process 85030 exited on signal 11 (core dumped)
+2022/09/27 11:52:00 [alert] 83272#0: worker process 85035 exited on signal 11 (core dumped)
+2022/09/27 11:52:00 [alert] 83272#0: worker process 85043 exited on signal 11 (core dumped)
+2022/09/27 11:52:01 [alert] 83272#0: worker process 85050 exited on signal 11 (core dumped)
+2022/09/27 11:52:01 [alert] 83272#0: worker process 85061 exited on signal 11 (core dumped)
+2022/09/27 11:52:01 [alert] 83272#0: worker process 85068 exited on signal 11 (core dumped)
+2022/09/27 11:52:01 [alert] 83272#0: worker process 85075 exited on signal 11 (core dumped)
+2022/09/27 11:52:01 [alert] 83272#0: worker process 85083 exited on signal 11 (core dumped)
+2022/09/27 11:52:02 [alert] 83272#0: worker process 85089 exited on signal 11 (core dumped)
+2022/09/27 11:52:02 [alert] 83272#0: worker process 85096 exited on signal 11 (core dumped)
+2022/09/27 11:52:02 [alert] 83272#0: worker process 85104 exited on signal 11 (core dumped)
+2022/09/27 11:52:02 [alert] 83272#0: worker process 85113 exited on signal 11 (core dumped)
+2022/09/27 11:52:02 [alert] 83272#0: worker process 85118 exited on signal 11 (core dumped)
+2022/09/27 11:52:13 [alert] 83272#0: worker process 85125 exited on signal 11 (core dumped)
+2022/09/27 11:52:13 [alert] 83272#0: worker process 85141 exited on signal 11 (core dumped)
+2022/09/27 11:52:13 [alert] 83272#0: worker process 85148 exited on signal 11 (core dumped)
+2022/09/27 11:52:13 [alert] 83272#0: worker process 85156 exited on signal 11 (core dumped)
+2022/09/27 11:52:13 [alert] 83272#0: worker process 85163 exited on signal 11 (core dumped)
+2022/09/27 11:52:13 [alert] 83272#0: worker process 85170 exited on signal 11 (core dumped)
+2022/09/27 11:52:13 [alert] 83272#0: worker process 85177 exited on signal 11 (core dumped)
+2022/09/27 11:52:13 [alert] 83272#0: worker process 85186 exited on signal 11 (core dumped)
+2022/09/27 11:52:13 [alert] 83272#0: worker process 85191 exited on signal 11 (core dumped)
+2022/09/27 11:52:13 [alert] 83272#0: worker process 85198 exited on signal 11 (core dumped)
+2022/09/27 11:52:15 [alert] 83272#0: worker process 85205 exited on signal 11 (core dumped)
+2022/09/27 11:52:15 [alert] 83272#0: worker process 85213 exited on signal 11 (core dumped)
+2022/09/27 11:52:15 [alert] 83272#0: worker process 85220 exited on signal 11 (core dumped)
+2022/09/27 11:52:15 [alert] 83272#0: worker process 85227 exited on signal 11 (core dumped)
+2022/09/27 11:52:15 [alert] 83272#0: worker process 85234 exited on signal 11 (core dumped)
+2022/09/27 11:52:16 [alert] 83272#0: worker process 85241 exited on signal 11 (core dumped)
+2022/09/27 11:52:16 [alert] 83272#0: worker process 85248 exited on signal 11 (core dumped)
+2022/09/27 11:52:16 [alert] 83272#0: worker process 85255 exited on signal 11 (core dumped)
+2022/09/27 11:52:16 [alert] 83272#0: worker process 85263 exited on signal 11 (core dumped)
+2022/09/27 11:52:16 [alert] 83272#0: worker process 85269 exited on signal 11 (core dumped)
+2022/09/27 11:54:02 [notice] 85373#0: signal process started
+2022/09/27 11:54:04 [alert] 83272#0: worker process 85374 exited on signal 11 (core dumped)
+2022/09/27 11:54:05 [alert] 83272#0: worker process 85419 exited on signal 11 (core dumped)
+2022/09/27 11:54:05 [alert] 83272#0: worker process 85426 exited on signal 11 (core dumped)
+2022/09/27 11:54:05 [alert] 83272#0: worker process 85433 exited on signal 11 (core dumped)
+2022/09/27 11:54:05 [alert] 83272#0: worker process 85440 exited on signal 11 (core dumped)
+2022/09/27 11:54:05 [alert] 83272#0: worker process 85447 exited on signal 11 (core dumped)
+2022/09/27 11:54:05 [alert] 83272#0: worker process 85454 exited on signal 11 (core dumped)
+2022/09/27 11:54:05 [alert] 83272#0: worker process 85461 exited on signal 11 (core dumped)
+2022/09/27 11:54:05 [alert] 83272#0: worker process 85468 exited on signal 11 (core dumped)
+2022/09/27 11:54:05 [alert] 83272#0: worker process 85475 exited on signal 11 (core dumped)
+2022/09/27 11:54:06 [alert] 83272#0: worker process 85482 exited on signal 11 (core dumped)
+2022/09/27 11:54:06 [alert] 83272#0: worker process 85496 exited on signal 11 (core dumped)
+2022/09/27 11:54:07 [alert] 83272#0: worker process 85503 exited on signal 11 (core dumped)
+2022/09/27 11:54:07 [alert] 83272#0: worker process 85511 exited on signal 11 (core dumped)
+2022/09/27 11:54:07 [alert] 83272#0: worker process 85517 exited on signal 11 (core dumped)
+2022/09/27 11:54:07 [alert] 83272#0: worker process 85524 exited on signal 11 (core dumped)
+2022/09/27 11:54:09 [alert] 83272#0: worker process 85532 exited on signal 11 (core dumped)
+2022/09/27 11:54:09 [alert] 83272#0: worker process 85547 exited on signal 11 (core dumped)
+2022/09/27 11:54:09 [alert] 83272#0: worker process 85556 exited on signal 11 (core dumped)
+2022/09/27 11:54:09 [alert] 83272#0: worker process 85563 exited on signal 11 (core dumped)
+2022/09/27 11:54:09 [alert] 83272#0: worker process 85570 exited on signal 11 (core dumped)
+2022/09/27 11:54:09 [alert] 83272#0: worker process 85577 exited on signal 11 (core dumped)
+2022/09/27 11:54:09 [alert] 83272#0: worker process 85584 exited on signal 11 (core dumped)
+2022/09/27 11:54:09 [alert] 83272#0: worker process 85593 exited on signal 11 (core dumped)
+2022/09/27 11:54:09 [alert] 83272#0: worker process 85600 exited on signal 11 (core dumped)
+2022/09/27 11:54:09 [alert] 83272#0: worker process 85608 exited on signal 11 (core dumped)
+2022/09/27 11:56:30 [notice] 85974#0: signal process started
+2022/09/27 11:56:34 [emerg] 86082#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67

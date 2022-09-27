@@ -1,9 +1,57 @@
-#include <nginx.h>
 #include <ngx_config.h>
 #include <ngx_core.h>
 #include <ngx_http.h>
-#include<ngx_proc.h>
-#include<ngx_channel.h>
+#include<nginx.h>
+
+#define NGX_HTTP_REQSTAT_TRAFFIC_STATUS_PROMETHEUS_FMT_MAIN                      \
+    "tengine_reqstat_server_bytes_total{host=\"%V\",direction=\"in\"} %uA\n"         \
+    "tengine_reqstat_server_bytes_total{host=\"%V\",direction=\"out\"} %uA\n"        \
+    "tengine_reqstat_server_requests_total{host=\"%V\",code=\"conn_total\"} %uA\n"          \
+    "tengine_reqstat_server_requests_total{host=\"%V\",code=\"req_total\"} %uA\n"          \
+    "tengine_reqstat_server_requests_total{host=\"%V\",code=\"2xx\"} %uA\n"          \
+    "tengine_reqstat_server_requests_total{host=\"%V\",code=\"3xx\"} %uA\n"          \
+    "tengine_reqstat_server_requests_total{host=\"%V\",code=\"4xx\"} %uA\n"          \
+    "tengine_reqstat_server_requests_total{host=\"%V\",code=\"5xx\"} %uA\n"           \
+    "tengine_reqstat_server_requests_total{host=\"%V\",code=\"http_other_status\"} %uA\n"          \
+    "tengine_reqstat_server_requests_total{host=\"%V\",code=\"rt\"} %uA\n"             \
+    "tengine_reqstat_server_requests_total{host=\"%V\",code=\"ups_req\"} %uA\n"          \
+    "tengine_reqstat_server_requests_total{host=\"%V\",code=\"ups_rt\"} %uA\n"             \
+    "tengine_reqstat_server_requests_total{host=\"%V\",code=\"ups_tries\"} %uA\n"          \
+    "tengine_reqstat_server_requests_total{host=\"%V\",code=\"http_200\"} %uA\n"             \
+    "tengine_reqstat_server_requests_total{host=\"%V\",code=\"http_206\"} %uA\n"          \
+    "tengine_reqstat_server_requests_total{host=\"%V\",code=\"http_302\"} %uA\n"               \
+    "tengine_reqstat_server_requests_total{host=\"%V\",code=\"http_304\"} %uA\n"          \
+    "tengine_reqstat_server_requests_total{host=\"%V\",code=\"http_403\"} %uA\n"             \
+    "tengine_reqstat_server_requests_total{host=\"%V\",code=\"http_404\"} %uA\n"          \
+    "tengine_reqstat_server_requests_total{host=\"%V\",code=\"http_416\"} %uA\n"         \
+    "tengine_reqstat_server_requests_total{host=\"%V\",code=\"http_499\"} %uA\n"             \
+    "tengine_reqstat_server_requests_total{host=\"%V\",code=\"http_500\"} %uA\n"          \
+    "tengine_reqstat_server_requests_total{host=\"%V\",code=\"http_502\"} %uA\n"             \
+    "tengine_reqstat_server_requests_total{host=\"%V\",code=\"http_503\"} %uA\n"          \
+    "tengine_reqstat_server_requests_total{host=\"%V\",code=\"http_504\"} %uA\n"             \
+    "tengine_reqstat_server_requests_total{host=\"%V\",code=\"http_508\"} %uA\n"          \
+    "tengine_reqstat_server_requests_total{host=\"%V\",code=\"http_other_detail_status\"} %uA\n"             \
+    "tengine_reqstat_server_requests_total{host=\"%V\",code=\"http_ups_4xx\"} %uA\n"          \
+    "tengine_reqstat_server_requests_total{host=\"%V\",code=\"http_ups_5xx\"} %uA\n"             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #define NGX_HTTP_REQSTAT_RSRV    29
@@ -73,11 +121,11 @@ typedef struct {
     ngx_flag_t                   lazy;
     ngx_array_t                 *monitor;
     ngx_array_t                 *display;
+    ngx_array_t                 *prome_display;
     ngx_array_t                 *bypass;
     ngx_int_t                    index;
     ngx_array_t                 *user_select;
     ngx_array_t                 *user_defined_str;
-    ngx_str_t                    *prome_ctl;
 } ngx_http_reqstat_conf_t;
 
 
