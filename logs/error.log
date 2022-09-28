@@ -1562,3 +1562,9 @@
 2022/09/27 11:54:09 [alert] 83272#0: worker process 85608 exited on signal 11 (core dumped)
 2022/09/27 11:56:30 [notice] 85974#0: signal process started
 2022/09/27 11:56:34 [emerg] 86082#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/28 15:37:00 [emerg] 3069#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/28 15:38:27 [emerg] 3190#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/28 15:38:34 [emerg] 3298#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/28 15:47:39 [emerg] 3905#0: "req_status_prome" directive is duplicate.................... in /home/zt/tengine/tengine//conf/nginx.conf:67
+2022/09/28 15:48:33 [error] 4132#0: *4 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/us"
+2022/09/28 15:51:07 [notice] 4854#0: signal process started

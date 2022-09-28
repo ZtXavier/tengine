@@ -207,7 +207,7 @@ static ngx_command_t   ngx_http_reqstat_commands[] = {
     { ngx_string("req_status_prome"),
       NGX_HTTP_SRV_CONF | NGX_HTTP_LOC_CONF | NGX_CONF_TAKE1,
       ngx_http_reqstat_traffic_prome,
-      0,
+      NGX_HTTP_LOC_CONF_OFFSET,
       0,
       NULL },
 
@@ -267,9 +267,9 @@ ngx_http_reqstat_create_loc_conf(ngx_conf_t *cf)
     conf->bypass = NGX_CONF_UNSET_PTR;
     conf->monitor = NGX_CONF_UNSET_PTR;
     conf->display = NGX_CONF_UNSET_PTR;
-    conf->prome_display = NGX_CONF_UNSET_PTR;
     conf->user_select = NGX_CONF_UNSET_PTR;
     conf->user_defined_str = NGX_CONF_UNSET_PTR;
+    conf->prome_display = NGX_CONF_UNSET_PTR;
     return conf;
 }
 
@@ -285,9 +285,9 @@ ngx_http_reqstat_merge_loc_conf(ngx_conf_t *cf, void *parent,
     ngx_conf_merge_ptr_value(conf->bypass, prev->bypass, NULL);
     ngx_conf_merge_ptr_value(conf->monitor, prev->monitor, NULL);
     ngx_conf_merge_ptr_value(conf->display, prev->display, NULL);
-    ngx_conf_merge_ptr_value(conf->prome_display, prev->prome_display, NULL);
     ngx_conf_merge_ptr_value(conf->user_select, prev->user_select, NULL);
     ngx_conf_merge_ptr_value(conf->user_defined_str, prev->user_defined_str, NULL);
+    ngx_conf_merge_ptr_value(conf->prome_display, prev->prome_display, NULL);
     return NGX_CONF_OK;
 }
 
@@ -1727,6 +1727,7 @@ ngx_http_reqstat_traffic_prome(ngx_conf_t *cf,ngx_command_t *cmd,void *conf)
         printf("%p\n%p",rlcf->prome_display,NGX_CONF_UNSET_PTR);
         return "is duplicate....................";
     }
+
     value = cf->args->elts;
     
     if(cf->args->nelts == 1) {
@@ -1828,12 +1829,12 @@ ngx_http_reqstat_traffic_handler(ngx_http_request_t *r)
             }
             
             tl->buf = b;
-            b->start = ngx_pcalloc(r->pool,4096);
+            b->start = ngx_pcalloc(r->pool,1024);
             if(b->start == NULL) {
                 return NGX_HTTP_INTERNAL_SERVER_ERROR;
             }
 
-            b->end = b->start + 4096;
+            b->end = b->start + 1024;
             b->last= b->pos = b->start;
             b->temporary = 1;
 
