@@ -1723,13 +1723,12 @@ ngx_http_reqstat_traffic_prome(ngx_conf_t *cf,ngx_command_t *cmd,void *conf)
     // 处理指令请求
     // 从指令获取共享内存的名字
     if(rlcf->prome_display !=  NGX_CONF_UNSET_PTR){
-        
-        printf("%p\n%p",rlcf->prome_display,NGX_CONF_UNSET_PTR);
-        return "is duplicate....................";
+        return "is duplicate";
     }
 
     value = cf->args->elts;
-    
+    // printf("%s***************************\n",(char*)(value+1)->data);
+    // printf("%ld+++++++++++++++++++++++++++++++++++\n",(ngx_uint_t)cf->args->nelts);
     if(cf->args->nelts == 1) {
         return "no prome_zone name";
     }
@@ -1738,6 +1737,7 @@ ngx_http_reqstat_traffic_prome(ngx_conf_t *cf,ngx_command_t *cmd,void *conf)
     if(rlcf->prome_display == NULL) {
         return NGX_CONF_ERROR;
     }
+    // rlcf->prome_display
 
     for(i = 1;i < cf->args->nelts; ++i) {
         shm_zone = ngx_shared_memory_add(cf,&value[i],0,
@@ -1748,6 +1748,10 @@ ngx_http_reqstat_traffic_prome(ngx_conf_t *cf,ngx_command_t *cmd,void *conf)
         z = ngx_array_push(rlcf->prome_display);
         *z = shm_zone;
     }
+    // printf("%ld***************************\n",(ngx_uint_t)rlcf->prome_display->nelts);
+    // value = rlcf->prome_display->elts;
+    // if(rlcf->prome_display == NULL)
+    // printf("%s****************************\n",(char*)(value)->data);
 
     // 注册回调函数
     clcf = ngx_http_conf_get_module_loc_conf(cf,ngx_http_core_module);
@@ -1772,17 +1776,20 @@ ngx_http_reqstat_traffic_handler(ngx_http_request_t *r)
     ngx_http_reqstat_conf_t                 *smcf;
     ngx_http_reqstat_rbnode_t             *node; // 通过将节点挂载到系统的红黑树上进行获取节点信息
     // ngx_http_reqstat_rbnode_t             *display_node;
-    ngx_chain_t                                  *tl,out,**cl;
+    ngx_chain_t                                  out;
+    // size_t                                            len;
+    // u_char                                          *o,*s,*p;
 
     rlcf = ngx_http_get_module_loc_conf(r,ngx_http_reqstat_module);
     smcf = ngx_http_get_module_main_conf(r,ngx_http_reqstat_module);
     // 直接指向需要监控的指标
-    display_traffic = smcf->monitor;
+    display_traffic = rlcf->prome_display == NULL ? smcf->monitor : rlcf->prome_display;
 
-    if(display_traffic == NULL) {
+    if(rlcf->prome_display == NULL) {
         r->headers_out.status = NGX_HTTP_NO_CONTENT;
         return ngx_http_send_header(r);
     }
+
 
     ngx_str_set(&type,"text/plain");
 
@@ -1799,13 +1806,25 @@ ngx_http_reqstat_traffic_handler(ngx_http_request_t *r)
         }
     }
 
-    shm_zone = display_traffic->elts;
-    cl = &out.next;
+    shm_zone = rlcf->prome_display->elts;
+
+            b = ngx_calloc_buf(r->pool);
+            if(b == NULL) {
+                return NGX_HTTP_INTERNAL_SERVER_ERROR;
+            }
+            b->start = ngx_pcalloc(r->pool,2500);
+            if(b->start == NULL) {
+                return NGX_HTTP_INTERNAL_SERVER_ERROR;
+            }
+
+            b->end = b->start + 2500;
+            b->last= b->pos = b->start;
+            b->temporary = 1;
 
     // 循环遍历每一个已有的共享内存,将里面的内容按照prome的格式写入到prome_zone中
     for(i = 0;i < display_traffic->nelts;i++) {
-        //如果遍历到prome_zone name 则跳过
-        if(rlcf->prome_display->elts == shm_zone[i]) continue;
+        // 如果遍历到prome_zone name 则跳过
+        // if(rlcf->prome_display->elts != shm_zone[i]) continue;
 
         ctx = shm_zone[i]->data;
 
@@ -1818,28 +1837,10 @@ ngx_http_reqstat_traffic_handler(ngx_http_request_t *r)
             if(node->conn_total == 0) {
                 continue;
             }
-            tl = ngx_alloc_chain_link(r->pool);
-            if(tl == NULL) {
-                return NGX_HTTP_INTERNAL_SERVER_ERROR;
-            }
-
-            b = ngx_calloc_buf(r->pool);
-            if(b == NULL) {
-                return NGX_HTTP_INTERNAL_SERVER_ERROR;
-            }
-            
-            tl->buf = b;
-            b->start = ngx_pcalloc(r->pool,1024);
-            if(b->start == NULL) {
-                return NGX_HTTP_INTERNAL_SERVER_ERROR;
-            }
-
-            b->end = b->start + 1024;
-            b->last= b->pos = b->start;
-            b->temporary = 1;
-
 
             b->last = ngx_slprintf(b->last,b->end, NGX_HTTP_REQSTAT_TRAFFIC_STATUS_PROMETHEUS_FMT_MAIN,
+                                        &ngx_cycle->hostname,
+                                        TENGINE_VERSION,NGINX_VERSION,
                                         &shm_zone[i]->shm.name,node->bytes_in,
                                         &shm_zone[i]->shm.name,node->bytes_out,
                                         &shm_zone[i]->shm.name,node->conn_total,
@@ -1871,31 +1872,28 @@ ngx_http_reqstat_traffic_handler(ngx_http_request_t *r)
                                         &shm_zone[i]->shm.name,node->http_ups_5xx);
 
 
-            // if(b->last == b->pos) {
-            //     b->last = ngx_sprintf(b->last,"#");
-            // }
+            if(b->last == b->pos) {
+                b->last = ngx_sprintf(b->last,"#");
+            }
             *(b->last - 1) = '\n';
-            tl->next = NULL;
-            *cl = tl;
-            cl = &tl->next;
         }
-
     }
 
-    tl = ngx_alloc_chain_link(r->pool);
-    if(tl == NULL) {
-        return NGX_HTTP_INTERNAL_SERVER_ERROR;
+
+    r->headers_out.status = NGX_HTTP_OK;
+    r->headers_out.content_length_n = b->last - b->pos;
+    b->last_buf = (r==r->main) ? 1 : 0;
+    b->last_in_chain = 1;
+
+    out.buf = b;
+    out.next = NULL;
+
+    rc = ngx_http_send_header(r);
+    if (rc == NGX_ERROR || rc > NGX_OK || r->header_only) {
+        return rc;
     }
 
-    tl->buf = ngx_calloc_buf(r->pool);
-    if(tl->buf == NULL) {
-        return NGX_HTTP_INTERNAL_SERVER_ERROR;
-    }
-
-    tl->buf->last_buf = 1;
-    tl->next = NULL;
-    *cl = tl;
-    return ngx_http_output_filter(r,out.next);
+    return ngx_http_output_filter(r,&out);
 }
 
 
@@ -2019,3 +2017,38 @@ ngx_http_reqstat_prome_zone(ngx_conf_t *cf, ngx_command_t *cmd, void *conf)
     return NGX_CONF_OK;
 
 }
+
+
+// static ngx_int_t
+// ngx_http_reqstat_traffic_init_worker(ngx_cycle_t *cycle)
+// {
+//     ngx_event_t                          *req_event;
+//     ngx_http_reqstat_ctx_t  *ctx;
+
+//     ngx_log_debug0(NGX_LOG_DEBUG_HTTP, cycle->log, 0,
+//                    "http reqstat init worker");
+
+//     ctx = ngx_http_cycle_get_module_main_conf(cycle, ngx_http_reqstat_module);
+
+//     if (ctx == NULL) {
+//         ngx_log_debug0(NGX_LOG_DEBUG_HTTP, cycle->log, 0,
+//                        "reqstat::init_worker(): is bypassed due to no http block in configure file");
+//         return NGX_OK;
+//     }
+
+//     if (!(ctx->enable & ctx->dump) || ctx->rbtree == NULL) {
+//         ngx_log_debug0(NGX_LOG_DEBUG_HTTP, cycle->log, 0,
+//                        "vts::init_worker(): is bypassed");
+//         return NGX_OK;
+//     }
+
+//     /* dumper */
+//     req_event = &ctx->req_event;
+//     req_event->handler = ngx_reqstat_traffic_prome_handler;
+//     req_event->log = ngx_cycle->log;
+//     req_event->data = ctx;
+//     ngx_add_timer(req_event, 1000);
+
+
+//     return NGX_OK;
+// }

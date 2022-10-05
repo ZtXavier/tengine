@@ -4,8 +4,15 @@
 #include<nginx.h>
 
 #define NGX_HTTP_REQSTAT_TRAFFIC_STATUS_PROMETHEUS_FMT_MAIN                      \
+    "# HELP tengine_reqstat_info Nginx info\n"                                       \
+    "# TYPE tengine_reqstat_info gauge\n"                                            \
+    "tengine_reqstat_info{hostname=\"%V\",module_version=\"%s\",version=\"%s\"} 1\n" \
+    "# HELP tengine_reqstat_server_bytes_total The request/response bytes\n"         \
+    "# TYPE tengine_reqstat_server_bytes_total counter\n"                            \
     "tengine_reqstat_server_bytes_total{host=\"%V\",direction=\"in\"} %uA\n"         \
     "tengine_reqstat_server_bytes_total{host=\"%V\",direction=\"out\"} %uA\n"        \
+    "# HELP tengine_reqstat_server_requests_total The requests counter\n"            \
+    "# TYPE tengine_reqstat_server_requests_total counter\n"                         \
     "tengine_reqstat_server_requests_total{host=\"%V\",code=\"conn_total\"} %uA\n"          \
     "tengine_reqstat_server_requests_total{host=\"%V\",code=\"req_total\"} %uA\n"          \
     "tengine_reqstat_server_requests_total{host=\"%V\",code=\"2xx\"} %uA\n"          \
@@ -33,26 +40,6 @@
     "tengine_reqstat_server_requests_total{host=\"%V\",code=\"http_other_detail_status\"} %uA\n"             \
     "tengine_reqstat_server_requests_total{host=\"%V\",code=\"http_ups_4xx\"} %uA\n"          \
     "tengine_reqstat_server_requests_total{host=\"%V\",code=\"http_ups_5xx\"} %uA\n"             
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #define NGX_HTTP_REQSTAT_RSRV    29
 #define NGX_HTTP_REQSTAT_MAX     50
@@ -121,11 +108,11 @@ typedef struct {
     ngx_flag_t                   lazy;
     ngx_array_t                 *monitor;
     ngx_array_t                 *display;
-    ngx_array_t                 *prome_display;
     ngx_array_t                 *bypass;
     ngx_int_t                    index;
     ngx_array_t                 *user_select;
     ngx_array_t                 *user_defined_str;
+    ngx_array_t                 *prome_display;
 } ngx_http_reqstat_conf_t;
 
 
