@@ -1765,7 +1765,7 @@ ngx_http_reqstat_traffic_handler(ngx_http_request_t *r)
 
     // 思路导师确认,监控需要拿到所有监控内容就需要拿到prome的共享内存name
     ngx_int_t                                      rc;
-    ngx_str_t                                       type;
+    // ngx_str_t                                       type;
     ngx_buf_t                                      *b;
     ngx_uint_t                                     i;
     ngx_array_t                                  *display_traffic; //指向需要转换的监控节点
@@ -1777,7 +1777,7 @@ ngx_http_reqstat_traffic_handler(ngx_http_request_t *r)
     ngx_http_reqstat_rbnode_t             *node; // 通过将节点挂载到系统的红黑树上进行获取节点信息
     // ngx_http_reqstat_rbnode_t             *display_node;
     ngx_chain_t                                  out;
-    // size_t                                            len;
+    size_t                                            size;
     // u_char                                          *o,*s,*p;
 
     rlcf = ngx_http_get_module_loc_conf(r,ngx_http_reqstat_module);
@@ -1791,10 +1791,10 @@ ngx_http_reqstat_traffic_handler(ngx_http_request_t *r)
     }
 
 
-    ngx_str_set(&type,"text/plain");
+    // ngx_str_set(&type,"text/plain");
 
-    r->headers_out.content_type_len = type.len;
-    r->headers_out.content_type = type;
+    // r->headers_out.content_type_len = type.len;
+    // r->headers_out.content_type = type;
 
     if(r->method == NGX_HTTP_HEAD) {
         r->headers_out.status = NGX_HTTP_OK;
@@ -1808,19 +1808,46 @@ ngx_http_reqstat_traffic_handler(ngx_http_request_t *r)
 
     shm_zone = rlcf->prome_display->elts;
 
-            b = ngx_calloc_buf(r->pool);
-            if(b == NULL) {
-                return NGX_HTTP_INTERNAL_SERVER_ERROR;
-            }
-            b->start = ngx_pcalloc(r->pool,2500);
-            if(b->start == NULL) {
-                return NGX_HTTP_INTERNAL_SERVER_ERROR;
-            }
+    size = 0;
 
-            b->end = b->start + 2500;
-            b->last= b->pos = b->start;
-            b->temporary = 1;
+     for(i = 0;i < display_traffic->nelts;i++) {
 
+        ctx = shm_zone[i]->data;
+
+        for (q = ngx_queue_head(&ctx->sh->queue);
+             q != ngx_queue_sentinel(&ctx->sh->queue);
+             q = ngx_queue_next(q))
+        {
+            node = ngx_queue_data(q, ngx_http_reqstat_rbnode_t, queue);
+
+            if(node->conn_total == 0) {
+                continue;
+            }
+            ++size;
+        }
+    }
+
+    if(size == 0){
+        size = 2500;
+    }else{
+        size *= 2500;
+    }
+
+
+    b = ngx_calloc_buf(r->pool);
+    if(b == NULL) {
+        return NGX_HTTP_INTERNAL_SERVER_ERROR;
+    }
+    b->start = ngx_pcalloc(r->pool,size);
+    if(b->start == NULL) {
+        return NGX_HTTP_INTERNAL_SERVER_ERROR;
+    }
+
+    b->end = b->start + size;
+    b->last= b->pos = b->start;
+    b->temporary = 1;
+
+            
     // 循环遍历每一个已有的共享内存,将里面的内容按照prome的格式写入到prome_zone中
     for(i = 0;i < display_traffic->nelts;i++) {
         // 如果遍历到prome_zone name 则跳过
@@ -1839,7 +1866,7 @@ ngx_http_reqstat_traffic_handler(ngx_http_request_t *r)
             }
 
             b->last = ngx_slprintf(b->last,b->end, NGX_HTTP_REQSTAT_TRAFFIC_STATUS_PROMETHEUS_FMT_MAIN,
-                                        &ngx_cycle->hostname,
+                                        node->data,
                                         TENGINE_VERSION,NGINX_VERSION,
                                         &shm_zone[i]->shm.name,node->bytes_in,
                                         &shm_zone[i]->shm.name,node->bytes_out,

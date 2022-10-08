@@ -2263,3 +2263,18 @@
 2022/10/05 23:17:09 [notice] 71995#0: signal process started
 2022/10/05 23:33:37 [error] 77292#0: *3 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "127.0.0.1", referrer: "http://127.0.0.1/metrics"
 2022/10/06 01:52:44 [alert] 102132#0: *1 zero size buf in writer t:1 r:0 f:0 000055F45F408DD0 000055F45F408DD0-000055F45F408DD0 0000000000000000 0-0, client: 127.0.0.1, server: localhost, request: "GET /metrics HTTP/1.1", host: "127.0.0.1:80"
+2022/10/08 12:27:33 [alert] 27493#0: *2 zero size buf in writer t:1 r:0 f:0 000055A27F4D6DD0 000055A27F4D6DD0-000055A27F4D6DD0 0000000000000000 0-0, client: 127.0.0.1, server: localhost, request: "GET /metrics HTTP/1.1", host: "127.0.0.1:80"
+2022/10/08 12:27:47 [error] 27493#0: *1 open() "/home/zt/tengine/tengine//html/9090" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /9090 HTTP/1.1", host: "127.0.0.1"
+2022/10/08 12:28:01 [error] 27493#0: *4 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 192.168.3.8, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "xavier", referrer: "http://xavier/metrics"
+2022/10/08 14:12:18 [alert] 31503#0: *1 zero size buf in writer t:1 r:0 f:0 0000559C641FFDD0 0000559C641FFDD0-0000559C641FFDD0 0000000000000000 0-0, client: 127.0.0.1, server: localhost, request: "GET /metrics HTTP/1.1", host: "127.0.0.1:80"
+2022/10/08 14:12:45 [error] 31503#0: *4 open() "/home/zt/tengine/tengine//html/favicon.ico" failed (13: Permission denied), client: 192.168.3.8, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "xavier", referrer: "http://xavier/metrics"
+2022/10/08 17:33:42 [alert] 49166#0: *1 zero size buf in writer t:1 r:0 f:0 00005555DBFE1DD0 00005555DBFE1DD0-00005555DBFE1DD0 0000000000000000 0-0, client: 127.0.0.1, server: localhost, request: "GET /metrics HTTP/1.1", host: "127.0.0.1"
+2022/10/08 17:35:33 [emerg] 49514#0: duplicate location "/metrics" in /home/zt/tengine/tengine//conf/nginx.conf:71
+2022/10/08 17:35:53 [emerg] 49651#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/10/08 17:35:53 [emerg] 49651#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/10/08 17:35:53 [emerg] 49651#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/10/08 17:35:53 [emerg] 49651#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/10/08 17:35:53 [emerg] 49651#0: bind() to 0.0.0.0:80 failed (98: Unknown error)
+2022/10/08 17:35:53 [emerg] 49651#0: still could not bind()
+2022/10/08 17:36:01 [notice] 49773#0: signal process started
+2022/10/08 23:46:26 [error] 49774#0: *16 open() "/home/zt/tengine/tengine//html/US" failed (13: Permission denied), client: 127.0.0.1, server: localhost, request: "GET /US HTTP/1.1", host: "127.0.0.1"

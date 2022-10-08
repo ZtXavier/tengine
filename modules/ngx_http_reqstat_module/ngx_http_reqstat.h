@@ -6,7 +6,7 @@
 #define NGX_HTTP_REQSTAT_TRAFFIC_STATUS_PROMETHEUS_FMT_MAIN                      \
     "# HELP tengine_reqstat_info Nginx info\n"                                       \
     "# TYPE tengine_reqstat_info gauge\n"                                            \
-    "tengine_reqstat_info{hostname=\"%V\",module_version=\"%s\",version=\"%s\"} 1\n" \
+    "tengine_reqstat_info{hostname=\"%s\",module_version=\"%s\",version=\"%s\"} 1\n" \
     "# HELP tengine_reqstat_server_bytes_total The request/response bytes\n"         \
     "# TYPE tengine_reqstat_server_bytes_total counter\n"                            \
     "tengine_reqstat_server_bytes_total{host=\"%V\",direction=\"in\"} %uA\n"         \
