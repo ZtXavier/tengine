@@ -13,7 +13,8 @@
 typedef struct {
     ngx_int_t         test;
     ngx_msec_t      time_out;
-
+    ngx_http_reqstat_ctx_t    *ctx;
+    
 } ngx_proc_prome_traffic_main_conf_t; 
 
 struct  ngx_http_reqstat_rbnode_s {
