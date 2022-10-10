@@ -1811,7 +1811,8 @@ ngx_http_reqstat_traffic_handler(ngx_http_request_t *r)
     ngx_http_reqstat_rbnode_t             *node; // 通过将节点挂载到系统的红黑树上进行获取节点信息
     // ngx_http_reqstat_rbnode_t             *display_node;
     ngx_chain_t                                  out;
-    size_t                                            size,nodes,host_len;
+    size_t                                            size,nodes;
+    ngx_int_t                                       host_len;
     // u_char                                          *o,*s,*p;
 
     rlcf = ngx_http_get_module_loc_conf(r,ngx_http_reqstat_module);
@@ -1824,12 +1825,14 @@ ngx_http_reqstat_traffic_handler(ngx_http_request_t *r)
 
     size = 0;
     nodes = 0;
-    host_len =30;
+    host_len =0;
     
-    // for(i = 0;i < NGX_HTTP_REQSTAT_FMT_KEY_NUMS;i++) {
-    //     size += sizeof(ngx_http_reqstat_fmt_key[i]);
-    // }
-    size = 5800;
+    for(i = 0;i < NGX_HTTP_REQSTAT_FMT_KEY_NUMS;i++) {
+        size += ngx_strlen(ngx_http_reqstat_fmt_key[i]);
+    }
+
+    
+    // size = 5800;
 
      for(i = 0;i < display_traffic->nelts;i++) {
 
@@ -1845,14 +1848,14 @@ ngx_http_reqstat_traffic_handler(ngx_http_request_t *r)
             if(node->conn_total == 0) {
                 continue;
             }
-            host_len = sizeof(node->data);
+            host_len += ngx_strlen(node->data);
             ++nodes;
         }
     }
 
     if(nodes == 0)
     nodes = 1;
-    size = nodes*(size+29*host_len);
+    size = nodes*(size+NGX_HTTP_REQSTAT_FMT_KEY_NUMS*(sizeof(ngx_atomic_t)+host_len));
 
 
     b = ngx_calloc_buf(r->pool);
